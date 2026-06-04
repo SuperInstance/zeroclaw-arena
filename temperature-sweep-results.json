@@ -1,0 +1,362 @@
+{
+  "experiment": "temperature_sweep",
+  "description": "Sweep softmax temperature to find optimal exploration vs exploitation balance",
+  "temperatures": [
+    0.01,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    1.0,
+    1.5,
+    2.0,
+    5.0
+  ],
+  "train_games": 300,
+  "eval_games": 500,
+  "greedy_eval_T": 0.01,
+  "results": [
+    {
+      "temperature": 0.01,
+      "train_games": 300,
+      "eval_games": 500,
+      "train_win_rate": 0.6933333333333334,
+      "eval_win_rate_at_train_T": 0.71,
+      "eval_win_rate_at_greedy_T": 0.678,
+      "unique_tiles": 544,
+      "score_entropy": 1.7462,
+      "mean_score": 0.509,
+      "score_std": 0.0595,
+      "train_wins": {
+        "X": 208,
+        "O": 68,
+        "draw": 24
+      },
+      "eval_wins_at_train_T": {
+        "X": 355,
+        "O": 105,
+        "draw": 40
+      },
+      "eval_wins_at_greedy_T": {
+        "X": 339,
+        "O": 100,
+        "draw": 61
+      }
+    },
+    {
+      "temperature": 0.05,
+      "train_games": 300,
+      "eval_games": 500,
+      "train_win_rate": 0.6266666666666667,
+      "eval_win_rate_at_train_T": 0.664,
+      "eval_win_rate_at_greedy_T": 0.66,
+      "unique_tiles": 539,
+      "score_entropy": 1.7649,
+      "mean_score": 0.5051,
+      "score_std": 0.0592,
+      "train_wins": {
+        "X": 188,
+        "O": 81,
+        "draw": 31
+      },
+      "eval_wins_at_train_T": {
+        "X": 332,
+        "O": 112,
+        "draw": 56
+      },
+      "eval_wins_at_greedy_T": {
+        "X": 330,
+        "O": 108,
+        "draw": 62
+      }
+    },
+    {
+      "temperature": 0.1,
+      "train_games": 300,
+      "eval_games": 500,
+      "train_win_rate": 0.6333333333333333,
+      "eval_win_rate_at_train_T": 0.694,
+      "eval_win_rate_at_greedy_T": 0.692,
+      "unique_tiles": 540,
+      "score_entropy": 1.8053,
+      "mean_score": 0.5049,
+      "score_std": 0.06,
+      "train_wins": {
+        "X": 190,
+        "O": 68,
+        "draw": 42
+      },
+      "eval_wins_at_train_T": {
+        "X": 347,
+        "O": 99,
+        "draw": 54
+      },
+      "eval_wins_at_greedy_T": {
+        "X": 346,
+        "O": 107,
+        "draw": 47
+      }
+    },
+    {
+      "temperature": 0.15,
+      "train_games": 300,
+      "eval_games": 500,
+      "train_win_rate": 0.68,
+      "eval_win_rate_at_train_T": 0.662,
+      "eval_win_rate_at_greedy_T": 0.676,
+      "unique_tiles": 531,
+      "score_entropy": 1.7819,
+      "mean_score": 0.5073,
+      "score_std": 0.0593,
+      "train_wins": {
+        "X": 204,
+        "O": 64,
+        "draw": 32
+      },
+      "eval_wins_at_train_T": {
+        "X": 331,
+        "O": 115,
+        "draw": 54
+      },
+      "eval_wins_at_greedy_T": {
+        "X": 338,
+        "O": 103,
+        "draw": 59
+      }
+    },
+    {
+      "temperature": 0.2,
+      "train_games": 300,
+      "eval_games": 500,
+      "train_win_rate": 0.7,
+      "eval_win_rate_at_train_T": 0.696,
+      "eval_win_rate_at_greedy_T": 0.688,
+      "unique_tiles": 540,
+      "score_entropy": 1.7178,
+      "mean_score": 0.5083,
+      "score_std": 0.0585,
+      "train_wins": {
+        "X": 210,
+        "O": 66,
+        "draw": 24
+      },
+      "eval_wins_at_train_T": {
+        "X": 348,
+        "O": 104,
+        "draw": 48
+      },
+      "eval_wins_at_greedy_T": {
+        "X": 344,
+        "O": 104,
+        "draw": 52
+      }
+    },
+    {
+      "temperature": 0.3,
+      "train_games": 300,
+      "eval_games": 500,
+      "train_win_rate": 0.68,
+      "eval_win_rate_at_train_T": 0.68,
+      "eval_win_rate_at_greedy_T": 0.704,
+      "unique_tiles": 532,
+      "score_entropy": 1.761,
+      "mean_score": 0.5077,
+      "score_std": 0.0595,
+      "train_wins": {
+        "X": 204,
+        "O": 78,
+        "draw": 18
+      },
+      "eval_wins_at_train_T": {
+        "X": 340,
+        "O": 114,
+        "draw": 46
+      },
+      "eval_wins_at_greedy_T": {
+        "X": 352,
+        "O": 96,
+        "draw": 52
+      }
+    },
+    {
+      "temperature": 0.5,
+      "train_games": 300,
+      "eval_games": 500,
+      "train_win_rate": 0.69,
+      "eval_win_rate_at_train_T": 0.674,
+      "eval_win_rate_at_greedy_T": 0.654,
+      "unique_tiles": 551,
+      "score_entropy": 1.7414,
+      "mean_score": 0.508,
+      "score_std": 0.0593,
+      "train_wins": {
+        "X": 207,
+        "O": 62,
+        "draw": 31
+      },
+      "eval_wins_at_train_T": {
+        "X": 337,
+        "O": 118,
+        "draw": 45
+      },
+      "eval_wins_at_greedy_T": {
+        "X": 327,
+        "O": 114,
+        "draw": 59
+      }
+    },
+    {
+      "temperature": 0.7,
+      "train_games": 300,
+      "eval_games": 500,
+      "train_win_rate": 0.65,
+      "eval_win_rate_at_train_T": 0.682,
+      "eval_win_rate_at_greedy_T": 0.686,
+      "unique_tiles": 534,
+      "score_entropy": 1.7749,
+      "mean_score": 0.5062,
+      "score_std": 0.059,
+      "train_wins": {
+        "X": 195,
+        "O": 70,
+        "draw": 35
+      },
+      "eval_wins_at_train_T": {
+        "X": 341,
+        "O": 107,
+        "draw": 52
+      },
+      "eval_wins_at_greedy_T": {
+        "X": 343,
+        "O": 99,
+        "draw": 58
+      }
+    },
+    {
+      "temperature": 1.0,
+      "train_games": 300,
+      "eval_games": 500,
+      "train_win_rate": 0.6933333333333334,
+      "eval_win_rate_at_train_T": 0.69,
+      "eval_win_rate_at_greedy_T": 0.684,
+      "unique_tiles": 530,
+      "score_entropy": 1.7503,
+      "mean_score": 0.5076,
+      "score_std": 0.0591,
+      "train_wins": {
+        "X": 208,
+        "O": 66,
+        "draw": 26
+      },
+      "eval_wins_at_train_T": {
+        "X": 345,
+        "O": 102,
+        "draw": 53
+      },
+      "eval_wins_at_greedy_T": {
+        "X": 342,
+        "O": 101,
+        "draw": 57
+      }
+    },
+    {
+      "temperature": 1.5,
+      "train_games": 300,
+      "eval_games": 500,
+      "train_win_rate": 0.6166666666666667,
+      "eval_win_rate_at_train_T": 0.712,
+      "eval_win_rate_at_greedy_T": 0.67,
+      "unique_tiles": 548,
+      "score_entropy": 1.7845,
+      "mean_score": 0.5064,
+      "score_std": 0.0602,
+      "train_wins": {
+        "X": 185,
+        "O": 70,
+        "draw": 45
+      },
+      "eval_wins_at_train_T": {
+        "X": 356,
+        "O": 106,
+        "draw": 38
+      },
+      "eval_wins_at_greedy_T": {
+        "X": 335,
+        "O": 106,
+        "draw": 59
+      }
+    },
+    {
+      "temperature": 2.0,
+      "train_games": 300,
+      "eval_games": 500,
+      "train_win_rate": 0.6833333333333333,
+      "eval_win_rate_at_train_T": 0.648,
+      "eval_win_rate_at_greedy_T": 0.654,
+      "unique_tiles": 528,
+      "score_entropy": 1.7564,
+      "mean_score": 0.5083,
+      "score_std": 0.0587,
+      "train_wins": {
+        "X": 205,
+        "O": 64,
+        "draw": 31
+      },
+      "eval_wins_at_train_T": {
+        "X": 324,
+        "O": 123,
+        "draw": 53
+      },
+      "eval_wins_at_greedy_T": {
+        "X": 327,
+        "O": 114,
+        "draw": 59
+      }
+    },
+    {
+      "temperature": 5.0,
+      "train_games": 300,
+      "eval_games": 500,
+      "train_win_rate": 0.68,
+      "eval_win_rate_at_train_T": 0.704,
+      "eval_win_rate_at_greedy_T": 0.696,
+      "unique_tiles": 539,
+      "score_entropy": 1.7237,
+      "mean_score": 0.5071,
+      "score_std": 0.0589,
+      "train_wins": {
+        "X": 204,
+        "O": 70,
+        "draw": 26
+      },
+      "eval_wins_at_train_T": {
+        "X": 352,
+        "O": 101,
+        "draw": 47
+      },
+      "eval_wins_at_greedy_T": {
+        "X": 348,
+        "O": 99,
+        "draw": 53
+      }
+    }
+  ],
+  "analysis": {
+    "best_eval_at_train_T": {
+      "temperature": 1.5,
+      "win_rate": 0.712
+    },
+    "best_eval_at_greedy_T": {
+      "temperature": 0.3,
+      "win_rate": 0.704
+    },
+    "most_exploration": {
+      "temperature": 0.5,
+      "tiles": 551
+    },
+    "annealing_justified": true
+  }
+}

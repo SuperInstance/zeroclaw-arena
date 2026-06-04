@@ -1,0 +1,858 @@
+{
+  "TTT": {
+    "game": "TTT",
+    "train_games": 1000,
+    "full_tiles": 1238,
+    "total_visits": 3794,
+    "train_time_s": 0.57,
+    "baseline": {
+      "wins": 132,
+      "draws": 25,
+      "losses": 43,
+      "win_rate": 0.66,
+      "total": 200
+    },
+    "prune_by_visits": [
+      {
+        "min_visits": 1,
+        "tiles_remaining": 1238,
+        "pct_of_full": 100.0,
+        "wins": 127,
+        "draws": 19,
+        "losses": 54,
+        "win_rate": 0.635,
+        "total": 200
+      },
+      {
+        "min_visits": 2,
+        "tiles_remaining": 519,
+        "pct_of_full": 41.92,
+        "wins": 123,
+        "draws": 25,
+        "losses": 52,
+        "win_rate": 0.615,
+        "total": 200
+      },
+      {
+        "min_visits": 3,
+        "tiles_remaining": 211,
+        "pct_of_full": 17.04,
+        "wins": 123,
+        "draws": 20,
+        "losses": 57,
+        "win_rate": 0.615,
+        "total": 200
+      },
+      {
+        "min_visits": 5,
+        "tiles_remaining": 82,
+        "pct_of_full": 6.62,
+        "wins": 125,
+        "draws": 22,
+        "losses": 53,
+        "win_rate": 0.625,
+        "total": 200
+      },
+      {
+        "min_visits": 10,
+        "tiles_remaining": 66,
+        "pct_of_full": 5.33,
+        "wins": 124,
+        "draws": 24,
+        "losses": 52,
+        "win_rate": 0.62,
+        "total": 200
+      },
+      {
+        "min_visits": 20,
+        "tiles_remaining": 5,
+        "pct_of_full": 0.4,
+        "wins": 122,
+        "draws": 22,
+        "losses": 56,
+        "win_rate": 0.61,
+        "total": 200
+      },
+      {
+        "min_visits": 50,
+        "tiles_remaining": 1,
+        "pct_of_full": 0.08,
+        "wins": 122,
+        "draws": 20,
+        "losses": 58,
+        "win_rate": 0.61,
+        "total": 200
+      },
+      {
+        "min_visits": 100,
+        "tiles_remaining": 1,
+        "pct_of_full": 0.08,
+        "wins": 132,
+        "draws": 22,
+        "losses": 46,
+        "win_rate": 0.66,
+        "total": 200
+      },
+      {
+        "min_visits": 200,
+        "tiles_remaining": 1,
+        "pct_of_full": 0.08,
+        "wins": 118,
+        "draws": 28,
+        "losses": 54,
+        "win_rate": 0.59,
+        "total": 200
+      },
+      {
+        "min_visits": 500,
+        "tiles_remaining": 1,
+        "pct_of_full": 0.08,
+        "wins": 125,
+        "draws": 27,
+        "losses": 48,
+        "win_rate": 0.625,
+        "total": 200
+      }
+    ],
+    "prune_by_score": [
+      {
+        "keep_n": 1,
+        "pct_of_full": 0.08,
+        "by_visits": {
+          "tiles_remaining": 1,
+          "wins": 109,
+          "draws": 29,
+          "losses": 62,
+          "win_rate": 0.545,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 1,
+          "wins": 132,
+          "draws": 21,
+          "losses": 47,
+          "win_rate": 0.66,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 2,
+        "pct_of_full": 0.16,
+        "by_visits": {
+          "tiles_remaining": 2,
+          "wins": 111,
+          "draws": 28,
+          "losses": 61,
+          "win_rate": 0.555,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 2,
+          "wins": 116,
+          "draws": 25,
+          "losses": 59,
+          "win_rate": 0.58,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 3,
+        "pct_of_full": 0.24,
+        "by_visits": {
+          "tiles_remaining": 3,
+          "wins": 119,
+          "draws": 28,
+          "losses": 53,
+          "win_rate": 0.595,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 3,
+          "wins": 111,
+          "draws": 28,
+          "losses": 61,
+          "win_rate": 0.555,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 5,
+        "pct_of_full": 0.4,
+        "by_visits": {
+          "tiles_remaining": 5,
+          "wins": 110,
+          "draws": 31,
+          "losses": 59,
+          "win_rate": 0.55,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 5,
+          "wins": 123,
+          "draws": 34,
+          "losses": 43,
+          "win_rate": 0.615,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 10,
+        "pct_of_full": 0.81,
+        "by_visits": {
+          "tiles_remaining": 10,
+          "wins": 126,
+          "draws": 24,
+          "losses": 50,
+          "win_rate": 0.63,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 10,
+          "wins": 106,
+          "draws": 27,
+          "losses": 67,
+          "win_rate": 0.53,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 20,
+        "pct_of_full": 1.62,
+        "by_visits": {
+          "tiles_remaining": 20,
+          "wins": 130,
+          "draws": 26,
+          "losses": 44,
+          "win_rate": 0.65,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 20,
+          "wins": 110,
+          "draws": 32,
+          "losses": 58,
+          "win_rate": 0.55,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 50,
+        "pct_of_full": 4.04,
+        "by_visits": {
+          "tiles_remaining": 50,
+          "wins": 106,
+          "draws": 28,
+          "losses": 66,
+          "win_rate": 0.53,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 50,
+          "wins": 107,
+          "draws": 30,
+          "losses": 63,
+          "win_rate": 0.535,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 66,
+        "pct_of_full": 5.33,
+        "by_visits": {
+          "tiles_remaining": 66,
+          "wins": 114,
+          "draws": 35,
+          "losses": 51,
+          "win_rate": 0.57,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 66,
+          "wins": 123,
+          "draws": 19,
+          "losses": 58,
+          "win_rate": 0.615,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 82,
+        "pct_of_full": 6.62,
+        "by_visits": {
+          "tiles_remaining": 82,
+          "wins": 115,
+          "draws": 19,
+          "losses": 66,
+          "win_rate": 0.575,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 82,
+          "wins": 106,
+          "draws": 26,
+          "losses": 68,
+          "win_rate": 0.53,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 100,
+        "pct_of_full": 8.08,
+        "by_visits": {
+          "tiles_remaining": 100,
+          "wins": 115,
+          "draws": 24,
+          "losses": 61,
+          "win_rate": 0.575,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 100,
+          "wins": 117,
+          "draws": 26,
+          "losses": 57,
+          "win_rate": 0.585,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 200,
+        "pct_of_full": 16.16,
+        "by_visits": {
+          "tiles_remaining": 200,
+          "wins": 104,
+          "draws": 25,
+          "losses": 71,
+          "win_rate": 0.52,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 200,
+          "wins": 126,
+          "draws": 19,
+          "losses": 55,
+          "win_rate": 0.63,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 211,
+        "pct_of_full": 17.04,
+        "by_visits": {
+          "tiles_remaining": 211,
+          "wins": 121,
+          "draws": 20,
+          "losses": 59,
+          "win_rate": 0.605,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 211,
+          "wins": 121,
+          "draws": 22,
+          "losses": 57,
+          "win_rate": 0.605,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 500,
+        "pct_of_full": 40.39,
+        "by_visits": {
+          "tiles_remaining": 500,
+          "wins": 115,
+          "draws": 26,
+          "losses": 59,
+          "win_rate": 0.575,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 500,
+          "wins": 116,
+          "draws": 34,
+          "losses": 50,
+          "win_rate": 0.58,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 519,
+        "pct_of_full": 41.92,
+        "by_visits": {
+          "tiles_remaining": 519,
+          "wins": 117,
+          "draws": 31,
+          "losses": 52,
+          "win_rate": 0.585,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 519,
+          "wins": 117,
+          "draws": 29,
+          "losses": 54,
+          "win_rate": 0.585,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 1238,
+        "pct_of_full": 100.0,
+        "by_visits": {
+          "tiles_remaining": 1238,
+          "wins": 124,
+          "draws": 22,
+          "losses": 54,
+          "win_rate": 0.62,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 1238,
+          "wins": 134,
+          "draws": 21,
+          "losses": 45,
+          "win_rate": 0.67,
+          "total": 200
+        }
+      }
+    ]
+  },
+  "Connect4": {
+    "game": "Connect4",
+    "train_games": 1000,
+    "full_tiles": 7926,
+    "total_visits": 10347,
+    "train_time_s": 5.68,
+    "baseline": {
+      "wins": 117,
+      "draws": 0,
+      "losses": 83,
+      "win_rate": 0.585,
+      "total": 200
+    },
+    "prune_by_visits": [
+      {
+        "min_visits": 1,
+        "tiles_remaining": 7926,
+        "pct_of_full": 100.0,
+        "wins": 107,
+        "draws": 0,
+        "losses": 93,
+        "win_rate": 0.535,
+        "total": 200
+      },
+      {
+        "min_visits": 2,
+        "tiles_remaining": 371,
+        "pct_of_full": 4.68,
+        "wins": 112,
+        "draws": 0,
+        "losses": 88,
+        "win_rate": 0.56,
+        "total": 200
+      },
+      {
+        "min_visits": 3,
+        "tiles_remaining": 154,
+        "pct_of_full": 1.94,
+        "wins": 130,
+        "draws": 0,
+        "losses": 70,
+        "win_rate": 0.65,
+        "total": 200
+      },
+      {
+        "min_visits": 5,
+        "tiles_remaining": 58,
+        "pct_of_full": 0.73,
+        "wins": 103,
+        "draws": 1,
+        "losses": 96,
+        "win_rate": 0.515,
+        "total": 200
+      },
+      {
+        "min_visits": 10,
+        "tiles_remaining": 49,
+        "pct_of_full": 0.62,
+        "wins": 120,
+        "draws": 2,
+        "losses": 78,
+        "win_rate": 0.6,
+        "total": 200
+      },
+      {
+        "min_visits": 20,
+        "tiles_remaining": 31,
+        "pct_of_full": 0.39,
+        "wins": 126,
+        "draws": 1,
+        "losses": 73,
+        "win_rate": 0.63,
+        "total": 200
+      },
+      {
+        "min_visits": 50,
+        "tiles_remaining": 1,
+        "pct_of_full": 0.01,
+        "wins": 126,
+        "draws": 1,
+        "losses": 73,
+        "win_rate": 0.63,
+        "total": 200
+      },
+      {
+        "min_visits": 100,
+        "tiles_remaining": 1,
+        "pct_of_full": 0.01,
+        "wins": 108,
+        "draws": 1,
+        "losses": 91,
+        "win_rate": 0.54,
+        "total": 200
+      },
+      {
+        "min_visits": 200,
+        "tiles_remaining": 1,
+        "pct_of_full": 0.01,
+        "wins": 101,
+        "draws": 1,
+        "losses": 98,
+        "win_rate": 0.505,
+        "total": 200
+      },
+      {
+        "min_visits": 500,
+        "tiles_remaining": 1,
+        "pct_of_full": 0.01,
+        "wins": 112,
+        "draws": 1,
+        "losses": 87,
+        "win_rate": 0.56,
+        "total": 200
+      }
+    ],
+    "prune_by_score": [
+      {
+        "keep_n": 1,
+        "pct_of_full": 0.01,
+        "by_visits": {
+          "tiles_remaining": 1,
+          "wins": 115,
+          "draws": 0,
+          "losses": 85,
+          "win_rate": 0.575,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 1,
+          "wins": 105,
+          "draws": 0,
+          "losses": 95,
+          "win_rate": 0.525,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 2,
+        "pct_of_full": 0.03,
+        "by_visits": {
+          "tiles_remaining": 2,
+          "wins": 109,
+          "draws": 1,
+          "losses": 90,
+          "win_rate": 0.545,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 2,
+          "wins": 117,
+          "draws": 2,
+          "losses": 81,
+          "win_rate": 0.585,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 3,
+        "pct_of_full": 0.04,
+        "by_visits": {
+          "tiles_remaining": 3,
+          "wins": 120,
+          "draws": 0,
+          "losses": 80,
+          "win_rate": 0.6,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 3,
+          "wins": 106,
+          "draws": 1,
+          "losses": 93,
+          "win_rate": 0.53,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 5,
+        "pct_of_full": 0.06,
+        "by_visits": {
+          "tiles_remaining": 5,
+          "wins": 110,
+          "draws": 1,
+          "losses": 89,
+          "win_rate": 0.55,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 5,
+          "wins": 106,
+          "draws": 0,
+          "losses": 94,
+          "win_rate": 0.53,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 10,
+        "pct_of_full": 0.13,
+        "by_visits": {
+          "tiles_remaining": 10,
+          "wins": 107,
+          "draws": 1,
+          "losses": 92,
+          "win_rate": 0.535,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 10,
+          "wins": 100,
+          "draws": 0,
+          "losses": 100,
+          "win_rate": 0.5,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 20,
+        "pct_of_full": 0.25,
+        "by_visits": {
+          "tiles_remaining": 20,
+          "wins": 109,
+          "draws": 1,
+          "losses": 90,
+          "win_rate": 0.545,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 20,
+          "wins": 108,
+          "draws": 0,
+          "losses": 92,
+          "win_rate": 0.54,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 31,
+        "pct_of_full": 0.39,
+        "by_visits": {
+          "tiles_remaining": 31,
+          "wins": 115,
+          "draws": 0,
+          "losses": 85,
+          "win_rate": 0.575,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 31,
+          "wins": 108,
+          "draws": 0,
+          "losses": 92,
+          "win_rate": 0.54,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 49,
+        "pct_of_full": 0.62,
+        "by_visits": {
+          "tiles_remaining": 49,
+          "wins": 118,
+          "draws": 0,
+          "losses": 82,
+          "win_rate": 0.59,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 49,
+          "wins": 99,
+          "draws": 0,
+          "losses": 101,
+          "win_rate": 0.495,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 50,
+        "pct_of_full": 0.63,
+        "by_visits": {
+          "tiles_remaining": 50,
+          "wins": 116,
+          "draws": 0,
+          "losses": 84,
+          "win_rate": 0.58,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 50,
+          "wins": 112,
+          "draws": 0,
+          "losses": 88,
+          "win_rate": 0.56,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 58,
+        "pct_of_full": 0.73,
+        "by_visits": {
+          "tiles_remaining": 58,
+          "wins": 112,
+          "draws": 0,
+          "losses": 88,
+          "win_rate": 0.56,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 58,
+          "wins": 119,
+          "draws": 0,
+          "losses": 81,
+          "win_rate": 0.595,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 100,
+        "pct_of_full": 1.26,
+        "by_visits": {
+          "tiles_remaining": 100,
+          "wins": 108,
+          "draws": 0,
+          "losses": 92,
+          "win_rate": 0.54,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 100,
+          "wins": 107,
+          "draws": 0,
+          "losses": 93,
+          "win_rate": 0.535,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 154,
+        "pct_of_full": 1.94,
+        "by_visits": {
+          "tiles_remaining": 154,
+          "wins": 116,
+          "draws": 0,
+          "losses": 84,
+          "win_rate": 0.58,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 154,
+          "wins": 117,
+          "draws": 1,
+          "losses": 82,
+          "win_rate": 0.585,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 200,
+        "pct_of_full": 2.52,
+        "by_visits": {
+          "tiles_remaining": 200,
+          "wins": 120,
+          "draws": 0,
+          "losses": 80,
+          "win_rate": 0.6,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 200,
+          "wins": 119,
+          "draws": 0,
+          "losses": 81,
+          "win_rate": 0.595,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 371,
+        "pct_of_full": 4.68,
+        "by_visits": {
+          "tiles_remaining": 371,
+          "wins": 109,
+          "draws": 1,
+          "losses": 90,
+          "win_rate": 0.545,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 371,
+          "wins": 107,
+          "draws": 0,
+          "losses": 93,
+          "win_rate": 0.535,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 500,
+        "pct_of_full": 6.31,
+        "by_visits": {
+          "tiles_remaining": 500,
+          "wins": 116,
+          "draws": 0,
+          "losses": 84,
+          "win_rate": 0.58,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 500,
+          "wins": 112,
+          "draws": 1,
+          "losses": 87,
+          "win_rate": 0.56,
+          "total": 200
+        }
+      },
+      {
+        "keep_n": 7926,
+        "pct_of_full": 100.0,
+        "by_visits": {
+          "tiles_remaining": 7926,
+          "wins": 129,
+          "draws": 0,
+          "losses": 71,
+          "win_rate": 0.645,
+          "total": 200
+        },
+        "by_score": {
+          "tiles_remaining": 7926,
+          "wins": 116,
+          "draws": 0,
+          "losses": 84,
+          "win_rate": 0.58,
+          "total": 200
+        }
+      }
+    ]
+  }
+}
