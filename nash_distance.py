@@ -705,6 +705,9 @@ def main():
     # Depth analysis
     analyze_by_depth(tiles, oracle)
 
+    # Well-trained states analysis
+    analyze_well_trained(tiles, oracle, x_states)
+
     # Save
     output = save_results(results, stats)
 
