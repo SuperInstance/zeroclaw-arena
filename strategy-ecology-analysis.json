@@ -1,0 +1,53 @@
+{
+  "strategy_species": {
+    "Explorer": {
+      "reward": "noisy",
+      "win_rate": 0.55,
+      "entropy": 1.29,
+      "trait": "thrives when signal is weak"
+    },
+    "Diplomat": {
+      "reward": "adversarial/cooperative",
+      "win_rate": 0.5,
+      "entropy": 1.28,
+      "trait": "adapts to opponents"
+    },
+    "Marksman": {
+      "reward": "binary/marginal",
+      "win_rate": 0.495,
+      "entropy": 1.28,
+      "trait": "exploits clear feedback"
+    },
+    "Climber": {
+      "reward": "progressive",
+      "win_rate": 0.351,
+      "entropy": 1.42,
+      "trait": "struggles with diminishing returns"
+    },
+    "Prospector": {
+      "reward": "sparse",
+      "win_rate": 0.104,
+      "entropy": 1.99,
+      "trait": "rare wins, maximum diversity"
+    }
+  },
+  "scaling_laws": {
+    "clusters": [
+      7,
+      10,
+      14
+    ],
+    "wr_std": [
+      0.135,
+      0.144,
+      0.149
+    ],
+    "entropy_increase_pct": [
+      75.0,
+      82.5,
+      82.3
+    ]
+  },
+  "universal_law": "Strategies differentiate into ~5 species at any scale. Scale increases resolution of sub-species, not number of species.",
+  "implication": "GPU factory = telescope into strategy space. Not speed, VISION."
+}
