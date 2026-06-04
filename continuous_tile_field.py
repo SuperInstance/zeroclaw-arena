@@ -307,8 +307,8 @@ def main():
     all_results = {}
 
     for n_bins in bin_counts:
-        # Scale episodes with action space — more bins need more exploration
-        num_episodes = base_episodes + (n_bins * n_bins * 10)
+        # Scale episodes with action space — but cap at 2000
+        num_episodes = min(2000, base_episodes + (n_bins * n_bins * 2))
         print(f"\n{'─' * 60}")
         print(f"BIN COUNT: {n_bins} ({n_bins*n_bins} discrete actions, {num_episodes} episodes)")
         print(f"{'─' * 60}")

@@ -234,7 +234,7 @@ def train_holdem_with_snapshots(num_games: int = 1000, interval: int = 50) -> li
             result = hand.play(field, opponent_strategy="random")
 
             # Evolve periodically
-            if hand.turn % 5 == 0:
+            if batch % 5 == 0:
                 field.evolve()
 
         # Take snapshot from poker tiles
