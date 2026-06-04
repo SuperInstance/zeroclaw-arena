@@ -1,0 +1,1971 @@
+{
+  "experiment": "memory_decay",
+  "decay_rates_tested": [
+    0.0,
+    0.001,
+    0.005,
+    0.01,
+    0.02,
+    0.05,
+    0.1
+  ],
+  "conditions": {
+    "with_switch": [
+      {
+        "decay_rate": 0.0,
+        "switch_opponent": true,
+        "total_games": 500,
+        "switch_point": 300,
+        "games": [
+          {
+            "game": 20,
+            "win_rate_window": 0.65,
+            "tiles": 58
+          },
+          {
+            "game": 40,
+            "win_rate_window": 0.8,
+            "tiles": 107
+          },
+          {
+            "game": 60,
+            "win_rate_window": 0.6,
+            "tiles": 154
+          },
+          {
+            "game": 80,
+            "win_rate_window": 0.5,
+            "tiles": 191
+          },
+          {
+            "game": 100,
+            "win_rate_window": 0.8,
+            "tiles": 234
+          },
+          {
+            "game": 120,
+            "win_rate_window": 0.7,
+            "tiles": 270
+          },
+          {
+            "game": 140,
+            "win_rate_window": 0.6,
+            "tiles": 301
+          },
+          {
+            "game": 160,
+            "win_rate_window": 0.75,
+            "tiles": 341
+          },
+          {
+            "game": 180,
+            "win_rate_window": 0.85,
+            "tiles": 374
+          },
+          {
+            "game": 200,
+            "win_rate_window": 0.7,
+            "tiles": 407
+          },
+          {
+            "game": 220,
+            "win_rate_window": 0.65,
+            "tiles": 442
+          },
+          {
+            "game": 240,
+            "win_rate_window": 0.65,
+            "tiles": 467
+          },
+          {
+            "game": 260,
+            "win_rate_window": 0.55,
+            "tiles": 493
+          },
+          {
+            "game": 280,
+            "win_rate_window": 0.65,
+            "tiles": 519
+          },
+          {
+            "game": 300,
+            "win_rate_window": 0.5,
+            "tiles": 547
+          },
+          {
+            "game": 320,
+            "win_rate_window": 0.05,
+            "tiles": 563
+          },
+          {
+            "game": 340,
+            "win_rate_window": 0.0,
+            "tiles": 573
+          },
+          {
+            "game": 360,
+            "win_rate_window": 0.0,
+            "tiles": 584
+          },
+          {
+            "game": 380,
+            "win_rate_window": 0.0,
+            "tiles": 594
+          },
+          {
+            "game": 400,
+            "win_rate_window": 0.0,
+            "tiles": 606
+          },
+          {
+            "game": 420,
+            "win_rate_window": 0.05,
+            "tiles": 612
+          },
+          {
+            "game": 440,
+            "win_rate_window": 0.05,
+            "tiles": 617
+          },
+          {
+            "game": 460,
+            "win_rate_window": 0.0,
+            "tiles": 620
+          },
+          {
+            "game": 480,
+            "win_rate_window": 0.0,
+            "tiles": 622
+          },
+          {
+            "game": 500,
+            "win_rate_window": 0.0,
+            "tiles": 628
+          }
+        ],
+        "tile_churn_after_switch": 0,
+        "tile_total_after_switch": 547,
+        "tile_churn_rate": 0.0,
+        "win_rate_before_switch": 0.6167,
+        "win_rate_after_switch": 0.0167,
+        "adaptation_game": null,
+        "adaptation_speed": null,
+        "final_tiles": 628
+      },
+      {
+        "decay_rate": 0.001,
+        "switch_opponent": true,
+        "total_games": 500,
+        "switch_point": 300,
+        "games": [
+          {
+            "game": 20,
+            "win_rate_window": 0.65,
+            "tiles": 58
+          },
+          {
+            "game": 40,
+            "win_rate_window": 0.8,
+            "tiles": 107
+          },
+          {
+            "game": 60,
+            "win_rate_window": 0.6,
+            "tiles": 154
+          },
+          {
+            "game": 80,
+            "win_rate_window": 0.5,
+            "tiles": 191
+          },
+          {
+            "game": 100,
+            "win_rate_window": 0.8,
+            "tiles": 234
+          },
+          {
+            "game": 120,
+            "win_rate_window": 0.7,
+            "tiles": 270
+          },
+          {
+            "game": 140,
+            "win_rate_window": 0.6,
+            "tiles": 301
+          },
+          {
+            "game": 160,
+            "win_rate_window": 0.75,
+            "tiles": 341
+          },
+          {
+            "game": 180,
+            "win_rate_window": 0.85,
+            "tiles": 374
+          },
+          {
+            "game": 200,
+            "win_rate_window": 0.7,
+            "tiles": 407
+          },
+          {
+            "game": 220,
+            "win_rate_window": 0.65,
+            "tiles": 442
+          },
+          {
+            "game": 240,
+            "win_rate_window": 0.65,
+            "tiles": 467
+          },
+          {
+            "game": 260,
+            "win_rate_window": 0.55,
+            "tiles": 493
+          },
+          {
+            "game": 280,
+            "win_rate_window": 0.65,
+            "tiles": 519
+          },
+          {
+            "game": 300,
+            "win_rate_window": 0.5,
+            "tiles": 547
+          },
+          {
+            "game": 320,
+            "win_rate_window": 0.05,
+            "tiles": 563
+          },
+          {
+            "game": 340,
+            "win_rate_window": 0.0,
+            "tiles": 573
+          },
+          {
+            "game": 360,
+            "win_rate_window": 0.0,
+            "tiles": 584
+          },
+          {
+            "game": 380,
+            "win_rate_window": 0.0,
+            "tiles": 594
+          },
+          {
+            "game": 400,
+            "win_rate_window": 0.0,
+            "tiles": 606
+          },
+          {
+            "game": 420,
+            "win_rate_window": 0.05,
+            "tiles": 612
+          },
+          {
+            "game": 440,
+            "win_rate_window": 0.05,
+            "tiles": 617
+          },
+          {
+            "game": 460,
+            "win_rate_window": 0.0,
+            "tiles": 620
+          },
+          {
+            "game": 480,
+            "win_rate_window": 0.0,
+            "tiles": 622
+          },
+          {
+            "game": 500,
+            "win_rate_window": 0.0,
+            "tiles": 628
+          }
+        ],
+        "tile_churn_after_switch": 0,
+        "tile_total_after_switch": 547,
+        "tile_churn_rate": 0.0,
+        "win_rate_before_switch": 0.6167,
+        "win_rate_after_switch": 0.0167,
+        "adaptation_game": null,
+        "adaptation_speed": null,
+        "final_tiles": 628
+      },
+      {
+        "decay_rate": 0.005,
+        "switch_opponent": true,
+        "total_games": 500,
+        "switch_point": 300,
+        "games": [
+          {
+            "game": 20,
+            "win_rate_window": 0.65,
+            "tiles": 58
+          },
+          {
+            "game": 40,
+            "win_rate_window": 0.8,
+            "tiles": 107
+          },
+          {
+            "game": 60,
+            "win_rate_window": 0.6,
+            "tiles": 154
+          },
+          {
+            "game": 80,
+            "win_rate_window": 0.5,
+            "tiles": 191
+          },
+          {
+            "game": 100,
+            "win_rate_window": 0.8,
+            "tiles": 234
+          },
+          {
+            "game": 120,
+            "win_rate_window": 0.7,
+            "tiles": 270
+          },
+          {
+            "game": 140,
+            "win_rate_window": 0.6,
+            "tiles": 301
+          },
+          {
+            "game": 160,
+            "win_rate_window": 0.75,
+            "tiles": 341
+          },
+          {
+            "game": 180,
+            "win_rate_window": 0.85,
+            "tiles": 374
+          },
+          {
+            "game": 200,
+            "win_rate_window": 0.7,
+            "tiles": 407
+          },
+          {
+            "game": 220,
+            "win_rate_window": 0.65,
+            "tiles": 442
+          },
+          {
+            "game": 240,
+            "win_rate_window": 0.65,
+            "tiles": 467
+          },
+          {
+            "game": 260,
+            "win_rate_window": 0.55,
+            "tiles": 493
+          },
+          {
+            "game": 280,
+            "win_rate_window": 0.65,
+            "tiles": 519
+          },
+          {
+            "game": 300,
+            "win_rate_window": 0.5,
+            "tiles": 547
+          },
+          {
+            "game": 320,
+            "win_rate_window": 0.05,
+            "tiles": 563
+          },
+          {
+            "game": 340,
+            "win_rate_window": 0.0,
+            "tiles": 573
+          },
+          {
+            "game": 360,
+            "win_rate_window": 0.0,
+            "tiles": 584
+          },
+          {
+            "game": 380,
+            "win_rate_window": 0.0,
+            "tiles": 594
+          },
+          {
+            "game": 400,
+            "win_rate_window": 0.0,
+            "tiles": 606
+          },
+          {
+            "game": 420,
+            "win_rate_window": 0.05,
+            "tiles": 612
+          },
+          {
+            "game": 440,
+            "win_rate_window": 0.05,
+            "tiles": 617
+          },
+          {
+            "game": 460,
+            "win_rate_window": 0.0,
+            "tiles": 620
+          },
+          {
+            "game": 480,
+            "win_rate_window": 0.0,
+            "tiles": 622
+          },
+          {
+            "game": 500,
+            "win_rate_window": 0.0,
+            "tiles": 628
+          }
+        ],
+        "tile_churn_after_switch": 0,
+        "tile_total_after_switch": 547,
+        "tile_churn_rate": 0.0,
+        "win_rate_before_switch": 0.6167,
+        "win_rate_after_switch": 0.0167,
+        "adaptation_game": null,
+        "adaptation_speed": null,
+        "final_tiles": 628
+      },
+      {
+        "decay_rate": 0.01,
+        "switch_opponent": true,
+        "total_games": 500,
+        "switch_point": 300,
+        "games": [
+          {
+            "game": 20,
+            "win_rate_window": 0.65,
+            "tiles": 58
+          },
+          {
+            "game": 40,
+            "win_rate_window": 0.8,
+            "tiles": 107
+          },
+          {
+            "game": 60,
+            "win_rate_window": 0.6,
+            "tiles": 154
+          },
+          {
+            "game": 80,
+            "win_rate_window": 0.5,
+            "tiles": 191
+          },
+          {
+            "game": 100,
+            "win_rate_window": 0.8,
+            "tiles": 234
+          },
+          {
+            "game": 120,
+            "win_rate_window": 0.7,
+            "tiles": 270
+          },
+          {
+            "game": 140,
+            "win_rate_window": 0.6,
+            "tiles": 301
+          },
+          {
+            "game": 160,
+            "win_rate_window": 0.75,
+            "tiles": 341
+          },
+          {
+            "game": 180,
+            "win_rate_window": 0.85,
+            "tiles": 374
+          },
+          {
+            "game": 200,
+            "win_rate_window": 0.7,
+            "tiles": 407
+          },
+          {
+            "game": 220,
+            "win_rate_window": 0.65,
+            "tiles": 442
+          },
+          {
+            "game": 240,
+            "win_rate_window": 0.65,
+            "tiles": 467
+          },
+          {
+            "game": 260,
+            "win_rate_window": 0.55,
+            "tiles": 493
+          },
+          {
+            "game": 280,
+            "win_rate_window": 0.65,
+            "tiles": 519
+          },
+          {
+            "game": 300,
+            "win_rate_window": 0.5,
+            "tiles": 547
+          },
+          {
+            "game": 320,
+            "win_rate_window": 0.05,
+            "tiles": 563
+          },
+          {
+            "game": 340,
+            "win_rate_window": 0.0,
+            "tiles": 573
+          },
+          {
+            "game": 360,
+            "win_rate_window": 0.0,
+            "tiles": 584
+          },
+          {
+            "game": 380,
+            "win_rate_window": 0.0,
+            "tiles": 594
+          },
+          {
+            "game": 400,
+            "win_rate_window": 0.0,
+            "tiles": 606
+          },
+          {
+            "game": 420,
+            "win_rate_window": 0.05,
+            "tiles": 612
+          },
+          {
+            "game": 440,
+            "win_rate_window": 0.05,
+            "tiles": 617
+          },
+          {
+            "game": 460,
+            "win_rate_window": 0.0,
+            "tiles": 620
+          },
+          {
+            "game": 480,
+            "win_rate_window": 0.0,
+            "tiles": 622
+          },
+          {
+            "game": 500,
+            "win_rate_window": 0.0,
+            "tiles": 628
+          }
+        ],
+        "tile_churn_after_switch": 0,
+        "tile_total_after_switch": 547,
+        "tile_churn_rate": 0.0,
+        "win_rate_before_switch": 0.6167,
+        "win_rate_after_switch": 0.0167,
+        "adaptation_game": null,
+        "adaptation_speed": null,
+        "final_tiles": 628
+      },
+      {
+        "decay_rate": 0.02,
+        "switch_opponent": true,
+        "total_games": 500,
+        "switch_point": 300,
+        "games": [
+          {
+            "game": 20,
+            "win_rate_window": 0.65,
+            "tiles": 58
+          },
+          {
+            "game": 40,
+            "win_rate_window": 0.8,
+            "tiles": 107
+          },
+          {
+            "game": 60,
+            "win_rate_window": 0.6,
+            "tiles": 154
+          },
+          {
+            "game": 80,
+            "win_rate_window": 0.5,
+            "tiles": 191
+          },
+          {
+            "game": 100,
+            "win_rate_window": 0.8,
+            "tiles": 234
+          },
+          {
+            "game": 120,
+            "win_rate_window": 0.7,
+            "tiles": 270
+          },
+          {
+            "game": 140,
+            "win_rate_window": 0.6,
+            "tiles": 301
+          },
+          {
+            "game": 160,
+            "win_rate_window": 0.75,
+            "tiles": 341
+          },
+          {
+            "game": 180,
+            "win_rate_window": 0.85,
+            "tiles": 374
+          },
+          {
+            "game": 200,
+            "win_rate_window": 0.7,
+            "tiles": 407
+          },
+          {
+            "game": 220,
+            "win_rate_window": 0.65,
+            "tiles": 442
+          },
+          {
+            "game": 240,
+            "win_rate_window": 0.65,
+            "tiles": 467
+          },
+          {
+            "game": 260,
+            "win_rate_window": 0.55,
+            "tiles": 493
+          },
+          {
+            "game": 280,
+            "win_rate_window": 0.65,
+            "tiles": 519
+          },
+          {
+            "game": 300,
+            "win_rate_window": 0.5,
+            "tiles": 547
+          },
+          {
+            "game": 320,
+            "win_rate_window": 0.05,
+            "tiles": 563
+          },
+          {
+            "game": 340,
+            "win_rate_window": 0.0,
+            "tiles": 573
+          },
+          {
+            "game": 360,
+            "win_rate_window": 0.0,
+            "tiles": 584
+          },
+          {
+            "game": 380,
+            "win_rate_window": 0.0,
+            "tiles": 594
+          },
+          {
+            "game": 400,
+            "win_rate_window": 0.0,
+            "tiles": 606
+          },
+          {
+            "game": 420,
+            "win_rate_window": 0.05,
+            "tiles": 612
+          },
+          {
+            "game": 440,
+            "win_rate_window": 0.05,
+            "tiles": 617
+          },
+          {
+            "game": 460,
+            "win_rate_window": 0.0,
+            "tiles": 620
+          },
+          {
+            "game": 480,
+            "win_rate_window": 0.0,
+            "tiles": 622
+          },
+          {
+            "game": 500,
+            "win_rate_window": 0.0,
+            "tiles": 628
+          }
+        ],
+        "tile_churn_after_switch": 0,
+        "tile_total_after_switch": 547,
+        "tile_churn_rate": 0.0,
+        "win_rate_before_switch": 0.6167,
+        "win_rate_after_switch": 0.0167,
+        "adaptation_game": null,
+        "adaptation_speed": null,
+        "final_tiles": 628
+      },
+      {
+        "decay_rate": 0.05,
+        "switch_opponent": true,
+        "total_games": 500,
+        "switch_point": 300,
+        "games": [
+          {
+            "game": 20,
+            "win_rate_window": 0.65,
+            "tiles": 58
+          },
+          {
+            "game": 40,
+            "win_rate_window": 0.8,
+            "tiles": 107
+          },
+          {
+            "game": 60,
+            "win_rate_window": 0.6,
+            "tiles": 154
+          },
+          {
+            "game": 80,
+            "win_rate_window": 0.5,
+            "tiles": 191
+          },
+          {
+            "game": 100,
+            "win_rate_window": 0.8,
+            "tiles": 234
+          },
+          {
+            "game": 120,
+            "win_rate_window": 0.7,
+            "tiles": 270
+          },
+          {
+            "game": 140,
+            "win_rate_window": 0.6,
+            "tiles": 301
+          },
+          {
+            "game": 160,
+            "win_rate_window": 0.75,
+            "tiles": 341
+          },
+          {
+            "game": 180,
+            "win_rate_window": 0.85,
+            "tiles": 374
+          },
+          {
+            "game": 200,
+            "win_rate_window": 0.7,
+            "tiles": 407
+          },
+          {
+            "game": 220,
+            "win_rate_window": 0.65,
+            "tiles": 442
+          },
+          {
+            "game": 240,
+            "win_rate_window": 0.65,
+            "tiles": 467
+          },
+          {
+            "game": 260,
+            "win_rate_window": 0.55,
+            "tiles": 493
+          },
+          {
+            "game": 280,
+            "win_rate_window": 0.65,
+            "tiles": 519
+          },
+          {
+            "game": 300,
+            "win_rate_window": 0.5,
+            "tiles": 547
+          },
+          {
+            "game": 320,
+            "win_rate_window": 0.05,
+            "tiles": 563
+          },
+          {
+            "game": 340,
+            "win_rate_window": 0.0,
+            "tiles": 573
+          },
+          {
+            "game": 360,
+            "win_rate_window": 0.0,
+            "tiles": 584
+          },
+          {
+            "game": 380,
+            "win_rate_window": 0.0,
+            "tiles": 594
+          },
+          {
+            "game": 400,
+            "win_rate_window": 0.0,
+            "tiles": 606
+          },
+          {
+            "game": 420,
+            "win_rate_window": 0.05,
+            "tiles": 612
+          },
+          {
+            "game": 440,
+            "win_rate_window": 0.05,
+            "tiles": 617
+          },
+          {
+            "game": 460,
+            "win_rate_window": 0.0,
+            "tiles": 620
+          },
+          {
+            "game": 480,
+            "win_rate_window": 0.0,
+            "tiles": 622
+          },
+          {
+            "game": 500,
+            "win_rate_window": 0.0,
+            "tiles": 628
+          }
+        ],
+        "tile_churn_after_switch": 0,
+        "tile_total_after_switch": 547,
+        "tile_churn_rate": 0.0,
+        "win_rate_before_switch": 0.6167,
+        "win_rate_after_switch": 0.0167,
+        "adaptation_game": null,
+        "adaptation_speed": null,
+        "final_tiles": 628
+      },
+      {
+        "decay_rate": 0.1,
+        "switch_opponent": true,
+        "total_games": 500,
+        "switch_point": 300,
+        "games": [
+          {
+            "game": 20,
+            "win_rate_window": 0.65,
+            "tiles": 58
+          },
+          {
+            "game": 40,
+            "win_rate_window": 0.8,
+            "tiles": 107
+          },
+          {
+            "game": 60,
+            "win_rate_window": 0.6,
+            "tiles": 154
+          },
+          {
+            "game": 80,
+            "win_rate_window": 0.5,
+            "tiles": 191
+          },
+          {
+            "game": 100,
+            "win_rate_window": 0.8,
+            "tiles": 234
+          },
+          {
+            "game": 120,
+            "win_rate_window": 0.7,
+            "tiles": 270
+          },
+          {
+            "game": 140,
+            "win_rate_window": 0.6,
+            "tiles": 301
+          },
+          {
+            "game": 160,
+            "win_rate_window": 0.75,
+            "tiles": 341
+          },
+          {
+            "game": 180,
+            "win_rate_window": 0.85,
+            "tiles": 374
+          },
+          {
+            "game": 200,
+            "win_rate_window": 0.7,
+            "tiles": 407
+          },
+          {
+            "game": 220,
+            "win_rate_window": 0.65,
+            "tiles": 442
+          },
+          {
+            "game": 240,
+            "win_rate_window": 0.65,
+            "tiles": 467
+          },
+          {
+            "game": 260,
+            "win_rate_window": 0.55,
+            "tiles": 493
+          },
+          {
+            "game": 280,
+            "win_rate_window": 0.65,
+            "tiles": 519
+          },
+          {
+            "game": 300,
+            "win_rate_window": 0.5,
+            "tiles": 547
+          },
+          {
+            "game": 320,
+            "win_rate_window": 0.05,
+            "tiles": 563
+          },
+          {
+            "game": 340,
+            "win_rate_window": 0.0,
+            "tiles": 573
+          },
+          {
+            "game": 360,
+            "win_rate_window": 0.0,
+            "tiles": 584
+          },
+          {
+            "game": 380,
+            "win_rate_window": 0.0,
+            "tiles": 594
+          },
+          {
+            "game": 400,
+            "win_rate_window": 0.0,
+            "tiles": 606
+          },
+          {
+            "game": 420,
+            "win_rate_window": 0.05,
+            "tiles": 612
+          },
+          {
+            "game": 440,
+            "win_rate_window": 0.05,
+            "tiles": 617
+          },
+          {
+            "game": 460,
+            "win_rate_window": 0.0,
+            "tiles": 620
+          },
+          {
+            "game": 480,
+            "win_rate_window": 0.0,
+            "tiles": 622
+          },
+          {
+            "game": 500,
+            "win_rate_window": 0.0,
+            "tiles": 628
+          }
+        ],
+        "tile_churn_after_switch": 0,
+        "tile_total_after_switch": 547,
+        "tile_churn_rate": 0.0,
+        "win_rate_before_switch": 0.6167,
+        "win_rate_after_switch": 0.0167,
+        "adaptation_game": null,
+        "adaptation_speed": null,
+        "final_tiles": 628
+      }
+    ],
+    "without_switch": [
+      {
+        "decay_rate": 0.0,
+        "switch_opponent": false,
+        "total_games": 500,
+        "switch_point": 300,
+        "games": [
+          {
+            "game": 20,
+            "win_rate_window": 0.65,
+            "tiles": 58
+          },
+          {
+            "game": 40,
+            "win_rate_window": 0.8,
+            "tiles": 107
+          },
+          {
+            "game": 60,
+            "win_rate_window": 0.6,
+            "tiles": 154
+          },
+          {
+            "game": 80,
+            "win_rate_window": 0.5,
+            "tiles": 191
+          },
+          {
+            "game": 100,
+            "win_rate_window": 0.8,
+            "tiles": 234
+          },
+          {
+            "game": 120,
+            "win_rate_window": 0.7,
+            "tiles": 270
+          },
+          {
+            "game": 140,
+            "win_rate_window": 0.6,
+            "tiles": 301
+          },
+          {
+            "game": 160,
+            "win_rate_window": 0.75,
+            "tiles": 341
+          },
+          {
+            "game": 180,
+            "win_rate_window": 0.85,
+            "tiles": 374
+          },
+          {
+            "game": 200,
+            "win_rate_window": 0.7,
+            "tiles": 407
+          },
+          {
+            "game": 220,
+            "win_rate_window": 0.65,
+            "tiles": 442
+          },
+          {
+            "game": 240,
+            "win_rate_window": 0.65,
+            "tiles": 467
+          },
+          {
+            "game": 260,
+            "win_rate_window": 0.55,
+            "tiles": 493
+          },
+          {
+            "game": 280,
+            "win_rate_window": 0.65,
+            "tiles": 519
+          },
+          {
+            "game": 300,
+            "win_rate_window": 0.5,
+            "tiles": 547
+          },
+          {
+            "game": 320,
+            "win_rate_window": 0.65,
+            "tiles": 578
+          },
+          {
+            "game": 340,
+            "win_rate_window": 0.7,
+            "tiles": 605
+          },
+          {
+            "game": 360,
+            "win_rate_window": 0.65,
+            "tiles": 633
+          },
+          {
+            "game": 380,
+            "win_rate_window": 0.6,
+            "tiles": 658
+          },
+          {
+            "game": 400,
+            "win_rate_window": 0.65,
+            "tiles": 681
+          },
+          {
+            "game": 420,
+            "win_rate_window": 0.65,
+            "tiles": 705
+          },
+          {
+            "game": 440,
+            "win_rate_window": 0.7,
+            "tiles": 730
+          },
+          {
+            "game": 460,
+            "win_rate_window": 0.7,
+            "tiles": 753
+          },
+          {
+            "game": 480,
+            "win_rate_window": 0.7,
+            "tiles": 774
+          },
+          {
+            "game": 500,
+            "win_rate_window": 0.75,
+            "tiles": 795
+          }
+        ],
+        "win_rate_before_switch": 0.6167,
+        "win_rate_after_switch": 0.6917,
+        "adaptation_game": null,
+        "adaptation_speed": null,
+        "final_tiles": 795
+      },
+      {
+        "decay_rate": 0.001,
+        "switch_opponent": false,
+        "total_games": 500,
+        "switch_point": 300,
+        "games": [
+          {
+            "game": 20,
+            "win_rate_window": 0.65,
+            "tiles": 58
+          },
+          {
+            "game": 40,
+            "win_rate_window": 0.8,
+            "tiles": 107
+          },
+          {
+            "game": 60,
+            "win_rate_window": 0.6,
+            "tiles": 154
+          },
+          {
+            "game": 80,
+            "win_rate_window": 0.5,
+            "tiles": 191
+          },
+          {
+            "game": 100,
+            "win_rate_window": 0.8,
+            "tiles": 234
+          },
+          {
+            "game": 120,
+            "win_rate_window": 0.7,
+            "tiles": 270
+          },
+          {
+            "game": 140,
+            "win_rate_window": 0.6,
+            "tiles": 301
+          },
+          {
+            "game": 160,
+            "win_rate_window": 0.75,
+            "tiles": 341
+          },
+          {
+            "game": 180,
+            "win_rate_window": 0.85,
+            "tiles": 374
+          },
+          {
+            "game": 200,
+            "win_rate_window": 0.7,
+            "tiles": 407
+          },
+          {
+            "game": 220,
+            "win_rate_window": 0.65,
+            "tiles": 442
+          },
+          {
+            "game": 240,
+            "win_rate_window": 0.65,
+            "tiles": 467
+          },
+          {
+            "game": 260,
+            "win_rate_window": 0.55,
+            "tiles": 493
+          },
+          {
+            "game": 280,
+            "win_rate_window": 0.65,
+            "tiles": 519
+          },
+          {
+            "game": 300,
+            "win_rate_window": 0.5,
+            "tiles": 547
+          },
+          {
+            "game": 320,
+            "win_rate_window": 0.65,
+            "tiles": 578
+          },
+          {
+            "game": 340,
+            "win_rate_window": 0.7,
+            "tiles": 605
+          },
+          {
+            "game": 360,
+            "win_rate_window": 0.65,
+            "tiles": 633
+          },
+          {
+            "game": 380,
+            "win_rate_window": 0.6,
+            "tiles": 658
+          },
+          {
+            "game": 400,
+            "win_rate_window": 0.65,
+            "tiles": 681
+          },
+          {
+            "game": 420,
+            "win_rate_window": 0.65,
+            "tiles": 705
+          },
+          {
+            "game": 440,
+            "win_rate_window": 0.7,
+            "tiles": 730
+          },
+          {
+            "game": 460,
+            "win_rate_window": 0.7,
+            "tiles": 753
+          },
+          {
+            "game": 480,
+            "win_rate_window": 0.7,
+            "tiles": 774
+          },
+          {
+            "game": 500,
+            "win_rate_window": 0.75,
+            "tiles": 795
+          }
+        ],
+        "win_rate_before_switch": 0.6167,
+        "win_rate_after_switch": 0.6917,
+        "adaptation_game": null,
+        "adaptation_speed": null,
+        "final_tiles": 795
+      },
+      {
+        "decay_rate": 0.005,
+        "switch_opponent": false,
+        "total_games": 500,
+        "switch_point": 300,
+        "games": [
+          {
+            "game": 20,
+            "win_rate_window": 0.65,
+            "tiles": 58
+          },
+          {
+            "game": 40,
+            "win_rate_window": 0.8,
+            "tiles": 107
+          },
+          {
+            "game": 60,
+            "win_rate_window": 0.6,
+            "tiles": 154
+          },
+          {
+            "game": 80,
+            "win_rate_window": 0.5,
+            "tiles": 191
+          },
+          {
+            "game": 100,
+            "win_rate_window": 0.8,
+            "tiles": 234
+          },
+          {
+            "game": 120,
+            "win_rate_window": 0.7,
+            "tiles": 270
+          },
+          {
+            "game": 140,
+            "win_rate_window": 0.6,
+            "tiles": 301
+          },
+          {
+            "game": 160,
+            "win_rate_window": 0.75,
+            "tiles": 341
+          },
+          {
+            "game": 180,
+            "win_rate_window": 0.85,
+            "tiles": 374
+          },
+          {
+            "game": 200,
+            "win_rate_window": 0.7,
+            "tiles": 407
+          },
+          {
+            "game": 220,
+            "win_rate_window": 0.65,
+            "tiles": 442
+          },
+          {
+            "game": 240,
+            "win_rate_window": 0.65,
+            "tiles": 467
+          },
+          {
+            "game": 260,
+            "win_rate_window": 0.55,
+            "tiles": 493
+          },
+          {
+            "game": 280,
+            "win_rate_window": 0.65,
+            "tiles": 519
+          },
+          {
+            "game": 300,
+            "win_rate_window": 0.5,
+            "tiles": 547
+          },
+          {
+            "game": 320,
+            "win_rate_window": 0.65,
+            "tiles": 578
+          },
+          {
+            "game": 340,
+            "win_rate_window": 0.7,
+            "tiles": 605
+          },
+          {
+            "game": 360,
+            "win_rate_window": 0.65,
+            "tiles": 633
+          },
+          {
+            "game": 380,
+            "win_rate_window": 0.6,
+            "tiles": 658
+          },
+          {
+            "game": 400,
+            "win_rate_window": 0.65,
+            "tiles": 681
+          },
+          {
+            "game": 420,
+            "win_rate_window": 0.65,
+            "tiles": 705
+          },
+          {
+            "game": 440,
+            "win_rate_window": 0.7,
+            "tiles": 730
+          },
+          {
+            "game": 460,
+            "win_rate_window": 0.7,
+            "tiles": 753
+          },
+          {
+            "game": 480,
+            "win_rate_window": 0.7,
+            "tiles": 774
+          },
+          {
+            "game": 500,
+            "win_rate_window": 0.75,
+            "tiles": 795
+          }
+        ],
+        "win_rate_before_switch": 0.6167,
+        "win_rate_after_switch": 0.6917,
+        "adaptation_game": null,
+        "adaptation_speed": null,
+        "final_tiles": 795
+      },
+      {
+        "decay_rate": 0.01,
+        "switch_opponent": false,
+        "total_games": 500,
+        "switch_point": 300,
+        "games": [
+          {
+            "game": 20,
+            "win_rate_window": 0.65,
+            "tiles": 58
+          },
+          {
+            "game": 40,
+            "win_rate_window": 0.8,
+            "tiles": 107
+          },
+          {
+            "game": 60,
+            "win_rate_window": 0.6,
+            "tiles": 154
+          },
+          {
+            "game": 80,
+            "win_rate_window": 0.5,
+            "tiles": 191
+          },
+          {
+            "game": 100,
+            "win_rate_window": 0.8,
+            "tiles": 234
+          },
+          {
+            "game": 120,
+            "win_rate_window": 0.7,
+            "tiles": 270
+          },
+          {
+            "game": 140,
+            "win_rate_window": 0.6,
+            "tiles": 301
+          },
+          {
+            "game": 160,
+            "win_rate_window": 0.75,
+            "tiles": 341
+          },
+          {
+            "game": 180,
+            "win_rate_window": 0.85,
+            "tiles": 374
+          },
+          {
+            "game": 200,
+            "win_rate_window": 0.7,
+            "tiles": 407
+          },
+          {
+            "game": 220,
+            "win_rate_window": 0.65,
+            "tiles": 442
+          },
+          {
+            "game": 240,
+            "win_rate_window": 0.65,
+            "tiles": 467
+          },
+          {
+            "game": 260,
+            "win_rate_window": 0.55,
+            "tiles": 493
+          },
+          {
+            "game": 280,
+            "win_rate_window": 0.65,
+            "tiles": 519
+          },
+          {
+            "game": 300,
+            "win_rate_window": 0.5,
+            "tiles": 547
+          },
+          {
+            "game": 320,
+            "win_rate_window": 0.65,
+            "tiles": 578
+          },
+          {
+            "game": 340,
+            "win_rate_window": 0.7,
+            "tiles": 605
+          },
+          {
+            "game": 360,
+            "win_rate_window": 0.65,
+            "tiles": 633
+          },
+          {
+            "game": 380,
+            "win_rate_window": 0.6,
+            "tiles": 658
+          },
+          {
+            "game": 400,
+            "win_rate_window": 0.65,
+            "tiles": 681
+          },
+          {
+            "game": 420,
+            "win_rate_window": 0.65,
+            "tiles": 705
+          },
+          {
+            "game": 440,
+            "win_rate_window": 0.7,
+            "tiles": 730
+          },
+          {
+            "game": 460,
+            "win_rate_window": 0.7,
+            "tiles": 753
+          },
+          {
+            "game": 480,
+            "win_rate_window": 0.7,
+            "tiles": 774
+          },
+          {
+            "game": 500,
+            "win_rate_window": 0.75,
+            "tiles": 795
+          }
+        ],
+        "win_rate_before_switch": 0.6167,
+        "win_rate_after_switch": 0.6917,
+        "adaptation_game": null,
+        "adaptation_speed": null,
+        "final_tiles": 795
+      },
+      {
+        "decay_rate": 0.02,
+        "switch_opponent": false,
+        "total_games": 500,
+        "switch_point": 300,
+        "games": [
+          {
+            "game": 20,
+            "win_rate_window": 0.65,
+            "tiles": 58
+          },
+          {
+            "game": 40,
+            "win_rate_window": 0.8,
+            "tiles": 107
+          },
+          {
+            "game": 60,
+            "win_rate_window": 0.6,
+            "tiles": 154
+          },
+          {
+            "game": 80,
+            "win_rate_window": 0.5,
+            "tiles": 191
+          },
+          {
+            "game": 100,
+            "win_rate_window": 0.8,
+            "tiles": 234
+          },
+          {
+            "game": 120,
+            "win_rate_window": 0.7,
+            "tiles": 270
+          },
+          {
+            "game": 140,
+            "win_rate_window": 0.6,
+            "tiles": 301
+          },
+          {
+            "game": 160,
+            "win_rate_window": 0.75,
+            "tiles": 341
+          },
+          {
+            "game": 180,
+            "win_rate_window": 0.85,
+            "tiles": 374
+          },
+          {
+            "game": 200,
+            "win_rate_window": 0.7,
+            "tiles": 407
+          },
+          {
+            "game": 220,
+            "win_rate_window": 0.65,
+            "tiles": 442
+          },
+          {
+            "game": 240,
+            "win_rate_window": 0.65,
+            "tiles": 467
+          },
+          {
+            "game": 260,
+            "win_rate_window": 0.55,
+            "tiles": 493
+          },
+          {
+            "game": 280,
+            "win_rate_window": 0.65,
+            "tiles": 519
+          },
+          {
+            "game": 300,
+            "win_rate_window": 0.5,
+            "tiles": 547
+          },
+          {
+            "game": 320,
+            "win_rate_window": 0.65,
+            "tiles": 578
+          },
+          {
+            "game": 340,
+            "win_rate_window": 0.7,
+            "tiles": 605
+          },
+          {
+            "game": 360,
+            "win_rate_window": 0.65,
+            "tiles": 633
+          },
+          {
+            "game": 380,
+            "win_rate_window": 0.6,
+            "tiles": 658
+          },
+          {
+            "game": 400,
+            "win_rate_window": 0.65,
+            "tiles": 681
+          },
+          {
+            "game": 420,
+            "win_rate_window": 0.65,
+            "tiles": 705
+          },
+          {
+            "game": 440,
+            "win_rate_window": 0.7,
+            "tiles": 730
+          },
+          {
+            "game": 460,
+            "win_rate_window": 0.7,
+            "tiles": 753
+          },
+          {
+            "game": 480,
+            "win_rate_window": 0.7,
+            "tiles": 774
+          },
+          {
+            "game": 500,
+            "win_rate_window": 0.75,
+            "tiles": 795
+          }
+        ],
+        "win_rate_before_switch": 0.6167,
+        "win_rate_after_switch": 0.6917,
+        "adaptation_game": null,
+        "adaptation_speed": null,
+        "final_tiles": 795
+      },
+      {
+        "decay_rate": 0.05,
+        "switch_opponent": false,
+        "total_games": 500,
+        "switch_point": 300,
+        "games": [
+          {
+            "game": 20,
+            "win_rate_window": 0.65,
+            "tiles": 58
+          },
+          {
+            "game": 40,
+            "win_rate_window": 0.8,
+            "tiles": 107
+          },
+          {
+            "game": 60,
+            "win_rate_window": 0.6,
+            "tiles": 154
+          },
+          {
+            "game": 80,
+            "win_rate_window": 0.5,
+            "tiles": 191
+          },
+          {
+            "game": 100,
+            "win_rate_window": 0.8,
+            "tiles": 234
+          },
+          {
+            "game": 120,
+            "win_rate_window": 0.7,
+            "tiles": 270
+          },
+          {
+            "game": 140,
+            "win_rate_window": 0.6,
+            "tiles": 301
+          },
+          {
+            "game": 160,
+            "win_rate_window": 0.75,
+            "tiles": 341
+          },
+          {
+            "game": 180,
+            "win_rate_window": 0.85,
+            "tiles": 374
+          },
+          {
+            "game": 200,
+            "win_rate_window": 0.7,
+            "tiles": 407
+          },
+          {
+            "game": 220,
+            "win_rate_window": 0.65,
+            "tiles": 442
+          },
+          {
+            "game": 240,
+            "win_rate_window": 0.65,
+            "tiles": 467
+          },
+          {
+            "game": 260,
+            "win_rate_window": 0.55,
+            "tiles": 493
+          },
+          {
+            "game": 280,
+            "win_rate_window": 0.65,
+            "tiles": 519
+          },
+          {
+            "game": 300,
+            "win_rate_window": 0.5,
+            "tiles": 547
+          },
+          {
+            "game": 320,
+            "win_rate_window": 0.65,
+            "tiles": 578
+          },
+          {
+            "game": 340,
+            "win_rate_window": 0.7,
+            "tiles": 605
+          },
+          {
+            "game": 360,
+            "win_rate_window": 0.65,
+            "tiles": 633
+          },
+          {
+            "game": 380,
+            "win_rate_window": 0.6,
+            "tiles": 658
+          },
+          {
+            "game": 400,
+            "win_rate_window": 0.65,
+            "tiles": 681
+          },
+          {
+            "game": 420,
+            "win_rate_window": 0.65,
+            "tiles": 705
+          },
+          {
+            "game": 440,
+            "win_rate_window": 0.7,
+            "tiles": 730
+          },
+          {
+            "game": 460,
+            "win_rate_window": 0.7,
+            "tiles": 753
+          },
+          {
+            "game": 480,
+            "win_rate_window": 0.7,
+            "tiles": 774
+          },
+          {
+            "game": 500,
+            "win_rate_window": 0.75,
+            "tiles": 795
+          }
+        ],
+        "win_rate_before_switch": 0.6167,
+        "win_rate_after_switch": 0.6917,
+        "adaptation_game": null,
+        "adaptation_speed": null,
+        "final_tiles": 795
+      },
+      {
+        "decay_rate": 0.1,
+        "switch_opponent": false,
+        "total_games": 500,
+        "switch_point": 300,
+        "games": [
+          {
+            "game": 20,
+            "win_rate_window": 0.65,
+            "tiles": 58
+          },
+          {
+            "game": 40,
+            "win_rate_window": 0.8,
+            "tiles": 107
+          },
+          {
+            "game": 60,
+            "win_rate_window": 0.6,
+            "tiles": 154
+          },
+          {
+            "game": 80,
+            "win_rate_window": 0.5,
+            "tiles": 191
+          },
+          {
+            "game": 100,
+            "win_rate_window": 0.8,
+            "tiles": 234
+          },
+          {
+            "game": 120,
+            "win_rate_window": 0.7,
+            "tiles": 270
+          },
+          {
+            "game": 140,
+            "win_rate_window": 0.6,
+            "tiles": 301
+          },
+          {
+            "game": 160,
+            "win_rate_window": 0.75,
+            "tiles": 341
+          },
+          {
+            "game": 180,
+            "win_rate_window": 0.85,
+            "tiles": 374
+          },
+          {
+            "game": 200,
+            "win_rate_window": 0.7,
+            "tiles": 407
+          },
+          {
+            "game": 220,
+            "win_rate_window": 0.65,
+            "tiles": 442
+          },
+          {
+            "game": 240,
+            "win_rate_window": 0.65,
+            "tiles": 467
+          },
+          {
+            "game": 260,
+            "win_rate_window": 0.55,
+            "tiles": 493
+          },
+          {
+            "game": 280,
+            "win_rate_window": 0.65,
+            "tiles": 519
+          },
+          {
+            "game": 300,
+            "win_rate_window": 0.5,
+            "tiles": 547
+          },
+          {
+            "game": 320,
+            "win_rate_window": 0.65,
+            "tiles": 578
+          },
+          {
+            "game": 340,
+            "win_rate_window": 0.7,
+            "tiles": 605
+          },
+          {
+            "game": 360,
+            "win_rate_window": 0.65,
+            "tiles": 633
+          },
+          {
+            "game": 380,
+            "win_rate_window": 0.6,
+            "tiles": 658
+          },
+          {
+            "game": 400,
+            "win_rate_window": 0.65,
+            "tiles": 681
+          },
+          {
+            "game": 420,
+            "win_rate_window": 0.65,
+            "tiles": 705
+          },
+          {
+            "game": 440,
+            "win_rate_window": 0.7,
+            "tiles": 730
+          },
+          {
+            "game": 460,
+            "win_rate_window": 0.7,
+            "tiles": 753
+          },
+          {
+            "game": 480,
+            "win_rate_window": 0.7,
+            "tiles": 774
+          },
+          {
+            "game": 500,
+            "win_rate_window": 0.75,
+            "tiles": 795
+          }
+        ],
+        "win_rate_before_switch": 0.6167,
+        "win_rate_after_switch": 0.6917,
+        "adaptation_game": null,
+        "adaptation_speed": null,
+        "final_tiles": 795
+      }
+    ]
+  }
+}

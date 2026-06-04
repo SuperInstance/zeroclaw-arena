@@ -1,0 +1,938 @@
+{
+  "experiment": "continuous_tile_field",
+  "description": "Tile field on continuous action space (2D navigation), discretized into bins",
+  "hypothesis": "Conservation weakens as bins increase, breaking down at a critical count",
+  "parameters": {
+    "game": "2D navigation: (0,0) \u2192 (1,1), step \u2208 [-0.3, 0.3]",
+    "bin_counts": [
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "n_runs": 5,
+    "num_episodes": 2000
+  },
+  "results": {
+    "4": {
+      "n_bins": 4,
+      "n_actions": 16,
+      "convergence": {
+        "mean_episode": 169.2,
+        "std_episode": 46.11463975789034,
+        "converged_runs": 5,
+        "total_runs": 5
+      },
+      "performance": {
+        "mean_reached_rate": 0.914,
+        "std_reached_rate": 0.04270831300812524,
+        "cv_reached_rate": 0.046726819483725646
+      },
+      "conservation": {
+        "negative_fraction": {
+          "mean": 0.32599836261213316,
+          "std": 0.029481242449700375,
+          "cv": 0.09043371326615102
+        },
+        "positive_fraction": {
+          "mean": 0.0012090431922003038,
+          "std": 0.00045835604649534543
+        },
+        "mean_within_tile_variance": {
+          "mean": 0.006865873198417578,
+          "std": 0.0010509771053855098
+        },
+        "score_cv_across_runs": {
+          "mean": 0.32635323274384026,
+          "cv_of_cv": 0.037110137625085166
+        }
+      },
+      "runs": [
+        {
+          "n_bins": 4,
+          "n_actions": 16,
+          "seed": 42,
+          "convergence_episode": 83,
+          "episodes_run": 532,
+          "tiles_created": 274,
+          "performance": {
+            "total_reached": 269,
+            "last_100_reached": 90,
+            "reached_rate": 0.5056390977443609,
+            "last_100_reached_rate": 0.9,
+            "avg_final_distance_last_100": 0.17504506021039834
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.3952337374878756,
+              "std": 0.12586794968785484,
+              "min": 0.06368409963688083,
+              "max": 0.9460724163943605
+            },
+            "negative_fraction": 0.3029197080291971,
+            "positive_fraction": 0.0009124087591240876,
+            "mean_within_tile_variance": 0.0065696908098899715
+          },
+          "score_cv": 0.318464588797195,
+          "total_score_count": 4384
+        },
+        {
+          "n_bins": 4,
+          "n_actions": 16,
+          "seed": 142,
+          "convergence_episode": 195,
+          "episodes_run": 532,
+          "tiles_created": 283,
+          "performance": {
+            "total_reached": 261,
+            "last_100_reached": 92,
+            "reached_rate": 0.4906015037593985,
+            "last_100_reached_rate": 0.92,
+            "avg_final_distance_last_100": 0.14217904652640254
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.3837161412413885,
+              "std": 0.12632705334897643,
+              "min": 0.06985030897257163,
+              "max": 0.8470544339526755
+            },
+            "negative_fraction": 0.35556537102473496,
+            "positive_fraction": 0.0011042402826855124,
+            "mean_within_tile_variance": 0.006791695980473062
+          },
+          "score_cv": 0.3292200660110008,
+          "total_score_count": 4528
+        },
+        {
+          "n_bins": 4,
+          "n_actions": 16,
+          "seed": 242,
+          "convergence_episode": 193,
+          "episodes_run": 532,
+          "tiles_created": 270,
+          "performance": {
+            "total_reached": 260,
+            "last_100_reached": 90,
+            "reached_rate": 0.48872180451127817,
+            "last_100_reached_rate": 0.9,
+            "avg_final_distance_last_100": 0.0709744972714711
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.3895859856993222,
+              "std": 0.12563450279911917,
+              "min": 0.08960241101941073,
+              "max": 0.9374842224750337
+            },
+            "negative_fraction": 0.3113425925925926,
+            "positive_fraction": 0.001388888888888889,
+            "mean_within_tile_variance": 0.006120122641533527
+          },
+          "score_cv": 0.3224820897332852,
+          "total_score_count": 4320
+        },
+        {
+          "n_bins": 4,
+          "n_actions": 16,
+          "seed": 342,
+          "convergence_episode": 162,
+          "episodes_run": 532,
+          "tiles_created": 220,
+          "performance": {
+            "total_reached": 334,
+            "last_100_reached": 99,
+            "reached_rate": 0.6278195488721805,
+            "last_100_reached_rate": 0.99,
+            "avg_final_distance_last_100": 0.013630145812734678
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.38784813687161934,
+              "std": 0.13506467032016173,
+              "min": 0.06710073532535822,
+              "max": 0.9408759981842996
+            },
+            "negative_fraction": 0.36676136363636364,
+            "positive_fraction": 0.0019886363636363634,
+            "mean_within_tile_variance": 0.008881759421178245
+          },
+          "score_cv": 0.34824112192362844,
+          "total_score_count": 3520
+        },
+        {
+          "n_bins": 4,
+          "n_actions": 16,
+          "seed": 442,
+          "convergence_episode": 213,
+          "episodes_run": 532,
+          "tiles_created": 288,
+          "performance": {
+            "total_reached": 246,
+            "last_100_reached": 86,
+            "reached_rate": 0.462406015037594,
+            "last_100_reached_rate": 0.86,
+            "avg_final_distance_last_100": 0.12349579121276243
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.3972823126493929,
+              "std": 0.12449170902098153,
+              "min": 0.06390641947218467,
+              "max": 0.82290670858355
+            },
+            "negative_fraction": 0.2934027777777778,
+            "positive_fraction": 0.0006510416666666666,
+            "mean_within_tile_variance": 0.005966097139013084
+          },
+          "score_cv": 0.31335829725409187,
+          "total_score_count": 4608
+        }
+      ]
+    },
+    "8": {
+      "n_bins": 8,
+      "n_actions": 64,
+      "convergence": {
+        "mean_episode": 426.0,
+        "std_episode": 0.0,
+        "converged_runs": 1,
+        "total_runs": 5
+      },
+      "performance": {
+        "mean_reached_rate": 0.06,
+        "std_reached_rate": 0.12000000000000001,
+        "cv_reached_rate": 2.0000000000000004
+      },
+      "conservation": {
+        "negative_fraction": {
+          "mean": 0.25580945670053395,
+          "std": 0.01832109073931087,
+          "cv": 0.07162006821647196
+        },
+        "positive_fraction": {
+          "mean": 4.832474226804124e-05,
+          "std": 9.664948453608247e-05
+        },
+        "mean_within_tile_variance": {
+          "mean": 0.00629320484541022,
+          "std": 0.00039807576046929063
+        },
+        "score_cv_across_runs": {
+          "mean": 0.30034555920005507,
+          "cv_of_cv": 0.03734100510017691
+        }
+      },
+      "runs": [
+        {
+          "n_bins": 8,
+          "n_actions": 64,
+          "seed": 42,
+          "convergence_episode": null,
+          "episodes_run": 628,
+          "tiles_created": 169,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 0.9814844636198707
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.4111205586121037,
+              "std": 0.12927334420889314,
+              "min": 0.08114322698344456,
+              "max": 0.5
+            },
+            "negative_fraction": 0.27662721893491127,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.007011400298611927
+          },
+          "score_cv": 0.314441449109977,
+          "total_score_count": 10816
+        },
+        {
+          "n_bins": 8,
+          "n_actions": 64,
+          "seed": 142,
+          "convergence_episode": 426,
+          "episodes_run": 628,
+          "tiles_created": 194,
+          "performance": {
+            "total_reached": 61,
+            "last_100_reached": 30,
+            "reached_rate": 0.09713375796178345,
+            "last_100_reached_rate": 0.3,
+            "avg_final_distance_last_100": 0.8093599243556873
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.42544101699189013,
+              "std": 0.1217384241305213,
+              "min": 0.050808654634961495,
+              "max": 0.8952905054342438
+            },
+            "negative_fraction": 0.234777706185567,
+            "positive_fraction": 0.0002416237113402062,
+            "mean_within_tile_variance": 0.005907228831716667
+          },
+          "score_cv": 0.286146420463361,
+          "total_score_count": 12416
+        },
+        {
+          "n_bins": 8,
+          "n_actions": 64,
+          "seed": 242,
+          "convergence_episode": null,
+          "episodes_run": 628,
+          "tiles_created": 174,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 0.9932156398527794
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.41102953667155934,
+              "std": 0.12671530158887817,
+              "min": 0.06390641947218467,
+              "max": 0.5
+            },
+            "negative_fraction": 0.2706537356321839,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.006375145416718722
+          },
+          "score_cv": 0.308287581021537,
+          "total_score_count": 11136
+        },
+        {
+          "n_bins": 8,
+          "n_actions": 64,
+          "seed": 342,
+          "convergence_episode": null,
+          "episodes_run": 628,
+          "tiles_created": 173,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 0.9881524551393079
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.41464403111004444,
+              "std": 0.12631541129476892,
+              "min": 0.05099833905550802,
+              "max": 0.5
+            },
+            "negative_fraction": 0.26390895953757226,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.006218527348878161
+          },
+          "score_cv": 0.30463578833297,
+          "total_score_count": 11072
+        },
+        {
+          "n_bins": 8,
+          "n_actions": 64,
+          "seed": 442,
+          "convergence_episode": null,
+          "episodes_run": 628,
+          "tiles_created": 193,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 0.9862768378496506
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.42437285039191475,
+              "std": 0.1223112818549712,
+              "min": 0.08441784390081625,
+              "max": 0.5
+            },
+            "negative_fraction": 0.23307966321243523,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.005953722331125625
+          },
+          "score_cv": 0.28821655707243027,
+          "total_score_count": 12352
+        }
+      ]
+    },
+    "16": {
+      "n_bins": 16,
+      "n_actions": 256,
+      "convergence": {
+        "mean_episode": 392.0,
+        "std_episode": 0.0,
+        "converged_runs": 1,
+        "total_runs": 5
+      },
+      "performance": {
+        "mean_reached_rate": 0.0,
+        "std_reached_rate": 0.0,
+        "cv_reached_rate": Infinity
+      },
+      "conservation": {
+        "negative_fraction": {
+          "mean": 0.13740157847045353,
+          "std": 0.005312776802682116,
+          "cv": 0.03866605363507204
+        },
+        "positive_fraction": {
+          "mean": 1.0775862068965516e-05,
+          "std": 2.1551724137931033e-05
+        },
+        "mean_within_tile_variance": {
+          "mean": 0.005792681117566693,
+          "std": 0.00022027130998654836
+        },
+        "score_cv_across_runs": {
+          "mean": 0.23794817503979102,
+          "cv_of_cv": 0.02058882548575631
+        }
+      },
+      "runs": [
+        {
+          "n_bins": 16,
+          "n_actions": 256,
+          "seed": 42,
+          "convergence_episode": null,
+          "episodes_run": 1012,
+          "tiles_created": 130,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 1.1093143788524968
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.4535318898306876,
+              "std": 0.11069013287897872,
+              "min": 0.05058950922888693,
+              "max": 0.5
+            },
+            "negative_fraction": 0.14281850961538461,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.0060038512041983155
+          },
+          "score_cv": 0.24406251326737252,
+          "total_score_count": 33280
+        },
+        {
+          "n_bins": 16,
+          "n_actions": 256,
+          "seed": 142,
+          "convergence_episode": null,
+          "episodes_run": 1012,
+          "tiles_created": 145,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 1.118490953800782
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.45683812693925274,
+              "std": 0.106517433399884,
+              "min": 0.050205549158352854,
+              "max": 0.5
+            },
+            "negative_fraction": 0.13502155172413793,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.0055625588094059255
+          },
+          "score_cv": 0.23316231093392947,
+          "total_score_count": 37120
+        },
+        {
+          "n_bins": 16,
+          "n_actions": 256,
+          "seed": 242,
+          "convergence_episode": 392,
+          "episodes_run": 1012,
+          "tiles_created": 145,
+          "performance": {
+            "total_reached": 1,
+            "last_100_reached": 0,
+            "reached_rate": 0.0009881422924901185,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 1.0871235155151242
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.4578534464014476,
+              "std": 0.1062985084621113,
+              "min": 0.05028196043669801,
+              "max": 0.9493449897456812
+            },
+            "negative_fraction": 0.12860991379310344,
+            "positive_fraction": 5.3879310344827585e-05,
+            "mean_within_tile_variance": 0.005514326399432157
+          },
+          "score_cv": 0.2321671034641691,
+          "total_score_count": 37120
+        },
+        {
+          "n_bins": 16,
+          "n_actions": 256,
+          "seed": 342,
+          "convergence_episode": null,
+          "episodes_run": 1012,
+          "tiles_created": 132,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 1.1323374693244888
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.45315091857280576,
+              "std": 0.11013217313308367,
+              "min": 0.05699372107603208,
+              "max": 0.5
+            },
+            "negative_fraction": 0.14275568181818182,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.006049434334208725
+          },
+          "score_cv": 0.2430364115335876,
+          "total_score_count": 33792
+        },
+        {
+          "n_bins": 16,
+          "n_actions": 256,
+          "seed": 442,
+          "convergence_episode": null,
+          "episodes_run": 1012,
+          "tiles_created": 137,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 1.1371171084869218
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.45590630239143876,
+              "std": 0.10819228079884795,
+              "min": 0.05001075736654948,
+              "max": 0.5
+            },
+            "negative_fraction": 0.13780223540145986,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.0058332348405883425
+          },
+          "score_cv": 0.23731253599989635,
+          "total_score_count": 35072
+        }
+      ]
+    },
+    "32": {
+      "n_bins": 32,
+      "n_actions": 1024,
+      "convergence": {
+        "mean_episode": null,
+        "std_episode": null,
+        "converged_runs": 0,
+        "total_runs": 5
+      },
+      "performance": {
+        "mean_reached_rate": 0.0,
+        "std_reached_rate": 0.0,
+        "cv_reached_rate": Infinity
+      },
+      "conservation": {
+        "negative_fraction": {
+          "mean": 0.07448114338502311,
+          "std": 0.0011390089489075519,
+          "cv": 0.015292581412446297
+        },
+        "positive_fraction": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "mean_within_tile_variance": {
+          "mean": 0.004348669088411564,
+          "std": 8.245677171125418e-05
+        },
+        "score_cv_across_runs": {
+          "mean": 0.18028878780341956,
+          "cv_of_cv": 0.009710961732426663
+        }
+      },
+      "runs": [
+        {
+          "n_bins": 32,
+          "n_actions": 1024,
+          "seed": 42,
+          "convergence_episode": null,
+          "episodes_run": 2000,
+          "tiles_created": 130,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 1.2242686968319607
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.47479650332012296,
+              "std": 0.08711732657798302,
+              "min": 0.05000000112409829,
+              "max": 0.5
+            },
+            "negative_fraction": 0.07663010817307692,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.004506280904859049
+          },
+          "score_cv": 0.18348350497275195,
+          "total_score_count": 133120
+        },
+        {
+          "n_bins": 32,
+          "n_actions": 1024,
+          "seed": 142,
+          "convergence_episode": null,
+          "episodes_run": 2000,
+          "tiles_created": 137,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 1.2157174723053996
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.4760171019483193,
+              "std": 0.08496659691885483,
+              "min": 0.050000000910519614,
+              "max": 0.5
+            },
+            "negative_fraction": 0.07392649406934307,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.004276501072264973
+          },
+          "score_cv": 0.17849484098594334,
+          "total_score_count": 140288
+        },
+        {
+          "n_bins": 32,
+          "n_actions": 1024,
+          "seed": 242,
+          "convergence_episode": null,
+          "episodes_run": 2000,
+          "tiles_created": 133,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 1.210677686497608
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.47600525408031025,
+              "std": 0.08518157296553343,
+              "min": 0.050000000483887454,
+              "max": 0.5
+            },
+            "negative_fraction": 0.07327890037593984,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.004301293773043457
+          },
+          "score_cv": 0.17895090912412878,
+          "total_score_count": 136192
+        },
+        {
+          "n_bins": 32,
+          "n_actions": 1024,
+          "seed": 342,
+          "convergence_episode": null,
+          "episodes_run": 2000,
+          "tiles_created": 134,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 1.1989499292106804
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.47574220998580036,
+              "std": 0.08586747060557391,
+              "min": 0.050000002115189256,
+              "max": 0.5
+            },
+            "negative_fraction": 0.07414587220149253,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.004307534354004577
+          },
+          "score_cv": 0.18049159566509104,
+          "total_score_count": 137216
+        },
+        {
+          "n_bins": 32,
+          "n_actions": 1024,
+          "seed": 442,
+          "convergence_episode": null,
+          "episodes_run": 2000,
+          "tiles_created": 133,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 1.1795136063946519
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.47558631962632264,
+              "std": 0.08561651799770517,
+              "min": 0.05000000043549871,
+              "max": 0.5
+            },
+            "negative_fraction": 0.07442434210526316,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.004351735337885768
+          },
+          "score_cv": 0.1800230882691826,
+          "total_score_count": 136192
+        }
+      ]
+    },
+    "64": {
+      "n_bins": 64,
+      "n_actions": 4096,
+      "convergence": {
+        "mean_episode": null,
+        "std_episode": null,
+        "converged_runs": 0,
+        "total_runs": 5
+      },
+      "performance": {
+        "mean_reached_rate": 0.0,
+        "std_reached_rate": 0.0,
+        "cv_reached_rate": Infinity
+      },
+      "conservation": {
+        "negative_fraction": {
+          "mean": 0.02526486760712061,
+          "std": 0.0005899514688570395,
+          "cv": 0.02335066535993913
+        },
+        "positive_fraction": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "mean_within_tile_variance": {
+          "mean": 0.0020810851626376996,
+          "std": 5.444677660832754e-05
+        },
+        "score_cv_across_runs": {
+          "mean": 0.11003818939363208,
+          "cv_of_cv": 0.010819066127818383
+        }
+      },
+      "runs": [
+        {
+          "n_bins": 64,
+          "n_actions": 4096,
+          "seed": 42,
+          "convergence_episode": null,
+          "episodes_run": 2000,
+          "tiles_created": 111,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 1.2742420601408484
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.491261928352808,
+              "std": 0.0541425417954753,
+              "min": 0.05000000031747856,
+              "max": 0.5
+            },
+            "negative_fraction": 0.025425816441441443,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.0020862677994973257
+          },
+          "score_cv": 0.11021114943104633,
+          "total_score_count": 454656
+        },
+        {
+          "n_bins": 64,
+          "n_actions": 4096,
+          "seed": 142,
+          "convergence_episode": null,
+          "episodes_run": 2000,
+          "tiles_created": 112,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 1.2429788735778724
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.4913662141609905,
+              "std": 0.0537121362067154,
+              "min": 0.05000000039194884,
+              "max": 0.5
+            },
+            "negative_fraction": 0.025183541434151784,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.0020699200223600416
+          },
+          "score_cv": 0.10931182213744398,
+          "total_score_count": 458752
+        },
+        {
+          "n_bins": 64,
+          "n_actions": 4096,
+          "seed": 242,
+          "convergence_episode": null,
+          "episodes_run": 2000,
+          "tiles_created": 109,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 1.2718746536665655
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.4912902122839067,
+              "std": 0.054150735048656105,
+              "min": 0.050000010273338315,
+              "max": 0.5
+            },
+            "negative_fraction": 0.025256235665137614,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.0020763872968895224
+          },
+          "score_cv": 0.11022148150870038,
+          "total_score_count": 446464
+        },
+        {
+          "n_bins": 64,
+          "n_actions": 4096,
+          "seed": 342,
+          "convergence_episode": null,
+          "episodes_run": 2000,
+          "tiles_created": 113,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 1.2511900219082812
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.4915985114603125,
+              "std": 0.05330433552016445,
+              "min": 0.050000000483887454,
+              "max": 0.5
+            },
+            "negative_fraction": 0.02430603567477876,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.002001009797560347
+          },
+          "score_cv": 0.10843062840410529,
+          "total_score_count": 462848
+        },
+        {
+          "n_bins": 64,
+          "n_actions": 4096,
+          "seed": 442,
+          "convergence_episode": null,
+          "episodes_run": 2000,
+          "tiles_created": 107,
+          "performance": {
+            "total_reached": 0,
+            "last_100_reached": 0,
+            "reached_rate": 0.0,
+            "last_100_reached_rate": 0.0,
+            "avg_final_distance_last_100": 1.2551352913362614
+          },
+          "conservation": {
+            "score_distribution": {
+              "mean": 0.4909672926120492,
+              "std": 0.05499612620768129,
+              "min": 0.0500000012489981,
+              "max": 0.5
+            },
+            "negative_fraction": 0.02615270882009346,
+            "positive_fraction": 0.0,
+            "mean_within_tile_variance": 0.0021718408968812606
+          },
+          "score_cv": 0.11201586548686439,
+          "total_score_count": 438272
+        }
+      ]
+    }
+  },
+  "analysis": {
+    "negative_fraction_trend": [
+      0.32599836261213316,
+      0.25580945670053395,
+      0.13740157847045353,
+      0.07448114338502311,
+      0.02526486760712061
+    ],
+    "negative_cv_trend": [
+      0.09043371326615102,
+      0.07162006821647196,
+      0.03866605363507204,
+      0.015292581412446297,
+      0.02335066535993913
+    ],
+    "score_cv_trend": [
+      0.32635323274384026,
+      0.30034555920005507,
+      0.23794817503979102,
+      0.18028878780341956,
+      0.11003818939363208
+    ],
+    "cv_of_cv_trend": [
+      0.037110137625085166,
+      0.03734100510017691,
+      0.02058882548575631,
+      0.009710961732426663,
+      0.010819066127818383
+    ],
+    "reached_rate_trend": [
+      0.914,
+      0.06,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "critical_bin_count": 4,
+    "conclusion": "Conservation BREAKS at 4 bins (16 actions). Negative space CV exceeds 0.05 threshold. Hypothesis CONFIRMED: continuous spaces fragment the negative space, weakening conservation."
+  }
+}
