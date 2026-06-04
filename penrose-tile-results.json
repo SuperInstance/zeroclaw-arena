@@ -1,0 +1,430 @@
+{
+  "experiment": "penrose_tile_field",
+  "penrose_tiling": {
+    "total_tiles": 160,
+    "fat_tiles": 80,
+    "thin_tiles": 80,
+    "fat_ratio": 0.4999999999996875,
+    "thin_ratio": 0.4999999999996875,
+    "expected_ratio_phi": 1.618033988749895,
+    "total_area": 195.92841743082442
+  },
+  "fields": {
+    "tictactoe": {
+      "conservation": {
+        "mean_negative_space": 0.41252470021884435,
+        "std_negative_space": 0.03786913977922336,
+        "ns_cv": 0.09179847839204243,
+        "score_cv": 0.04749184733169787,
+        "cv": 0.04749184733169787,
+        "conserved": "True",
+        "num_tiles": 200,
+        "min_ns": 0.33171021564453107,
+        "max_ns": 0.5057764703683678,
+        "median_ns": 0.4130300853540836
+      },
+      "stats": {
+        "num_tiles": 200,
+        "conservation": {
+          "mean_negative_space": 0.41252470021884435,
+          "std_negative_space": 0.03786913977922336,
+          "ns_cv": 0.09179847839204243,
+          "score_cv": 0.04749184733169787,
+          "cv": 0.04749184733169787,
+          "conserved": "True",
+          "num_tiles": 200,
+          "min_ns": 0.33171021564453107,
+          "max_ns": 0.5057764703683678,
+          "median_ns": 0.4130300853540836
+        },
+        "mean_entropy": 1.6039540625085342,
+        "std_entropy": 0.0038329682236284816,
+        "fingerprint_correlation": NaN
+      },
+      "zoom": [
+        {
+          "level_fraction": 1.0,
+          "num_tiles_sampled": 200,
+          "ks_statistic": 0.004255818763503005,
+          "wasserstein_distance": 0.0,
+          "global_entropy": 1.604291438199866,
+          "local_entropy": 1.604291438199866,
+          "entropy_delta": 0.0,
+          "self_similar": true
+        },
+        {
+          "level_fraction": 0.5,
+          "num_tiles_sampled": 100,
+          "ks_statistic": 0.004129322892274079,
+          "wasserstein_distance": 0.00277371719280306,
+          "global_entropy": 1.604291438199866,
+          "local_entropy": 1.5915654726324566,
+          "entropy_delta": 0.012725965567409459,
+          "self_similar": true
+        },
+        {
+          "level_fraction": 0.25,
+          "num_tiles_sampled": 50,
+          "ks_statistic": 0.0069280054661283175,
+          "wasserstein_distance": 0.0010368666593926212,
+          "global_entropy": 1.604291438199866,
+          "local_entropy": 1.5780450222200857,
+          "entropy_delta": 0.02624641597978039,
+          "self_similar": true
+        },
+        {
+          "level_fraction": 0.125,
+          "num_tiles_sampled": 25,
+          "ks_statistic": 0.010032512330533705,
+          "wasserstein_distance": 0.0037441254392526213,
+          "global_entropy": 1.604291438199866,
+          "local_entropy": 1.5567143645539314,
+          "entropy_delta": 0.047577073645934664,
+          "self_similar": true
+        },
+        {
+          "level_fraction": 0.0625,
+          "num_tiles_sampled": 12,
+          "ks_statistic": 0.017660614905681077,
+          "wasserstein_distance": 0.006367207181714463,
+          "global_entropy": 1.604291438199866,
+          "local_entropy": 1.619873807685944,
+          "entropy_delta": 0.01558236948607794,
+          "self_similar": true
+        }
+      ],
+      "fractal_dimension": {
+        "fractal_dimension": 0.8442797280924251,
+        "r_squared": 0.9965163508231665,
+        "scales_tested": 10,
+        "interpretation": "structured \u2014 scores cluster into distinct modes"
+      },
+      "theorem": {
+        "theorem_statement": "If negative space is conserved (CV < 0.05 across runs), then any single tile reconstructs the global pattern with bounded error: \u03b5 \u2264 C \u00d7 CV \u00d7 (1/\u221an)",
+        "preconditions": {
+          "conservation_cv": 0.04749184733169787,
+          "conserved": true,
+          "n_tiles": 200
+        },
+        "empirical_results": {
+          "mean_error": 0.03755338880688362,
+          "max_error": 0.039411892805086404,
+          "min_error": 0.03522468109257964,
+          "std_error": 0.00080243821523285,
+          "theoretical_bound_factor": 0.0033581807299319804,
+          "C_empirical": 11.73608449771692
+        },
+        "theorem_holds": "True",
+        "practical_implication": "With CV=0.0475 and 200 tiles, each tile contains 298\u00d7 more information than the minimum bound requires",
+        "n_tests": 50
+      }
+    },
+    "connect4": {
+      "conservation": {
+        "mean_negative_space": 0.4219002869724058,
+        "std_negative_space": 0.041861326413078825,
+        "ns_cv": 0.0992209005437741,
+        "score_cv": 0.04958890654582942,
+        "cv": 0.04958890654582942,
+        "conserved": "True",
+        "num_tiles": 200,
+        "min_ns": 0.29612726646583865,
+        "max_ns": 0.5233861841471772,
+        "median_ns": 0.4263205982424413
+      },
+      "stats": {
+        "num_tiles": 200,
+        "conservation": {
+          "mean_negative_space": 0.4219002869724058,
+          "std_negative_space": 0.041861326413078825,
+          "ns_cv": 0.0992209005437741,
+          "score_cv": 0.04958890654582942,
+          "cv": 0.04958890654582942,
+          "conserved": "True",
+          "num_tiles": 200,
+          "min_ns": 0.29612726646583865,
+          "max_ns": 0.5233861841471772,
+          "median_ns": 0.4263205982424413
+        },
+        "mean_entropy": 1.6045642739706756,
+        "std_entropy": 0.0033700242124499492,
+        "fingerprint_correlation": NaN
+      },
+      "zoom": [
+        {
+          "level_fraction": 1.0,
+          "num_tiles_sampled": 200,
+          "ks_statistic": 0.004356948877463296,
+          "wasserstein_distance": 0.0,
+          "global_entropy": 1.5734989875130558,
+          "local_entropy": 1.5734989875130558,
+          "entropy_delta": 0.0,
+          "self_similar": true
+        },
+        {
+          "level_fraction": 0.5,
+          "num_tiles_sampled": 100,
+          "ks_statistic": 0.005601344231898064,
+          "wasserstein_distance": 0.0014122948626419385,
+          "global_entropy": 1.5734989875130558,
+          "local_entropy": 1.5537305174097256,
+          "entropy_delta": 0.01976847010333027,
+          "self_similar": true
+        },
+        {
+          "level_fraction": 0.25,
+          "num_tiles_sampled": 50,
+          "ks_statistic": 0.007458351265412166,
+          "wasserstein_distance": 0.0011469670539988597,
+          "global_entropy": 1.5734989875130558,
+          "local_entropy": 1.5464416838045063,
+          "entropy_delta": 0.02705730370854953,
+          "self_similar": true
+        },
+        {
+          "level_fraction": 0.125,
+          "num_tiles_sampled": 25,
+          "ks_statistic": 0.007129644198062612,
+          "wasserstein_distance": 0.0008428030505307493,
+          "global_entropy": 1.5734989875130558,
+          "local_entropy": 1.440801799535742,
+          "entropy_delta": 0.13269718797731378,
+          "self_similar": true
+        },
+        {
+          "level_fraction": 0.0625,
+          "num_tiles_sampled": 12,
+          "ks_statistic": 0.026709960387975906,
+          "wasserstein_distance": 0.0017834177402707985,
+          "global_entropy": 1.5734989875130558,
+          "local_entropy": 1.5838172214284936,
+          "entropy_delta": 0.010318233915437736,
+          "self_similar": true
+        }
+      ],
+      "fractal_dimension": {
+        "fractal_dimension": 0.8199083626669713,
+        "r_squared": 0.9967078454271867,
+        "scales_tested": 10,
+        "interpretation": "structured \u2014 scores cluster into distinct modes"
+      },
+      "theorem": {
+        "theorem_statement": "If negative space is conserved (CV < 0.05 across runs), then any single tile reconstructs the global pattern with bounded error: \u03b5 \u2264 C \u00d7 CV \u00d7 (1/\u221an)",
+        "preconditions": {
+          "conservation_cv": 0.04958890654582942,
+          "conserved": true,
+          "n_tiles": 200
+        },
+        "empirical_results": {
+          "mean_error": 0.03728564043148186,
+          "max_error": 0.03886443545637379,
+          "min_error": 0.034997519375717205,
+          "std_error": 0.0008216654213519817,
+          "theoretical_bound_factor": 0.0035064652090181954,
+          "C_empirical": 11.083650668034368
+        },
+        "theorem_holds": "True",
+        "practical_implication": "With CV=0.0496 and 200 tiles, each tile contains 285\u00d7 more information than the minimum bound requires",
+        "n_tests": 50
+      }
+    },
+    "holdem": {
+      "conservation": {
+        "mean_negative_space": 0.4890238095238096,
+        "std_negative_space": 0.03999195639080088,
+        "ns_cv": 0.08177916005714186,
+        "score_cv": 0.06411912518323322,
+        "cv": 0.06411912518323322,
+        "conserved": "False",
+        "num_tiles": 42,
+        "min_ns": 0.40800000000000003,
+        "max_ns": 0.552,
+        "median_ns": 0.5
+      },
+      "stats": {
+        "num_tiles": 42,
+        "conservation": {
+          "mean_negative_space": 0.4890238095238096,
+          "std_negative_space": 0.03999195639080088,
+          "ns_cv": 0.08177916005714186,
+          "score_cv": 0.06411912518323322,
+          "cv": 0.06411912518323322,
+          "conserved": "False",
+          "num_tiles": 42,
+          "min_ns": 0.40800000000000003,
+          "max_ns": 0.552,
+          "median_ns": 0.5
+        },
+        "mean_entropy": 1.5764661317132787,
+        "std_entropy": 0.006880352134178792,
+        "fingerprint_correlation": NaN
+      },
+      "zoom": [
+        {
+          "level_fraction": 1.0,
+          "num_tiles_sampled": 42,
+          "ks_statistic": 0.012753433616727206,
+          "wasserstein_distance": 0.0,
+          "global_entropy": 1.969597339120416,
+          "local_entropy": 1.969597339120416,
+          "entropy_delta": 0.0,
+          "self_similar": true
+        },
+        {
+          "level_fraction": 0.5,
+          "num_tiles_sampled": 21,
+          "ks_statistic": 0.02414452790904381,
+          "wasserstein_distance": 0.00045714285714282266,
+          "global_entropy": 1.969597339120416,
+          "local_entropy": 1.9353577049759343,
+          "entropy_delta": 0.03423963414448172,
+          "self_similar": true
+        },
+        {
+          "level_fraction": 0.25,
+          "num_tiles_sampled": 10,
+          "ks_statistic": 0.022859773792151983,
+          "wasserstein_distance": 0.002771428571428536,
+          "global_entropy": 1.969597339120416,
+          "local_entropy": 1.8213524794081621,
+          "entropy_delta": 0.14824485971225387,
+          "self_similar": true
+        },
+        {
+          "level_fraction": 0.125,
+          "num_tiles_sampled": 5,
+          "ks_statistic": 0.03957569179148368,
+          "wasserstein_distance": 0.0034685714285714875,
+          "global_entropy": 1.969597339120416,
+          "local_entropy": 1.773276747168475,
+          "entropy_delta": 0.19632059195194107,
+          "self_similar": true
+        }
+      ],
+      "fractal_dimension": {
+        "fractal_dimension": 0.5481192970893765,
+        "r_squared": 0.9149742564579694,
+        "scales_tested": 10,
+        "interpretation": "structured \u2014 scores cluster into distinct modes"
+      },
+      "theorem": {
+        "theorem_statement": "If negative space is conserved (CV < 0.05 across runs), then any single tile reconstructs the global pattern with bounded error: \u03b5 \u2264 C \u00d7 CV \u00d7 (1/\u221an)",
+        "preconditions": {
+          "conservation_cv": 0.06411912518323322,
+          "conserved": false,
+          "n_tiles": 42
+        },
+        "empirical_results": {
+          "mean_error": 0.08288781028236995,
+          "max_error": 0.09074515952906549,
+          "min_error": 0.07493007894086737,
+          "std_error": 0.0034288302214063424,
+          "theoretical_bound_factor": 0.009893795812411616,
+          "C_empirical": 9.171925644071518
+        },
+        "theorem_holds": false,
+        "practical_implication": "With CV=0.0641 and 42 tiles, each tile contains 101\u00d7 more information than the minimum bound requires",
+        "n_tests": 50
+      }
+    },
+    "json_tile_field": {
+      "conservation": {
+        "mean_negative_space": 0.18125,
+        "std_negative_space": 0.08637671850678284,
+        "ns_cv": 0.47656120555466397,
+        "score_cv": 0.13277033391897577,
+        "cv": 0.13277033391897577,
+        "conserved": "False",
+        "num_tiles": 8,
+        "min_ns": 0.050000000000000044,
+        "max_ns": 0.30000000000000004,
+        "median_ns": 0.19999999999999996
+      },
+      "stats": {
+        "num_tiles": 8,
+        "conservation": {
+          "mean_negative_space": 0.18125,
+          "std_negative_space": 0.08637671850678284,
+          "ns_cv": 0.47656120555466397,
+          "score_cv": 0.13277033391897577,
+          "cv": 0.13277033391897577,
+          "conserved": "False",
+          "num_tiles": 8,
+          "min_ns": 0.050000000000000044,
+          "max_ns": 0.30000000000000004,
+          "median_ns": 0.19999999999999996
+        },
+        "mean_entropy": 0.8622634529264046,
+        "std_entropy": 0.30546346835938504,
+        "fingerprint_correlation": 0.12387315675066235
+      },
+      "zoom": [
+        {
+          "error": "not enough tiles for zoom"
+        }
+      ],
+      "fractal_dimension": {
+        "fractal_dimension": 0.022638409051245402,
+        "r_squared": 0.2727272737036762,
+        "scales_tested": 10,
+        "interpretation": "highly concentrated \u2014 near-deterministic scores"
+      },
+      "theorem": {
+        "theorem_statement": "If negative space is conserved (CV < 0.05 across runs), then any single tile reconstructs the global pattern with bounded error: \u03b5 \u2264 C \u00d7 CV \u00d7 (1/\u221an)",
+        "preconditions": {
+          "conservation_cv": 0.13277033391897577,
+          "conserved": false,
+          "n_tiles": 8
+        },
+        "empirical_results": {
+          "mean_error": 0.28596950009215916,
+          "max_error": 0.4427515241027868,
+          "min_error": 0.1858367797170649,
+          "std_error": 0.07458454156093768,
+          "theoretical_bound_factor": 0.04694140172725502,
+          "C_empirical": 9.432004750844866
+        },
+        "theorem_holds": false,
+        "practical_implication": "With CV=0.1328 and 8 tiles, each tile contains 21\u00d7 more information than the minimum bound requires",
+        "n_tests": 50
+      }
+    }
+  },
+  "scaling": {
+    "games": [
+      "json_tile_field",
+      "holdem",
+      "tictactoe",
+      "connect4"
+    ],
+    "conservation_cvs": [
+      0.13277033391897577,
+      0.06411912518323322,
+      0.04749184733169787,
+      0.04958890654582942
+    ],
+    "score_entropies": [
+      1.9297292877037053,
+      1.969597339120416,
+      1.604291438199866,
+      1.5734989875130558
+    ],
+    "score_ranges": [
+      0.6499999999999999,
+      0.347,
+      0.33657956871093764,
+      0.38489097250148085
+    ],
+    "tile_counts": [
+      8,
+      42,
+      200,
+      200
+    ],
+    "scaling_exponent_alpha": -0.30186502221023725,
+    "interpretation": "INVERSE SCALING (\u03b1=-0.302): more complex \u2192 tighter conservation",
+    "all_conserve": false,
+    "tightest_game": "tictactoe",
+    "loosest_game": "json_tile_field"
+  }
+}
