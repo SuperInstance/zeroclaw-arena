@@ -1,6 +1,6 @@
 {
   "experiment": "memory_decay",
-  "decay_rates_tested": [
+  "decay_rates": [
     0.0,
     0.001,
     0.005,
@@ -9,1963 +9,7809 @@
     0.05,
     0.1
   ],
+  "n_trials": 5,
   "conditions": {
-    "with_switch": [
-      {
-        "decay_rate": 0.0,
-        "switch_opponent": true,
-        "total_games": 500,
-        "switch_point": 300,
-        "games": [
-          {
-            "game": 20,
-            "win_rate_window": 0.65,
-            "tiles": 58
-          },
-          {
-            "game": 40,
-            "win_rate_window": 0.8,
-            "tiles": 107
-          },
-          {
-            "game": 60,
-            "win_rate_window": 0.6,
-            "tiles": 154
-          },
-          {
-            "game": 80,
-            "win_rate_window": 0.5,
-            "tiles": 191
-          },
-          {
-            "game": 100,
-            "win_rate_window": 0.8,
-            "tiles": 234
-          },
-          {
-            "game": 120,
-            "win_rate_window": 0.7,
-            "tiles": 270
-          },
-          {
-            "game": 140,
-            "win_rate_window": 0.6,
-            "tiles": 301
-          },
-          {
-            "game": 160,
-            "win_rate_window": 0.75,
-            "tiles": 341
-          },
-          {
-            "game": 180,
-            "win_rate_window": 0.85,
-            "tiles": 374
-          },
-          {
-            "game": 200,
-            "win_rate_window": 0.7,
-            "tiles": 407
-          },
-          {
-            "game": 220,
-            "win_rate_window": 0.65,
-            "tiles": 442
-          },
-          {
-            "game": 240,
-            "win_rate_window": 0.65,
-            "tiles": 467
-          },
-          {
-            "game": 260,
-            "win_rate_window": 0.55,
-            "tiles": 493
-          },
-          {
-            "game": 280,
-            "win_rate_window": 0.65,
-            "tiles": 519
-          },
-          {
-            "game": 300,
-            "win_rate_window": 0.5,
-            "tiles": 547
-          },
-          {
-            "game": 320,
-            "win_rate_window": 0.05,
-            "tiles": 563
-          },
-          {
-            "game": 340,
-            "win_rate_window": 0.0,
-            "tiles": 573
-          },
-          {
-            "game": 360,
-            "win_rate_window": 0.0,
-            "tiles": 584
-          },
-          {
-            "game": 380,
-            "win_rate_window": 0.0,
-            "tiles": 594
-          },
-          {
-            "game": 400,
-            "win_rate_window": 0.0,
-            "tiles": 606
-          },
-          {
-            "game": 420,
-            "win_rate_window": 0.05,
-            "tiles": 612
-          },
-          {
-            "game": 440,
-            "win_rate_window": 0.05,
-            "tiles": 617
-          },
-          {
-            "game": 460,
-            "win_rate_window": 0.0,
-            "tiles": 620
-          },
-          {
-            "game": 480,
-            "win_rate_window": 0.0,
-            "tiles": 622
-          },
-          {
-            "game": 500,
-            "win_rate_window": 0.0,
-            "tiles": 628
-          }
-        ],
-        "tile_churn_after_switch": 0,
-        "tile_total_after_switch": 547,
-        "tile_churn_rate": 0.0,
-        "win_rate_before_switch": 0.6167,
-        "win_rate_after_switch": 0.0167,
-        "adaptation_game": null,
-        "adaptation_speed": null,
-        "final_tiles": 628
-      },
-      {
-        "decay_rate": 0.001,
-        "switch_opponent": true,
-        "total_games": 500,
-        "switch_point": 300,
-        "games": [
-          {
-            "game": 20,
-            "win_rate_window": 0.65,
-            "tiles": 58
-          },
-          {
-            "game": 40,
-            "win_rate_window": 0.8,
-            "tiles": 107
-          },
-          {
-            "game": 60,
-            "win_rate_window": 0.6,
-            "tiles": 154
-          },
-          {
-            "game": 80,
-            "win_rate_window": 0.5,
-            "tiles": 191
-          },
-          {
-            "game": 100,
-            "win_rate_window": 0.8,
-            "tiles": 234
-          },
-          {
-            "game": 120,
-            "win_rate_window": 0.7,
-            "tiles": 270
-          },
-          {
-            "game": 140,
-            "win_rate_window": 0.6,
-            "tiles": 301
-          },
-          {
-            "game": 160,
-            "win_rate_window": 0.75,
-            "tiles": 341
-          },
-          {
-            "game": 180,
-            "win_rate_window": 0.85,
-            "tiles": 374
-          },
-          {
-            "game": 200,
-            "win_rate_window": 0.7,
-            "tiles": 407
-          },
-          {
-            "game": 220,
-            "win_rate_window": 0.65,
-            "tiles": 442
-          },
-          {
-            "game": 240,
-            "win_rate_window": 0.65,
-            "tiles": 467
-          },
-          {
-            "game": 260,
-            "win_rate_window": 0.55,
-            "tiles": 493
-          },
-          {
-            "game": 280,
-            "win_rate_window": 0.65,
-            "tiles": 519
-          },
-          {
-            "game": 300,
-            "win_rate_window": 0.5,
-            "tiles": 547
-          },
-          {
-            "game": 320,
-            "win_rate_window": 0.05,
-            "tiles": 563
-          },
-          {
-            "game": 340,
-            "win_rate_window": 0.0,
-            "tiles": 573
-          },
-          {
-            "game": 360,
-            "win_rate_window": 0.0,
-            "tiles": 584
-          },
-          {
-            "game": 380,
-            "win_rate_window": 0.0,
-            "tiles": 594
-          },
-          {
-            "game": 400,
-            "win_rate_window": 0.0,
-            "tiles": 606
-          },
-          {
-            "game": 420,
-            "win_rate_window": 0.05,
-            "tiles": 612
-          },
-          {
-            "game": 440,
-            "win_rate_window": 0.05,
-            "tiles": 617
-          },
-          {
-            "game": 460,
-            "win_rate_window": 0.0,
-            "tiles": 620
-          },
-          {
-            "game": 480,
-            "win_rate_window": 0.0,
-            "tiles": 622
-          },
-          {
-            "game": 500,
-            "win_rate_window": 0.0,
-            "tiles": 628
-          }
-        ],
-        "tile_churn_after_switch": 0,
-        "tile_total_after_switch": 547,
-        "tile_churn_rate": 0.0,
-        "win_rate_before_switch": 0.6167,
-        "win_rate_after_switch": 0.0167,
-        "adaptation_game": null,
-        "adaptation_speed": null,
-        "final_tiles": 628
-      },
-      {
-        "decay_rate": 0.005,
-        "switch_opponent": true,
-        "total_games": 500,
-        "switch_point": 300,
-        "games": [
-          {
-            "game": 20,
-            "win_rate_window": 0.65,
-            "tiles": 58
-          },
-          {
-            "game": 40,
-            "win_rate_window": 0.8,
-            "tiles": 107
-          },
-          {
-            "game": 60,
-            "win_rate_window": 0.6,
-            "tiles": 154
-          },
-          {
-            "game": 80,
-            "win_rate_window": 0.5,
-            "tiles": 191
-          },
-          {
-            "game": 100,
-            "win_rate_window": 0.8,
-            "tiles": 234
-          },
-          {
-            "game": 120,
-            "win_rate_window": 0.7,
-            "tiles": 270
-          },
-          {
-            "game": 140,
-            "win_rate_window": 0.6,
-            "tiles": 301
-          },
-          {
-            "game": 160,
-            "win_rate_window": 0.75,
-            "tiles": 341
-          },
-          {
-            "game": 180,
-            "win_rate_window": 0.85,
-            "tiles": 374
-          },
-          {
-            "game": 200,
-            "win_rate_window": 0.7,
-            "tiles": 407
-          },
-          {
-            "game": 220,
-            "win_rate_window": 0.65,
-            "tiles": 442
-          },
-          {
-            "game": 240,
-            "win_rate_window": 0.65,
-            "tiles": 467
-          },
-          {
-            "game": 260,
-            "win_rate_window": 0.55,
-            "tiles": 493
-          },
-          {
-            "game": 280,
-            "win_rate_window": 0.65,
-            "tiles": 519
-          },
-          {
-            "game": 300,
-            "win_rate_window": 0.5,
-            "tiles": 547
-          },
-          {
-            "game": 320,
-            "win_rate_window": 0.05,
-            "tiles": 563
-          },
-          {
-            "game": 340,
-            "win_rate_window": 0.0,
-            "tiles": 573
-          },
-          {
-            "game": 360,
-            "win_rate_window": 0.0,
-            "tiles": 584
-          },
-          {
-            "game": 380,
-            "win_rate_window": 0.0,
-            "tiles": 594
-          },
-          {
-            "game": 400,
-            "win_rate_window": 0.0,
-            "tiles": 606
-          },
-          {
-            "game": 420,
-            "win_rate_window": 0.05,
-            "tiles": 612
-          },
-          {
-            "game": 440,
-            "win_rate_window": 0.05,
-            "tiles": 617
-          },
-          {
-            "game": 460,
-            "win_rate_window": 0.0,
-            "tiles": 620
-          },
-          {
-            "game": 480,
-            "win_rate_window": 0.0,
-            "tiles": 622
-          },
-          {
-            "game": 500,
-            "win_rate_window": 0.0,
-            "tiles": 628
-          }
-        ],
-        "tile_churn_after_switch": 0,
-        "tile_total_after_switch": 547,
-        "tile_churn_rate": 0.0,
-        "win_rate_before_switch": 0.6167,
-        "win_rate_after_switch": 0.0167,
-        "adaptation_game": null,
-        "adaptation_speed": null,
-        "final_tiles": 628
-      },
-      {
-        "decay_rate": 0.01,
-        "switch_opponent": true,
-        "total_games": 500,
-        "switch_point": 300,
-        "games": [
-          {
-            "game": 20,
-            "win_rate_window": 0.65,
-            "tiles": 58
-          },
-          {
-            "game": 40,
-            "win_rate_window": 0.8,
-            "tiles": 107
-          },
-          {
-            "game": 60,
-            "win_rate_window": 0.6,
-            "tiles": 154
-          },
-          {
-            "game": 80,
-            "win_rate_window": 0.5,
-            "tiles": 191
-          },
-          {
-            "game": 100,
-            "win_rate_window": 0.8,
-            "tiles": 234
-          },
-          {
-            "game": 120,
-            "win_rate_window": 0.7,
-            "tiles": 270
-          },
-          {
-            "game": 140,
-            "win_rate_window": 0.6,
-            "tiles": 301
-          },
-          {
-            "game": 160,
-            "win_rate_window": 0.75,
-            "tiles": 341
-          },
-          {
-            "game": 180,
-            "win_rate_window": 0.85,
-            "tiles": 374
-          },
-          {
-            "game": 200,
-            "win_rate_window": 0.7,
-            "tiles": 407
-          },
-          {
-            "game": 220,
-            "win_rate_window": 0.65,
-            "tiles": 442
-          },
-          {
-            "game": 240,
-            "win_rate_window": 0.65,
-            "tiles": 467
-          },
-          {
-            "game": 260,
-            "win_rate_window": 0.55,
-            "tiles": 493
-          },
-          {
-            "game": 280,
-            "win_rate_window": 0.65,
-            "tiles": 519
-          },
-          {
-            "game": 300,
-            "win_rate_window": 0.5,
-            "tiles": 547
-          },
-          {
-            "game": 320,
-            "win_rate_window": 0.05,
-            "tiles": 563
-          },
-          {
-            "game": 340,
-            "win_rate_window": 0.0,
-            "tiles": 573
-          },
-          {
-            "game": 360,
-            "win_rate_window": 0.0,
-            "tiles": 584
-          },
-          {
-            "game": 380,
-            "win_rate_window": 0.0,
-            "tiles": 594
-          },
-          {
-            "game": 400,
-            "win_rate_window": 0.0,
-            "tiles": 606
-          },
-          {
-            "game": 420,
-            "win_rate_window": 0.05,
-            "tiles": 612
-          },
-          {
-            "game": 440,
-            "win_rate_window": 0.05,
-            "tiles": 617
-          },
-          {
-            "game": 460,
-            "win_rate_window": 0.0,
-            "tiles": 620
-          },
-          {
-            "game": 480,
-            "win_rate_window": 0.0,
-            "tiles": 622
-          },
-          {
-            "game": 500,
-            "win_rate_window": 0.0,
-            "tiles": 628
-          }
-        ],
-        "tile_churn_after_switch": 0,
-        "tile_total_after_switch": 547,
-        "tile_churn_rate": 0.0,
-        "win_rate_before_switch": 0.6167,
-        "win_rate_after_switch": 0.0167,
-        "adaptation_game": null,
-        "adaptation_speed": null,
-        "final_tiles": 628
-      },
-      {
-        "decay_rate": 0.02,
-        "switch_opponent": true,
-        "total_games": 500,
-        "switch_point": 300,
-        "games": [
-          {
-            "game": 20,
-            "win_rate_window": 0.65,
-            "tiles": 58
-          },
-          {
-            "game": 40,
-            "win_rate_window": 0.8,
-            "tiles": 107
-          },
-          {
-            "game": 60,
-            "win_rate_window": 0.6,
-            "tiles": 154
-          },
-          {
-            "game": 80,
-            "win_rate_window": 0.5,
-            "tiles": 191
-          },
-          {
-            "game": 100,
-            "win_rate_window": 0.8,
-            "tiles": 234
-          },
-          {
-            "game": 120,
-            "win_rate_window": 0.7,
-            "tiles": 270
-          },
-          {
-            "game": 140,
-            "win_rate_window": 0.6,
-            "tiles": 301
-          },
-          {
-            "game": 160,
-            "win_rate_window": 0.75,
-            "tiles": 341
-          },
-          {
-            "game": 180,
-            "win_rate_window": 0.85,
-            "tiles": 374
-          },
-          {
-            "game": 200,
-            "win_rate_window": 0.7,
-            "tiles": 407
-          },
-          {
-            "game": 220,
-            "win_rate_window": 0.65,
-            "tiles": 442
-          },
-          {
-            "game": 240,
-            "win_rate_window": 0.65,
-            "tiles": 467
-          },
-          {
-            "game": 260,
-            "win_rate_window": 0.55,
-            "tiles": 493
-          },
-          {
-            "game": 280,
-            "win_rate_window": 0.65,
-            "tiles": 519
-          },
-          {
-            "game": 300,
-            "win_rate_window": 0.5,
-            "tiles": 547
-          },
-          {
-            "game": 320,
-            "win_rate_window": 0.05,
-            "tiles": 563
-          },
-          {
-            "game": 340,
-            "win_rate_window": 0.0,
-            "tiles": 573
-          },
-          {
-            "game": 360,
-            "win_rate_window": 0.0,
-            "tiles": 584
-          },
-          {
-            "game": 380,
-            "win_rate_window": 0.0,
-            "tiles": 594
-          },
-          {
-            "game": 400,
-            "win_rate_window": 0.0,
-            "tiles": 606
-          },
-          {
-            "game": 420,
-            "win_rate_window": 0.05,
-            "tiles": 612
-          },
-          {
-            "game": 440,
-            "win_rate_window": 0.05,
-            "tiles": 617
-          },
-          {
-            "game": 460,
-            "win_rate_window": 0.0,
-            "tiles": 620
-          },
-          {
-            "game": 480,
-            "win_rate_window": 0.0,
-            "tiles": 622
-          },
-          {
-            "game": 500,
-            "win_rate_window": 0.0,
-            "tiles": 628
-          }
-        ],
-        "tile_churn_after_switch": 0,
-        "tile_total_after_switch": 547,
-        "tile_churn_rate": 0.0,
-        "win_rate_before_switch": 0.6167,
-        "win_rate_after_switch": 0.0167,
-        "adaptation_game": null,
-        "adaptation_speed": null,
-        "final_tiles": 628
-      },
-      {
-        "decay_rate": 0.05,
-        "switch_opponent": true,
-        "total_games": 500,
-        "switch_point": 300,
-        "games": [
-          {
-            "game": 20,
-            "win_rate_window": 0.65,
-            "tiles": 58
-          },
-          {
-            "game": 40,
-            "win_rate_window": 0.8,
-            "tiles": 107
-          },
-          {
-            "game": 60,
-            "win_rate_window": 0.6,
-            "tiles": 154
-          },
-          {
-            "game": 80,
-            "win_rate_window": 0.5,
-            "tiles": 191
-          },
-          {
-            "game": 100,
-            "win_rate_window": 0.8,
-            "tiles": 234
-          },
-          {
-            "game": 120,
-            "win_rate_window": 0.7,
-            "tiles": 270
-          },
-          {
-            "game": 140,
-            "win_rate_window": 0.6,
-            "tiles": 301
-          },
-          {
-            "game": 160,
-            "win_rate_window": 0.75,
-            "tiles": 341
-          },
-          {
-            "game": 180,
-            "win_rate_window": 0.85,
-            "tiles": 374
-          },
-          {
-            "game": 200,
-            "win_rate_window": 0.7,
-            "tiles": 407
-          },
-          {
-            "game": 220,
-            "win_rate_window": 0.65,
-            "tiles": 442
-          },
-          {
-            "game": 240,
-            "win_rate_window": 0.65,
-            "tiles": 467
-          },
-          {
-            "game": 260,
-            "win_rate_window": 0.55,
-            "tiles": 493
-          },
-          {
-            "game": 280,
-            "win_rate_window": 0.65,
-            "tiles": 519
-          },
-          {
-            "game": 300,
-            "win_rate_window": 0.5,
-            "tiles": 547
-          },
-          {
-            "game": 320,
-            "win_rate_window": 0.05,
-            "tiles": 563
-          },
-          {
-            "game": 340,
-            "win_rate_window": 0.0,
-            "tiles": 573
-          },
-          {
-            "game": 360,
-            "win_rate_window": 0.0,
-            "tiles": 584
-          },
-          {
-            "game": 380,
-            "win_rate_window": 0.0,
-            "tiles": 594
-          },
-          {
-            "game": 400,
-            "win_rate_window": 0.0,
-            "tiles": 606
-          },
-          {
-            "game": 420,
-            "win_rate_window": 0.05,
-            "tiles": 612
-          },
-          {
-            "game": 440,
-            "win_rate_window": 0.05,
-            "tiles": 617
-          },
-          {
-            "game": 460,
-            "win_rate_window": 0.0,
-            "tiles": 620
-          },
-          {
-            "game": 480,
-            "win_rate_window": 0.0,
-            "tiles": 622
-          },
-          {
-            "game": 500,
-            "win_rate_window": 0.0,
-            "tiles": 628
-          }
-        ],
-        "tile_churn_after_switch": 0,
-        "tile_total_after_switch": 547,
-        "tile_churn_rate": 0.0,
-        "win_rate_before_switch": 0.6167,
-        "win_rate_after_switch": 0.0167,
-        "adaptation_game": null,
-        "adaptation_speed": null,
-        "final_tiles": 628
-      },
-      {
-        "decay_rate": 0.1,
-        "switch_opponent": true,
-        "total_games": 500,
-        "switch_point": 300,
-        "games": [
-          {
-            "game": 20,
-            "win_rate_window": 0.65,
-            "tiles": 58
-          },
-          {
-            "game": 40,
-            "win_rate_window": 0.8,
-            "tiles": 107
-          },
-          {
-            "game": 60,
-            "win_rate_window": 0.6,
-            "tiles": 154
-          },
-          {
-            "game": 80,
-            "win_rate_window": 0.5,
-            "tiles": 191
-          },
-          {
-            "game": 100,
-            "win_rate_window": 0.8,
-            "tiles": 234
-          },
-          {
-            "game": 120,
-            "win_rate_window": 0.7,
-            "tiles": 270
-          },
-          {
-            "game": 140,
-            "win_rate_window": 0.6,
-            "tiles": 301
-          },
-          {
-            "game": 160,
-            "win_rate_window": 0.75,
-            "tiles": 341
-          },
-          {
-            "game": 180,
-            "win_rate_window": 0.85,
-            "tiles": 374
-          },
-          {
-            "game": 200,
-            "win_rate_window": 0.7,
-            "tiles": 407
-          },
-          {
-            "game": 220,
-            "win_rate_window": 0.65,
-            "tiles": 442
-          },
-          {
-            "game": 240,
-            "win_rate_window": 0.65,
-            "tiles": 467
-          },
-          {
-            "game": 260,
-            "win_rate_window": 0.55,
-            "tiles": 493
-          },
-          {
-            "game": 280,
-            "win_rate_window": 0.65,
-            "tiles": 519
-          },
-          {
-            "game": 300,
-            "win_rate_window": 0.5,
-            "tiles": 547
-          },
-          {
-            "game": 320,
-            "win_rate_window": 0.05,
-            "tiles": 563
-          },
-          {
-            "game": 340,
-            "win_rate_window": 0.0,
-            "tiles": 573
-          },
-          {
-            "game": 360,
-            "win_rate_window": 0.0,
-            "tiles": 584
-          },
-          {
-            "game": 380,
-            "win_rate_window": 0.0,
-            "tiles": 594
-          },
-          {
-            "game": 400,
-            "win_rate_window": 0.0,
-            "tiles": 606
-          },
-          {
-            "game": 420,
-            "win_rate_window": 0.05,
-            "tiles": 612
-          },
-          {
-            "game": 440,
-            "win_rate_window": 0.05,
-            "tiles": 617
-          },
-          {
-            "game": 460,
-            "win_rate_window": 0.0,
-            "tiles": 620
-          },
-          {
-            "game": 480,
-            "win_rate_window": 0.0,
-            "tiles": 622
-          },
-          {
-            "game": 500,
-            "win_rate_window": 0.0,
-            "tiles": 628
-          }
-        ],
-        "tile_churn_after_switch": 0,
-        "tile_total_after_switch": 547,
-        "tile_churn_rate": 0.0,
-        "win_rate_before_switch": 0.6167,
-        "win_rate_after_switch": 0.0167,
-        "adaptation_game": null,
-        "adaptation_speed": null,
-        "final_tiles": 628
-      }
-    ],
-    "without_switch": [
-      {
-        "decay_rate": 0.0,
-        "switch_opponent": false,
-        "total_games": 500,
-        "switch_point": 300,
-        "games": [
-          {
-            "game": 20,
-            "win_rate_window": 0.65,
-            "tiles": 58
-          },
-          {
-            "game": 40,
-            "win_rate_window": 0.8,
-            "tiles": 107
-          },
-          {
-            "game": 60,
-            "win_rate_window": 0.6,
-            "tiles": 154
-          },
-          {
-            "game": 80,
-            "win_rate_window": 0.5,
-            "tiles": 191
-          },
-          {
-            "game": 100,
-            "win_rate_window": 0.8,
-            "tiles": 234
-          },
-          {
-            "game": 120,
-            "win_rate_window": 0.7,
-            "tiles": 270
-          },
-          {
-            "game": 140,
-            "win_rate_window": 0.6,
-            "tiles": 301
-          },
-          {
-            "game": 160,
-            "win_rate_window": 0.75,
-            "tiles": 341
-          },
-          {
-            "game": 180,
-            "win_rate_window": 0.85,
-            "tiles": 374
-          },
-          {
-            "game": 200,
-            "win_rate_window": 0.7,
-            "tiles": 407
-          },
-          {
-            "game": 220,
-            "win_rate_window": 0.65,
-            "tiles": 442
-          },
-          {
-            "game": 240,
-            "win_rate_window": 0.65,
-            "tiles": 467
-          },
-          {
-            "game": 260,
-            "win_rate_window": 0.55,
-            "tiles": 493
-          },
-          {
-            "game": 280,
-            "win_rate_window": 0.65,
-            "tiles": 519
-          },
-          {
-            "game": 300,
-            "win_rate_window": 0.5,
-            "tiles": 547
-          },
-          {
-            "game": 320,
-            "win_rate_window": 0.65,
-            "tiles": 578
-          },
-          {
-            "game": 340,
-            "win_rate_window": 0.7,
-            "tiles": 605
-          },
-          {
-            "game": 360,
-            "win_rate_window": 0.65,
-            "tiles": 633
-          },
-          {
-            "game": 380,
-            "win_rate_window": 0.6,
-            "tiles": 658
-          },
-          {
-            "game": 400,
-            "win_rate_window": 0.65,
-            "tiles": 681
-          },
-          {
-            "game": 420,
-            "win_rate_window": 0.65,
-            "tiles": 705
-          },
-          {
-            "game": 440,
-            "win_rate_window": 0.7,
-            "tiles": 730
-          },
-          {
-            "game": 460,
-            "win_rate_window": 0.7,
-            "tiles": 753
-          },
-          {
-            "game": 480,
-            "win_rate_window": 0.7,
-            "tiles": 774
-          },
-          {
-            "game": 500,
-            "win_rate_window": 0.75,
-            "tiles": 795
-          }
-        ],
-        "win_rate_before_switch": 0.6167,
-        "win_rate_after_switch": 0.6917,
-        "adaptation_game": null,
-        "adaptation_speed": null,
-        "final_tiles": 795
-      },
-      {
-        "decay_rate": 0.001,
-        "switch_opponent": false,
-        "total_games": 500,
-        "switch_point": 300,
-        "games": [
-          {
-            "game": 20,
-            "win_rate_window": 0.65,
-            "tiles": 58
-          },
-          {
-            "game": 40,
-            "win_rate_window": 0.8,
-            "tiles": 107
-          },
-          {
-            "game": 60,
-            "win_rate_window": 0.6,
-            "tiles": 154
-          },
-          {
-            "game": 80,
-            "win_rate_window": 0.5,
-            "tiles": 191
-          },
-          {
-            "game": 100,
-            "win_rate_window": 0.8,
-            "tiles": 234
-          },
-          {
-            "game": 120,
-            "win_rate_window": 0.7,
-            "tiles": 270
-          },
-          {
-            "game": 140,
-            "win_rate_window": 0.6,
-            "tiles": 301
-          },
-          {
-            "game": 160,
-            "win_rate_window": 0.75,
-            "tiles": 341
-          },
-          {
-            "game": 180,
-            "win_rate_window": 0.85,
-            "tiles": 374
-          },
-          {
-            "game": 200,
-            "win_rate_window": 0.7,
-            "tiles": 407
-          },
-          {
-            "game": 220,
-            "win_rate_window": 0.65,
-            "tiles": 442
-          },
-          {
-            "game": 240,
-            "win_rate_window": 0.65,
-            "tiles": 467
-          },
-          {
-            "game": 260,
-            "win_rate_window": 0.55,
-            "tiles": 493
-          },
-          {
-            "game": 280,
-            "win_rate_window": 0.65,
-            "tiles": 519
-          },
-          {
-            "game": 300,
-            "win_rate_window": 0.5,
-            "tiles": 547
-          },
-          {
-            "game": 320,
-            "win_rate_window": 0.65,
-            "tiles": 578
-          },
-          {
-            "game": 340,
-            "win_rate_window": 0.7,
-            "tiles": 605
-          },
-          {
-            "game": 360,
-            "win_rate_window": 0.65,
-            "tiles": 633
-          },
-          {
-            "game": 380,
-            "win_rate_window": 0.6,
-            "tiles": 658
-          },
-          {
-            "game": 400,
-            "win_rate_window": 0.65,
-            "tiles": 681
-          },
-          {
-            "game": 420,
-            "win_rate_window": 0.65,
-            "tiles": 705
-          },
-          {
-            "game": 440,
-            "win_rate_window": 0.7,
-            "tiles": 730
-          },
-          {
-            "game": 460,
-            "win_rate_window": 0.7,
-            "tiles": 753
-          },
-          {
-            "game": 480,
-            "win_rate_window": 0.7,
-            "tiles": 774
-          },
-          {
-            "game": 500,
-            "win_rate_window": 0.75,
-            "tiles": 795
-          }
-        ],
-        "win_rate_before_switch": 0.6167,
-        "win_rate_after_switch": 0.6917,
-        "adaptation_game": null,
-        "adaptation_speed": null,
-        "final_tiles": 795
-      },
-      {
-        "decay_rate": 0.005,
-        "switch_opponent": false,
-        "total_games": 500,
-        "switch_point": 300,
-        "games": [
-          {
-            "game": 20,
-            "win_rate_window": 0.65,
-            "tiles": 58
-          },
-          {
-            "game": 40,
-            "win_rate_window": 0.8,
-            "tiles": 107
-          },
-          {
-            "game": 60,
-            "win_rate_window": 0.6,
-            "tiles": 154
-          },
-          {
-            "game": 80,
-            "win_rate_window": 0.5,
-            "tiles": 191
-          },
-          {
-            "game": 100,
-            "win_rate_window": 0.8,
-            "tiles": 234
-          },
-          {
-            "game": 120,
-            "win_rate_window": 0.7,
-            "tiles": 270
-          },
-          {
-            "game": 140,
-            "win_rate_window": 0.6,
-            "tiles": 301
-          },
-          {
-            "game": 160,
-            "win_rate_window": 0.75,
-            "tiles": 341
-          },
-          {
-            "game": 180,
-            "win_rate_window": 0.85,
-            "tiles": 374
-          },
-          {
-            "game": 200,
-            "win_rate_window": 0.7,
-            "tiles": 407
-          },
-          {
-            "game": 220,
-            "win_rate_window": 0.65,
-            "tiles": 442
-          },
-          {
-            "game": 240,
-            "win_rate_window": 0.65,
-            "tiles": 467
-          },
-          {
-            "game": 260,
-            "win_rate_window": 0.55,
-            "tiles": 493
-          },
-          {
-            "game": 280,
-            "win_rate_window": 0.65,
-            "tiles": 519
-          },
-          {
-            "game": 300,
-            "win_rate_window": 0.5,
-            "tiles": 547
-          },
-          {
-            "game": 320,
-            "win_rate_window": 0.65,
-            "tiles": 578
-          },
-          {
-            "game": 340,
-            "win_rate_window": 0.7,
-            "tiles": 605
-          },
-          {
-            "game": 360,
-            "win_rate_window": 0.65,
-            "tiles": 633
-          },
-          {
-            "game": 380,
-            "win_rate_window": 0.6,
-            "tiles": 658
-          },
-          {
-            "game": 400,
-            "win_rate_window": 0.65,
-            "tiles": 681
-          },
-          {
-            "game": 420,
-            "win_rate_window": 0.65,
-            "tiles": 705
-          },
-          {
-            "game": 440,
-            "win_rate_window": 0.7,
-            "tiles": 730
-          },
-          {
-            "game": 460,
-            "win_rate_window": 0.7,
-            "tiles": 753
-          },
-          {
-            "game": 480,
-            "win_rate_window": 0.7,
-            "tiles": 774
-          },
-          {
-            "game": 500,
-            "win_rate_window": 0.75,
-            "tiles": 795
-          }
-        ],
-        "win_rate_before_switch": 0.6167,
-        "win_rate_after_switch": 0.6917,
-        "adaptation_game": null,
-        "adaptation_speed": null,
-        "final_tiles": 795
-      },
-      {
-        "decay_rate": 0.01,
-        "switch_opponent": false,
-        "total_games": 500,
-        "switch_point": 300,
-        "games": [
-          {
-            "game": 20,
-            "win_rate_window": 0.65,
-            "tiles": 58
-          },
-          {
-            "game": 40,
-            "win_rate_window": 0.8,
-            "tiles": 107
-          },
-          {
-            "game": 60,
-            "win_rate_window": 0.6,
-            "tiles": 154
-          },
-          {
-            "game": 80,
-            "win_rate_window": 0.5,
-            "tiles": 191
-          },
-          {
-            "game": 100,
-            "win_rate_window": 0.8,
-            "tiles": 234
-          },
-          {
-            "game": 120,
-            "win_rate_window": 0.7,
-            "tiles": 270
-          },
-          {
-            "game": 140,
-            "win_rate_window": 0.6,
-            "tiles": 301
-          },
-          {
-            "game": 160,
-            "win_rate_window": 0.75,
-            "tiles": 341
-          },
-          {
-            "game": 180,
-            "win_rate_window": 0.85,
-            "tiles": 374
-          },
-          {
-            "game": 200,
-            "win_rate_window": 0.7,
-            "tiles": 407
-          },
-          {
-            "game": 220,
-            "win_rate_window": 0.65,
-            "tiles": 442
-          },
-          {
-            "game": 240,
-            "win_rate_window": 0.65,
-            "tiles": 467
-          },
-          {
-            "game": 260,
-            "win_rate_window": 0.55,
-            "tiles": 493
-          },
-          {
-            "game": 280,
-            "win_rate_window": 0.65,
-            "tiles": 519
-          },
-          {
-            "game": 300,
-            "win_rate_window": 0.5,
-            "tiles": 547
-          },
-          {
-            "game": 320,
-            "win_rate_window": 0.65,
-            "tiles": 578
-          },
-          {
-            "game": 340,
-            "win_rate_window": 0.7,
-            "tiles": 605
-          },
-          {
-            "game": 360,
-            "win_rate_window": 0.65,
-            "tiles": 633
-          },
-          {
-            "game": 380,
-            "win_rate_window": 0.6,
-            "tiles": 658
-          },
-          {
-            "game": 400,
-            "win_rate_window": 0.65,
-            "tiles": 681
-          },
-          {
-            "game": 420,
-            "win_rate_window": 0.65,
-            "tiles": 705
-          },
-          {
-            "game": 440,
-            "win_rate_window": 0.7,
-            "tiles": 730
-          },
-          {
-            "game": 460,
-            "win_rate_window": 0.7,
-            "tiles": 753
-          },
-          {
-            "game": 480,
-            "win_rate_window": 0.7,
-            "tiles": 774
-          },
-          {
-            "game": 500,
-            "win_rate_window": 0.75,
-            "tiles": 795
-          }
-        ],
-        "win_rate_before_switch": 0.6167,
-        "win_rate_after_switch": 0.6917,
-        "adaptation_game": null,
-        "adaptation_speed": null,
-        "final_tiles": 795
-      },
-      {
-        "decay_rate": 0.02,
-        "switch_opponent": false,
-        "total_games": 500,
-        "switch_point": 300,
-        "games": [
-          {
-            "game": 20,
-            "win_rate_window": 0.65,
-            "tiles": 58
-          },
-          {
-            "game": 40,
-            "win_rate_window": 0.8,
-            "tiles": 107
-          },
-          {
-            "game": 60,
-            "win_rate_window": 0.6,
-            "tiles": 154
-          },
-          {
-            "game": 80,
-            "win_rate_window": 0.5,
-            "tiles": 191
-          },
-          {
-            "game": 100,
-            "win_rate_window": 0.8,
-            "tiles": 234
-          },
-          {
-            "game": 120,
-            "win_rate_window": 0.7,
-            "tiles": 270
-          },
-          {
-            "game": 140,
-            "win_rate_window": 0.6,
-            "tiles": 301
-          },
-          {
-            "game": 160,
-            "win_rate_window": 0.75,
-            "tiles": 341
-          },
-          {
-            "game": 180,
-            "win_rate_window": 0.85,
-            "tiles": 374
-          },
-          {
-            "game": 200,
-            "win_rate_window": 0.7,
-            "tiles": 407
-          },
-          {
-            "game": 220,
-            "win_rate_window": 0.65,
-            "tiles": 442
-          },
-          {
-            "game": 240,
-            "win_rate_window": 0.65,
-            "tiles": 467
-          },
-          {
-            "game": 260,
-            "win_rate_window": 0.55,
-            "tiles": 493
-          },
-          {
-            "game": 280,
-            "win_rate_window": 0.65,
-            "tiles": 519
-          },
-          {
-            "game": 300,
-            "win_rate_window": 0.5,
-            "tiles": 547
-          },
-          {
-            "game": 320,
-            "win_rate_window": 0.65,
-            "tiles": 578
-          },
-          {
-            "game": 340,
-            "win_rate_window": 0.7,
-            "tiles": 605
-          },
-          {
-            "game": 360,
-            "win_rate_window": 0.65,
-            "tiles": 633
-          },
-          {
-            "game": 380,
-            "win_rate_window": 0.6,
-            "tiles": 658
-          },
-          {
-            "game": 400,
-            "win_rate_window": 0.65,
-            "tiles": 681
-          },
-          {
-            "game": 420,
-            "win_rate_window": 0.65,
-            "tiles": 705
-          },
-          {
-            "game": 440,
-            "win_rate_window": 0.7,
-            "tiles": 730
-          },
-          {
-            "game": 460,
-            "win_rate_window": 0.7,
-            "tiles": 753
-          },
-          {
-            "game": 480,
-            "win_rate_window": 0.7,
-            "tiles": 774
-          },
-          {
-            "game": 500,
-            "win_rate_window": 0.75,
-            "tiles": 795
-          }
-        ],
-        "win_rate_before_switch": 0.6167,
-        "win_rate_after_switch": 0.6917,
-        "adaptation_game": null,
-        "adaptation_speed": null,
-        "final_tiles": 795
-      },
-      {
-        "decay_rate": 0.05,
-        "switch_opponent": false,
-        "total_games": 500,
-        "switch_point": 300,
-        "games": [
-          {
-            "game": 20,
-            "win_rate_window": 0.65,
-            "tiles": 58
-          },
-          {
-            "game": 40,
-            "win_rate_window": 0.8,
-            "tiles": 107
-          },
-          {
-            "game": 60,
-            "win_rate_window": 0.6,
-            "tiles": 154
-          },
-          {
-            "game": 80,
-            "win_rate_window": 0.5,
-            "tiles": 191
-          },
-          {
-            "game": 100,
-            "win_rate_window": 0.8,
-            "tiles": 234
-          },
-          {
-            "game": 120,
-            "win_rate_window": 0.7,
-            "tiles": 270
-          },
-          {
-            "game": 140,
-            "win_rate_window": 0.6,
-            "tiles": 301
-          },
-          {
-            "game": 160,
-            "win_rate_window": 0.75,
-            "tiles": 341
-          },
-          {
-            "game": 180,
-            "win_rate_window": 0.85,
-            "tiles": 374
-          },
-          {
-            "game": 200,
-            "win_rate_window": 0.7,
-            "tiles": 407
-          },
-          {
-            "game": 220,
-            "win_rate_window": 0.65,
-            "tiles": 442
-          },
-          {
-            "game": 240,
-            "win_rate_window": 0.65,
-            "tiles": 467
-          },
-          {
-            "game": 260,
-            "win_rate_window": 0.55,
-            "tiles": 493
-          },
-          {
-            "game": 280,
-            "win_rate_window": 0.65,
-            "tiles": 519
-          },
-          {
-            "game": 300,
-            "win_rate_window": 0.5,
-            "tiles": 547
-          },
-          {
-            "game": 320,
-            "win_rate_window": 0.65,
-            "tiles": 578
-          },
-          {
-            "game": 340,
-            "win_rate_window": 0.7,
-            "tiles": 605
-          },
-          {
-            "game": 360,
-            "win_rate_window": 0.65,
-            "tiles": 633
-          },
-          {
-            "game": 380,
-            "win_rate_window": 0.6,
-            "tiles": 658
-          },
-          {
-            "game": 400,
-            "win_rate_window": 0.65,
-            "tiles": 681
-          },
-          {
-            "game": 420,
-            "win_rate_window": 0.65,
-            "tiles": 705
-          },
-          {
-            "game": 440,
-            "win_rate_window": 0.7,
-            "tiles": 730
-          },
-          {
-            "game": 460,
-            "win_rate_window": 0.7,
-            "tiles": 753
-          },
-          {
-            "game": 480,
-            "win_rate_window": 0.7,
-            "tiles": 774
-          },
-          {
-            "game": 500,
-            "win_rate_window": 0.75,
-            "tiles": 795
-          }
-        ],
-        "win_rate_before_switch": 0.6167,
-        "win_rate_after_switch": 0.6917,
-        "adaptation_game": null,
-        "adaptation_speed": null,
-        "final_tiles": 795
-      },
-      {
-        "decay_rate": 0.1,
-        "switch_opponent": false,
-        "total_games": 500,
-        "switch_point": 300,
-        "games": [
-          {
-            "game": 20,
-            "win_rate_window": 0.65,
-            "tiles": 58
-          },
-          {
-            "game": 40,
-            "win_rate_window": 0.8,
-            "tiles": 107
-          },
-          {
-            "game": 60,
-            "win_rate_window": 0.6,
-            "tiles": 154
-          },
-          {
-            "game": 80,
-            "win_rate_window": 0.5,
-            "tiles": 191
-          },
-          {
-            "game": 100,
-            "win_rate_window": 0.8,
-            "tiles": 234
-          },
-          {
-            "game": 120,
-            "win_rate_window": 0.7,
-            "tiles": 270
-          },
-          {
-            "game": 140,
-            "win_rate_window": 0.6,
-            "tiles": 301
-          },
-          {
-            "game": 160,
-            "win_rate_window": 0.75,
-            "tiles": 341
-          },
-          {
-            "game": 180,
-            "win_rate_window": 0.85,
-            "tiles": 374
-          },
-          {
-            "game": 200,
-            "win_rate_window": 0.7,
-            "tiles": 407
-          },
-          {
-            "game": 220,
-            "win_rate_window": 0.65,
-            "tiles": 442
-          },
-          {
-            "game": 240,
-            "win_rate_window": 0.65,
-            "tiles": 467
-          },
-          {
-            "game": 260,
-            "win_rate_window": 0.55,
-            "tiles": 493
-          },
-          {
-            "game": 280,
-            "win_rate_window": 0.65,
-            "tiles": 519
-          },
-          {
-            "game": 300,
-            "win_rate_window": 0.5,
-            "tiles": 547
-          },
-          {
-            "game": 320,
-            "win_rate_window": 0.65,
-            "tiles": 578
-          },
-          {
-            "game": 340,
-            "win_rate_window": 0.7,
-            "tiles": 605
-          },
-          {
-            "game": 360,
-            "win_rate_window": 0.65,
-            "tiles": 633
-          },
-          {
-            "game": 380,
-            "win_rate_window": 0.6,
-            "tiles": 658
-          },
-          {
-            "game": 400,
-            "win_rate_window": 0.65,
-            "tiles": 681
-          },
-          {
-            "game": 420,
-            "win_rate_window": 0.65,
-            "tiles": 705
-          },
-          {
-            "game": 440,
-            "win_rate_window": 0.7,
-            "tiles": 730
-          },
-          {
-            "game": 460,
-            "win_rate_window": 0.7,
-            "tiles": 753
-          },
-          {
-            "game": 480,
-            "win_rate_window": 0.7,
-            "tiles": 774
-          },
-          {
-            "game": 500,
-            "win_rate_window": 0.75,
-            "tiles": 795
-          }
-        ],
-        "win_rate_before_switch": 0.6167,
-        "win_rate_after_switch": 0.6917,
-        "adaptation_game": null,
-        "adaptation_speed": null,
-        "final_tiles": 795
-      }
-    ]
+    "with_switch": {
+      "0.0": [
+        {
+          "pre_switch_winrate": 0.6,
+          "post_switch_winrate": 0.28,
+          "immediate_after_winrate": 0.25,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0037,
+          "final_tiles": 723,
+          "windows": [
+            [
+              10,
+              0.65
+            ],
+            [
+              30,
+              0.8
+            ],
+            [
+              50,
+              0.6
+            ],
+            [
+              70,
+              0.5
+            ],
+            [
+              90,
+              0.8
+            ],
+            [
+              110,
+              0.7
+            ],
+            [
+              130,
+              0.6
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.85
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.65
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.55
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.5
+            ],
+            [
+              310,
+              0.3
+            ],
+            [
+              330,
+              0.2
+            ],
+            [
+              350,
+              0.25
+            ],
+            [
+              370,
+              0.2
+            ],
+            [
+              390,
+              0.3
+            ],
+            [
+              410,
+              0.45
+            ],
+            [
+              430,
+              0.15
+            ],
+            [
+              450,
+              0.25
+            ],
+            [
+              470,
+              0.2
+            ],
+            [
+              490,
+              0.35
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.65,
+          "post_switch_winrate": 0.3,
+          "immediate_after_winrate": 0.35,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0037,
+          "final_tiles": 720,
+          "windows": [
+            [
+              10,
+              0.8
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.55
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.6
+            ],
+            [
+              130,
+              0.65
+            ],
+            [
+              150,
+              0.6
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.8
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.65
+            ],
+            [
+              270,
+              0.55
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.35
+            ],
+            [
+              330,
+              0.35
+            ],
+            [
+              350,
+              0.25
+            ],
+            [
+              370,
+              0.35
+            ],
+            [
+              390,
+              0.25
+            ],
+            [
+              410,
+              0.25
+            ],
+            [
+              430,
+              0.25
+            ],
+            [
+              450,
+              0.35
+            ],
+            [
+              470,
+              0.3
+            ],
+            [
+              490,
+              0.35
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.69,
+          "post_switch_winrate": 0.24,
+          "immediate_after_winrate": 0.3,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0038,
+          "final_tiles": 715,
+          "windows": [
+            [
+              10,
+              0.65
+            ],
+            [
+              30,
+              0.75
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.8
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.6
+            ],
+            [
+              130,
+              0.65
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.6
+            ],
+            [
+              190,
+              0.6
+            ],
+            [
+              210,
+              0.65
+            ],
+            [
+              230,
+              0.8
+            ],
+            [
+              250,
+              0.65
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.4
+            ],
+            [
+              330,
+              0.2
+            ],
+            [
+              350,
+              0.3
+            ],
+            [
+              370,
+              0.3
+            ],
+            [
+              390,
+              0.25
+            ],
+            [
+              410,
+              0.3
+            ],
+            [
+              430,
+              0.3
+            ],
+            [
+              450,
+              0.25
+            ],
+            [
+              470,
+              0.1
+            ],
+            [
+              490,
+              0.25
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.69,
+          "post_switch_winrate": 0.26,
+          "immediate_after_winrate": 0.25,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0094,
+          "final_tiles": 715,
+          "windows": [
+            [
+              10,
+              0.7
+            ],
+            [
+              30,
+              0.6
+            ],
+            [
+              50,
+              0.85
+            ],
+            [
+              70,
+              0.75
+            ],
+            [
+              90,
+              0.55
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.65
+            ],
+            [
+              150,
+              0.6
+            ],
+            [
+              170,
+              0.6
+            ],
+            [
+              190,
+              0.5
+            ],
+            [
+              210,
+              0.75
+            ],
+            [
+              230,
+              0.6
+            ],
+            [
+              250,
+              0.8
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.6
+            ],
+            [
+              310,
+              0.25
+            ],
+            [
+              330,
+              0.25
+            ],
+            [
+              350,
+              0.4
+            ],
+            [
+              370,
+              0.3
+            ],
+            [
+              390,
+              0.35
+            ],
+            [
+              410,
+              0.15
+            ],
+            [
+              430,
+              0.3
+            ],
+            [
+              450,
+              0.15
+            ],
+            [
+              470,
+              0.25
+            ],
+            [
+              490,
+              0.45
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.63,
+          "post_switch_winrate": 0.3,
+          "immediate_after_winrate": 0.2,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0093,
+          "final_tiles": 720,
+          "windows": [
+            [
+              10,
+              0.55
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.55
+            ],
+            [
+              70,
+              0.75
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.55
+            ],
+            [
+              130,
+              0.55
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.65
+            ],
+            [
+              190,
+              0.75
+            ],
+            [
+              210,
+              0.5
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.7
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.6
+            ],
+            [
+              310,
+              0.25
+            ],
+            [
+              330,
+              0.15
+            ],
+            [
+              350,
+              0.25
+            ],
+            [
+              370,
+              0.3
+            ],
+            [
+              390,
+              0.25
+            ],
+            [
+              410,
+              0.2
+            ],
+            [
+              430,
+              0.3
+            ],
+            [
+              450,
+              0.45
+            ],
+            [
+              470,
+              0.2
+            ],
+            [
+              490,
+              0.35
+            ]
+          ]
+        }
+      ],
+      "0.001": [
+        {
+          "pre_switch_winrate": 0.67,
+          "post_switch_winrate": 0.26,
+          "immediate_after_winrate": 0.225,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0056,
+          "final_tiles": 726,
+          "windows": [
+            [
+              10,
+              0.55
+            ],
+            [
+              30,
+              0.7
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.6
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.6
+            ],
+            [
+              150,
+              0.8
+            ],
+            [
+              170,
+              0.7
+            ],
+            [
+              190,
+              0.55
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.7
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.25
+            ],
+            [
+              330,
+              0.2
+            ],
+            [
+              350,
+              0.4
+            ],
+            [
+              370,
+              0.25
+            ],
+            [
+              390,
+              0.2
+            ],
+            [
+              410,
+              0.25
+            ],
+            [
+              430,
+              0.25
+            ],
+            [
+              450,
+              0.2
+            ],
+            [
+              470,
+              0.3
+            ],
+            [
+              490,
+              0.3
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.69,
+          "post_switch_winrate": 0.22,
+          "immediate_after_winrate": 0.175,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0037,
+          "final_tiles": 710,
+          "windows": [
+            [
+              10,
+              0.7
+            ],
+            [
+              30,
+              0.6
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.75
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.75
+            ],
+            [
+              130,
+              0.65
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.75
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.55
+            ],
+            [
+              270,
+              0.8
+            ],
+            [
+              290,
+              0.75
+            ],
+            [
+              310,
+              0.25
+            ],
+            [
+              330,
+              0.1
+            ],
+            [
+              350,
+              0.2
+            ],
+            [
+              370,
+              0.2
+            ],
+            [
+              390,
+              0.2
+            ],
+            [
+              410,
+              0.15
+            ],
+            [
+              430,
+              0.2
+            ],
+            [
+              450,
+              0.25
+            ],
+            [
+              470,
+              0.3
+            ],
+            [
+              490,
+              0.2
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.66,
+          "post_switch_winrate": 0.24,
+          "immediate_after_winrate": 0.225,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0093,
+          "final_tiles": 714,
+          "windows": [
+            [
+              10,
+              0.8
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.6
+            ],
+            [
+              110,
+              0.55
+            ],
+            [
+              130,
+              0.75
+            ],
+            [
+              150,
+              0.8
+            ],
+            [
+              170,
+              0.6
+            ],
+            [
+              190,
+              0.65
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.75
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.65
+            ],
+            [
+              310,
+              0.2
+            ],
+            [
+              330,
+              0.25
+            ],
+            [
+              350,
+              0.15
+            ],
+            [
+              370,
+              0.2
+            ],
+            [
+              390,
+              0.45
+            ],
+            [
+              410,
+              0.1
+            ],
+            [
+              430,
+              0.2
+            ],
+            [
+              450,
+              0.3
+            ],
+            [
+              470,
+              0.45
+            ],
+            [
+              490,
+              0.15
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.75,
+          "post_switch_winrate": 0.2,
+          "immediate_after_winrate": 0.375,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0018,
+          "final_tiles": 740,
+          "windows": [
+            [
+              10,
+              0.4
+            ],
+            [
+              30,
+              0.7
+            ],
+            [
+              50,
+              0.75
+            ],
+            [
+              70,
+              0.6
+            ],
+            [
+              90,
+              0.6
+            ],
+            [
+              110,
+              0.8
+            ],
+            [
+              130,
+              0.8
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.55
+            ],
+            [
+              190,
+              0.8
+            ],
+            [
+              210,
+              0.9
+            ],
+            [
+              230,
+              0.85
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.85
+            ],
+            [
+              290,
+              0.55
+            ],
+            [
+              310,
+              0.45
+            ],
+            [
+              330,
+              0.3
+            ],
+            [
+              350,
+              0.2
+            ],
+            [
+              370,
+              0.25
+            ],
+            [
+              390,
+              0.35
+            ],
+            [
+              410,
+              0.1
+            ],
+            [
+              430,
+              0.25
+            ],
+            [
+              450,
+              0.3
+            ],
+            [
+              470,
+              0.15
+            ],
+            [
+              490,
+              0.2
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.69,
+          "post_switch_winrate": 0.29,
+          "immediate_after_winrate": 0.25,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0018,
+          "final_tiles": 712,
+          "windows": [
+            [
+              10,
+              0.55
+            ],
+            [
+              30,
+              0.75
+            ],
+            [
+              50,
+              0.85
+            ],
+            [
+              70,
+              0.5
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.8
+            ],
+            [
+              130,
+              0.7
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.7
+            ],
+            [
+              190,
+              0.8
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.75
+            ],
+            [
+              250,
+              0.8
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.65
+            ],
+            [
+              310,
+              0.25
+            ],
+            [
+              330,
+              0.25
+            ],
+            [
+              350,
+              0.3
+            ],
+            [
+              370,
+              0.35
+            ],
+            [
+              390,
+              0.35
+            ],
+            [
+              410,
+              0.25
+            ],
+            [
+              430,
+              0.25
+            ],
+            [
+              450,
+              0.15
+            ],
+            [
+              470,
+              0.4
+            ],
+            [
+              490,
+              0.4
+            ]
+          ]
+        }
+      ],
+      "0.005": [
+        {
+          "pre_switch_winrate": 0.65,
+          "post_switch_winrate": 0.34,
+          "immediate_after_winrate": 0.2,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0038,
+          "final_tiles": 713,
+          "windows": [
+            [
+              10,
+              0.85
+            ],
+            [
+              30,
+              0.9
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.8
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.75
+            ],
+            [
+              190,
+              0.8
+            ],
+            [
+              210,
+              0.8
+            ],
+            [
+              230,
+              0.5
+            ],
+            [
+              250,
+              0.75
+            ],
+            [
+              270,
+              0.75
+            ],
+            [
+              290,
+              0.45
+            ],
+            [
+              310,
+              0.2
+            ],
+            [
+              330,
+              0.2
+            ],
+            [
+              350,
+              0.5
+            ],
+            [
+              370,
+              0.25
+            ],
+            [
+              390,
+              0.25
+            ],
+            [
+              410,
+              0.25
+            ],
+            [
+              430,
+              0.5
+            ],
+            [
+              450,
+              0.4
+            ],
+            [
+              470,
+              0.3
+            ],
+            [
+              490,
+              0.25
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.68,
+          "post_switch_winrate": 0.19,
+          "immediate_after_winrate": 0.25,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0,
+          "final_tiles": 742,
+          "windows": [
+            [
+              10,
+              0.75
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.6
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.8
+            ],
+            [
+              130,
+              0.45
+            ],
+            [
+              150,
+              0.6
+            ],
+            [
+              170,
+              0.75
+            ],
+            [
+              190,
+              0.75
+            ],
+            [
+              210,
+              0.65
+            ],
+            [
+              230,
+              0.7
+            ],
+            [
+              250,
+              0.65
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.25
+            ],
+            [
+              330,
+              0.25
+            ],
+            [
+              350,
+              0.2
+            ],
+            [
+              370,
+              0.4
+            ],
+            [
+              390,
+              0.25
+            ],
+            [
+              410,
+              0.25
+            ],
+            [
+              430,
+              0.1
+            ],
+            [
+              450,
+              0.25
+            ],
+            [
+              470,
+              0.25
+            ],
+            [
+              490,
+              0.1
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.64,
+          "post_switch_winrate": 0.29,
+          "immediate_after_winrate": 0.25,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0094,
+          "final_tiles": 700,
+          "windows": [
+            [
+              10,
+              0.75
+            ],
+            [
+              30,
+              0.6
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.45
+            ],
+            [
+              110,
+              0.75
+            ],
+            [
+              130,
+              0.7
+            ],
+            [
+              150,
+              0.55
+            ],
+            [
+              170,
+              0.65
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.45
+            ],
+            [
+              250,
+              0.75
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.75
+            ],
+            [
+              310,
+              0.15
+            ],
+            [
+              330,
+              0.35
+            ],
+            [
+              350,
+              0.15
+            ],
+            [
+              370,
+              0.15
+            ],
+            [
+              390,
+              0.05
+            ],
+            [
+              410,
+              0.2
+            ],
+            [
+              430,
+              0.3
+            ],
+            [
+              450,
+              0.35
+            ],
+            [
+              470,
+              0.3
+            ],
+            [
+              490,
+              0.3
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.7,
+          "post_switch_winrate": 0.37,
+          "immediate_after_winrate": 0.325,
+          "adaptation_game": 330,
+          "adaptation_speed": 30,
+          "tile_churn_rate": 0.0074,
+          "final_tiles": 717,
+          "windows": [
+            [
+              10,
+              0.7
+            ],
+            [
+              30,
+              0.75
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.55
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.5
+            ],
+            [
+              130,
+              0.5
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.6
+            ],
+            [
+              190,
+              0.6
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.6
+            ],
+            [
+              250,
+              0.7
+            ],
+            [
+              270,
+              0.75
+            ],
+            [
+              290,
+              0.75
+            ],
+            [
+              310,
+              0.0
+            ],
+            [
+              330,
+              0.65
+            ],
+            [
+              350,
+              0.2
+            ],
+            [
+              370,
+              0.25
+            ],
+            [
+              390,
+              0.2
+            ],
+            [
+              410,
+              0.15
+            ],
+            [
+              430,
+              0.4
+            ],
+            [
+              450,
+              0.3
+            ],
+            [
+              470,
+              0.5
+            ],
+            [
+              490,
+              0.5
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.7,
+          "post_switch_winrate": 0.3,
+          "immediate_after_winrate": 0.2,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0092,
+          "final_tiles": 709,
+          "windows": [
+            [
+              10,
+              0.55
+            ],
+            [
+              30,
+              0.8
+            ],
+            [
+              50,
+              0.6
+            ],
+            [
+              70,
+              0.65
+            ],
+            [
+              90,
+              0.5
+            ],
+            [
+              110,
+              0.7
+            ],
+            [
+              130,
+              0.75
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.55
+            ],
+            [
+              190,
+              0.85
+            ],
+            [
+              210,
+              0.65
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.65
+            ],
+            [
+              270,
+              0.8
+            ],
+            [
+              290,
+              0.75
+            ],
+            [
+              310,
+              0.15
+            ],
+            [
+              330,
+              0.25
+            ],
+            [
+              350,
+              0.35
+            ],
+            [
+              370,
+              0.25
+            ],
+            [
+              390,
+              0.4
+            ],
+            [
+              410,
+              0.4
+            ],
+            [
+              430,
+              0.25
+            ],
+            [
+              450,
+              0.1
+            ],
+            [
+              470,
+              0.35
+            ],
+            [
+              490,
+              0.4
+            ]
+          ]
+        }
+      ],
+      "0.01": [
+        {
+          "pre_switch_winrate": 0.72,
+          "post_switch_winrate": 0.21,
+          "immediate_after_winrate": 0.275,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0018,
+          "final_tiles": 716,
+          "windows": [
+            [
+              10,
+              0.55
+            ],
+            [
+              30,
+              0.35
+            ],
+            [
+              50,
+              0.75
+            ],
+            [
+              70,
+              0.6
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.8
+            ],
+            [
+              150,
+              0.55
+            ],
+            [
+              170,
+              0.85
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.8
+            ],
+            [
+              250,
+              0.8
+            ],
+            [
+              270,
+              0.8
+            ],
+            [
+              290,
+              0.5
+            ],
+            [
+              310,
+              0.45
+            ],
+            [
+              330,
+              0.1
+            ],
+            [
+              350,
+              0.4
+            ],
+            [
+              370,
+              0.3
+            ],
+            [
+              390,
+              0.25
+            ],
+            [
+              410,
+              0.25
+            ],
+            [
+              430,
+              0.2
+            ],
+            [
+              450,
+              0.2
+            ],
+            [
+              470,
+              0.25
+            ],
+            [
+              490,
+              0.15
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.58,
+          "post_switch_winrate": 0.22,
+          "immediate_after_winrate": 0.225,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0057,
+          "final_tiles": 694,
+          "windows": [
+            [
+              10,
+              0.75
+            ],
+            [
+              30,
+              0.6
+            ],
+            [
+              50,
+              0.85
+            ],
+            [
+              70,
+              0.5
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.7
+            ],
+            [
+              130,
+              0.5
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.65
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.5
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.55
+            ],
+            [
+              310,
+              0.3
+            ],
+            [
+              330,
+              0.15
+            ],
+            [
+              350,
+              0.35
+            ],
+            [
+              370,
+              0.35
+            ],
+            [
+              390,
+              0.25
+            ],
+            [
+              410,
+              0.3
+            ],
+            [
+              430,
+              0.25
+            ],
+            [
+              450,
+              0.3
+            ],
+            [
+              470,
+              0.1
+            ],
+            [
+              490,
+              0.15
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.71,
+          "post_switch_winrate": 0.23,
+          "immediate_after_winrate": 0.375,
+          "adaptation_game": 330,
+          "adaptation_speed": 30,
+          "tile_churn_rate": 0.0074,
+          "final_tiles": 711,
+          "windows": [
+            [
+              10,
+              0.65
+            ],
+            [
+              30,
+              0.8
+            ],
+            [
+              50,
+              0.6
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.75
+            ],
+            [
+              150,
+              0.7
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.9
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.8
+            ],
+            [
+              250,
+              0.65
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.15
+            ],
+            [
+              330,
+              0.6
+            ],
+            [
+              350,
+              0.15
+            ],
+            [
+              370,
+              0.15
+            ],
+            [
+              390,
+              0.3
+            ],
+            [
+              410,
+              0.4
+            ],
+            [
+              430,
+              0.15
+            ],
+            [
+              450,
+              0.2
+            ],
+            [
+              470,
+              0.1
+            ],
+            [
+              490,
+              0.3
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.62,
+          "post_switch_winrate": 0.27,
+          "immediate_after_winrate": 0.1,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0056,
+          "final_tiles": 721,
+          "windows": [
+            [
+              10,
+              0.75
+            ],
+            [
+              30,
+              0.75
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.55
+            ],
+            [
+              90,
+              0.95
+            ],
+            [
+              110,
+              0.7
+            ],
+            [
+              130,
+              0.75
+            ],
+            [
+              150,
+              0.7
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.5
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.5
+            ],
+            [
+              250,
+              0.7
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.65
+            ],
+            [
+              310,
+              0.0
+            ],
+            [
+              330,
+              0.2
+            ],
+            [
+              350,
+              0.25
+            ],
+            [
+              370,
+              0.2
+            ],
+            [
+              390,
+              0.2
+            ],
+            [
+              410,
+              0.25
+            ],
+            [
+              430,
+              0.4
+            ],
+            [
+              450,
+              0.2
+            ],
+            [
+              470,
+              0.35
+            ],
+            [
+              490,
+              0.15
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.68,
+          "post_switch_winrate": 0.23,
+          "immediate_after_winrate": 0.225,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0018,
+          "final_tiles": 725,
+          "windows": [
+            [
+              10,
+              0.8
+            ],
+            [
+              30,
+              0.7
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.6
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.6
+            ],
+            [
+              150,
+              0.5
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.85
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.6
+            ],
+            [
+              250,
+              0.75
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.75
+            ],
+            [
+              310,
+              0.15
+            ],
+            [
+              330,
+              0.3
+            ],
+            [
+              350,
+              0.45
+            ],
+            [
+              370,
+              0.25
+            ],
+            [
+              390,
+              0.3
+            ],
+            [
+              410,
+              0.3
+            ],
+            [
+              430,
+              0.3
+            ],
+            [
+              450,
+              0.1
+            ],
+            [
+              470,
+              0.25
+            ],
+            [
+              490,
+              0.2
+            ]
+          ]
+        }
+      ],
+      "0.02": [
+        {
+          "pre_switch_winrate": 0.67,
+          "post_switch_winrate": 0.36,
+          "immediate_after_winrate": 0.275,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0071,
+          "final_tiles": 747,
+          "windows": [
+            [
+              10,
+              0.75
+            ],
+            [
+              30,
+              0.8
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.75
+            ],
+            [
+              110,
+              0.55
+            ],
+            [
+              130,
+              0.7
+            ],
+            [
+              150,
+              0.55
+            ],
+            [
+              170,
+              0.55
+            ],
+            [
+              190,
+              0.75
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.85
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.6
+            ],
+            [
+              310,
+              0.3
+            ],
+            [
+              330,
+              0.25
+            ],
+            [
+              350,
+              0.1
+            ],
+            [
+              370,
+              0.15
+            ],
+            [
+              390,
+              0.35
+            ],
+            [
+              410,
+              0.4
+            ],
+            [
+              430,
+              0.4
+            ],
+            [
+              450,
+              0.5
+            ],
+            [
+              470,
+              0.2
+            ],
+            [
+              490,
+              0.3
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.68,
+          "post_switch_winrate": 0.23,
+          "immediate_after_winrate": 0.175,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0092,
+          "final_tiles": 715,
+          "windows": [
+            [
+              10,
+              0.45
+            ],
+            [
+              30,
+              0.75
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.75
+            ],
+            [
+              90,
+              0.75
+            ],
+            [
+              110,
+              0.8
+            ],
+            [
+              130,
+              0.5
+            ],
+            [
+              150,
+              0.7
+            ],
+            [
+              170,
+              0.75
+            ],
+            [
+              190,
+              0.3
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.5
+            ],
+            [
+              250,
+              0.75
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.75
+            ],
+            [
+              310,
+              0.25
+            ],
+            [
+              330,
+              0.1
+            ],
+            [
+              350,
+              0.1
+            ],
+            [
+              370,
+              0.5
+            ],
+            [
+              390,
+              0.25
+            ],
+            [
+              410,
+              0.45
+            ],
+            [
+              430,
+              0.25
+            ],
+            [
+              450,
+              0.15
+            ],
+            [
+              470,
+              0.1
+            ],
+            [
+              490,
+              0.2
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.67,
+          "post_switch_winrate": 0.23,
+          "immediate_after_winrate": 0.275,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0036,
+          "final_tiles": 726,
+          "windows": [
+            [
+              10,
+              0.65
+            ],
+            [
+              30,
+              0.5
+            ],
+            [
+              50,
+              0.9
+            ],
+            [
+              70,
+              0.6
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.6
+            ],
+            [
+              130,
+              0.75
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.8
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.8
+            ],
+            [
+              270,
+              0.55
+            ],
+            [
+              290,
+              0.55
+            ],
+            [
+              310,
+              0.35
+            ],
+            [
+              330,
+              0.2
+            ],
+            [
+              350,
+              0.2
+            ],
+            [
+              370,
+              0.3
+            ],
+            [
+              390,
+              0.2
+            ],
+            [
+              410,
+              0.1
+            ],
+            [
+              430,
+              0.15
+            ],
+            [
+              450,
+              0.25
+            ],
+            [
+              470,
+              0.4
+            ],
+            [
+              490,
+              0.25
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.65,
+          "post_switch_winrate": 0.24,
+          "immediate_after_winrate": 0.125,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0037,
+          "final_tiles": 713,
+          "windows": [
+            [
+              10,
+              0.5
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.8
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.6
+            ],
+            [
+              130,
+              0.85
+            ],
+            [
+              150,
+              0.7
+            ],
+            [
+              170,
+              0.65
+            ],
+            [
+              190,
+              0.65
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.45
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.9
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.2
+            ],
+            [
+              330,
+              0.05
+            ],
+            [
+              350,
+              0.25
+            ],
+            [
+              370,
+              0.35
+            ],
+            [
+              390,
+              0.15
+            ],
+            [
+              410,
+              0.2
+            ],
+            [
+              430,
+              0.2
+            ],
+            [
+              450,
+              0.3
+            ],
+            [
+              470,
+              0.3
+            ],
+            [
+              490,
+              0.2
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.69,
+          "post_switch_winrate": 0.3,
+          "immediate_after_winrate": 0.225,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0075,
+          "final_tiles": 723,
+          "windows": [
+            [
+              10,
+              0.9
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.6
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.5
+            ],
+            [
+              130,
+              0.65
+            ],
+            [
+              150,
+              0.6
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.8
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.7
+            ],
+            [
+              250,
+              0.8
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.6
+            ],
+            [
+              310,
+              0.25
+            ],
+            [
+              330,
+              0.2
+            ],
+            [
+              350,
+              0.2
+            ],
+            [
+              370,
+              0.3
+            ],
+            [
+              390,
+              0.15
+            ],
+            [
+              410,
+              0.25
+            ],
+            [
+              430,
+              0.4
+            ],
+            [
+              450,
+              0.25
+            ],
+            [
+              470,
+              0.35
+            ],
+            [
+              490,
+              0.25
+            ]
+          ]
+        }
+      ],
+      "0.05": [
+        {
+          "pre_switch_winrate": 0.7,
+          "post_switch_winrate": 0.24,
+          "immediate_after_winrate": 0.325,
+          "adaptation_game": 430,
+          "adaptation_speed": 130,
+          "tile_churn_rate": 0.0056,
+          "final_tiles": 729,
+          "windows": [
+            [
+              10,
+              0.75
+            ],
+            [
+              30,
+              0.55
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.65
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.7
+            ],
+            [
+              130,
+              0.75
+            ],
+            [
+              150,
+              0.8
+            ],
+            [
+              170,
+              0.75
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.45
+            ],
+            [
+              230,
+              0.75
+            ],
+            [
+              250,
+              0.7
+            ],
+            [
+              270,
+              0.8
+            ],
+            [
+              290,
+              0.8
+            ],
+            [
+              310,
+              0.25
+            ],
+            [
+              330,
+              0.4
+            ],
+            [
+              350,
+              0.35
+            ],
+            [
+              370,
+              0.35
+            ],
+            [
+              390,
+              0.4
+            ],
+            [
+              410,
+              0.25
+            ],
+            [
+              430,
+              0.6
+            ],
+            [
+              450,
+              0.15
+            ],
+            [
+              470,
+              0.05
+            ],
+            [
+              490,
+              0.15
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.7,
+          "post_switch_winrate": 0.22,
+          "immediate_after_winrate": 0.225,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0071,
+          "final_tiles": 718,
+          "windows": [
+            [
+              10,
+              0.55
+            ],
+            [
+              30,
+              0.7
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.75
+            ],
+            [
+              110,
+              0.55
+            ],
+            [
+              130,
+              0.65
+            ],
+            [
+              150,
+              0.6
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.65
+            ],
+            [
+              210,
+              0.55
+            ],
+            [
+              230,
+              0.7
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.75
+            ],
+            [
+              290,
+              0.9
+            ],
+            [
+              310,
+              0.15
+            ],
+            [
+              330,
+              0.3
+            ],
+            [
+              350,
+              0.3
+            ],
+            [
+              370,
+              0.3
+            ],
+            [
+              390,
+              0.15
+            ],
+            [
+              410,
+              0.2
+            ],
+            [
+              430,
+              0.25
+            ],
+            [
+              450,
+              0.25
+            ],
+            [
+              470,
+              0.25
+            ],
+            [
+              490,
+              0.15
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.69,
+          "post_switch_winrate": 0.27,
+          "immediate_after_winrate": 0.3,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0055,
+          "final_tiles": 731,
+          "windows": [
+            [
+              10,
+              0.6
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.55
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.6
+            ],
+            [
+              130,
+              0.65
+            ],
+            [
+              150,
+              0.8
+            ],
+            [
+              170,
+              0.55
+            ],
+            [
+              190,
+              0.45
+            ],
+            [
+              210,
+              0.75
+            ],
+            [
+              230,
+              0.75
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.25
+            ],
+            [
+              330,
+              0.35
+            ],
+            [
+              350,
+              0.1
+            ],
+            [
+              370,
+              0.15
+            ],
+            [
+              390,
+              0.1
+            ],
+            [
+              410,
+              0.25
+            ],
+            [
+              430,
+              0.3
+            ],
+            [
+              450,
+              0.2
+            ],
+            [
+              470,
+              0.2
+            ],
+            [
+              490,
+              0.4
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.68,
+          "post_switch_winrate": 0.29,
+          "immediate_after_winrate": 0.3,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.015,
+          "final_tiles": 700,
+          "windows": [
+            [
+              10,
+              0.75
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.55
+            ],
+            [
+              130,
+              0.85
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.6
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.75
+            ],
+            [
+              230,
+              0.7
+            ],
+            [
+              250,
+              0.7
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.6
+            ],
+            [
+              310,
+              0.4
+            ],
+            [
+              330,
+              0.2
+            ],
+            [
+              350,
+              0.3
+            ],
+            [
+              370,
+              0.4
+            ],
+            [
+              390,
+              0.2
+            ],
+            [
+              410,
+              0.35
+            ],
+            [
+              430,
+              0.3
+            ],
+            [
+              450,
+              0.2
+            ],
+            [
+              470,
+              0.4
+            ],
+            [
+              490,
+              0.2
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.65,
+          "post_switch_winrate": 0.23,
+          "immediate_after_winrate": 0.3,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0037,
+          "final_tiles": 710,
+          "windows": [
+            [
+              10,
+              0.7
+            ],
+            [
+              30,
+              0.75
+            ],
+            [
+              50,
+              0.55
+            ],
+            [
+              70,
+              0.5
+            ],
+            [
+              90,
+              0.45
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.7
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.65
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.55
+            ],
+            [
+              250,
+              0.85
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.6
+            ],
+            [
+              310,
+              0.35
+            ],
+            [
+              330,
+              0.25
+            ],
+            [
+              350,
+              0.4
+            ],
+            [
+              370,
+              0.2
+            ],
+            [
+              390,
+              0.2
+            ],
+            [
+              410,
+              0.3
+            ],
+            [
+              430,
+              0.15
+            ],
+            [
+              450,
+              0.35
+            ],
+            [
+              470,
+              0.25
+            ],
+            [
+              490,
+              0.1
+            ]
+          ]
+        }
+      ],
+      "0.1": [
+        {
+          "pre_switch_winrate": 0.58,
+          "post_switch_winrate": 0.29,
+          "immediate_after_winrate": 0.25,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0112,
+          "final_tiles": 710,
+          "windows": [
+            [
+              10,
+              0.6
+            ],
+            [
+              30,
+              0.6
+            ],
+            [
+              50,
+              0.6
+            ],
+            [
+              70,
+              0.5
+            ],
+            [
+              90,
+              0.6
+            ],
+            [
+              110,
+              0.75
+            ],
+            [
+              130,
+              0.75
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.7
+            ],
+            [
+              190,
+              0.65
+            ],
+            [
+              210,
+              0.45
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.55
+            ],
+            [
+              310,
+              0.25
+            ],
+            [
+              330,
+              0.25
+            ],
+            [
+              350,
+              0.2
+            ],
+            [
+              370,
+              0.3
+            ],
+            [
+              390,
+              0.4
+            ],
+            [
+              410,
+              0.35
+            ],
+            [
+              430,
+              0.25
+            ],
+            [
+              450,
+              0.25
+            ],
+            [
+              470,
+              0.35
+            ],
+            [
+              490,
+              0.25
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.69,
+          "post_switch_winrate": 0.24,
+          "immediate_after_winrate": 0.25,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0039,
+          "final_tiles": 713,
+          "windows": [
+            [
+              10,
+              0.85
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.6
+            ],
+            [
+              110,
+              0.75
+            ],
+            [
+              130,
+              0.6
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.7
+            ],
+            [
+              190,
+              0.55
+            ],
+            [
+              210,
+              0.85
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.15
+            ],
+            [
+              330,
+              0.35
+            ],
+            [
+              350,
+              0.25
+            ],
+            [
+              370,
+              0.05
+            ],
+            [
+              390,
+              0.35
+            ],
+            [
+              410,
+              0.2
+            ],
+            [
+              430,
+              0.35
+            ],
+            [
+              450,
+              0.25
+            ],
+            [
+              470,
+              0.25
+            ],
+            [
+              490,
+              0.15
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.72,
+          "post_switch_winrate": 0.22,
+          "immediate_after_winrate": 0.3,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0074,
+          "final_tiles": 721,
+          "windows": [
+            [
+              10,
+              0.8
+            ],
+            [
+              30,
+              0.7
+            ],
+            [
+              50,
+              0.9
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.45
+            ],
+            [
+              110,
+              0.6
+            ],
+            [
+              130,
+              0.8
+            ],
+            [
+              150,
+              0.6
+            ],
+            [
+              170,
+              0.6
+            ],
+            [
+              190,
+              0.8
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.8
+            ],
+            [
+              250,
+              0.8
+            ],
+            [
+              270,
+              0.5
+            ],
+            [
+              290,
+              0.8
+            ],
+            [
+              310,
+              0.4
+            ],
+            [
+              330,
+              0.2
+            ],
+            [
+              350,
+              0.25
+            ],
+            [
+              370,
+              0.25
+            ],
+            [
+              390,
+              0.3
+            ],
+            [
+              410,
+              0.25
+            ],
+            [
+              430,
+              0.15
+            ],
+            [
+              450,
+              0.25
+            ],
+            [
+              470,
+              0.25
+            ],
+            [
+              490,
+              0.2
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.7,
+          "post_switch_winrate": 0.19,
+          "immediate_after_winrate": 0.275,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0,
+          "final_tiles": 686,
+          "windows": [
+            [
+              10,
+              0.5
+            ],
+            [
+              30,
+              0.6
+            ],
+            [
+              50,
+              0.85
+            ],
+            [
+              70,
+              0.8
+            ],
+            [
+              90,
+              0.6
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.55
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.65
+            ],
+            [
+              190,
+              0.75
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.7
+            ],
+            [
+              250,
+              0.85
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.65
+            ],
+            [
+              310,
+              0.3
+            ],
+            [
+              330,
+              0.25
+            ],
+            [
+              350,
+              0.35
+            ],
+            [
+              370,
+              0.3
+            ],
+            [
+              390,
+              0.2
+            ],
+            [
+              410,
+              0.25
+            ],
+            [
+              430,
+              0.2
+            ],
+            [
+              450,
+              0.15
+            ],
+            [
+              470,
+              0.1
+            ],
+            [
+              490,
+              0.25
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.72,
+          "post_switch_winrate": 0.26,
+          "immediate_after_winrate": 0.325,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": 0.0038,
+          "final_tiles": 715,
+          "windows": [
+            [
+              10,
+              0.7
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.6
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.8
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.85
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.75
+            ],
+            [
+              210,
+              0.75
+            ],
+            [
+              230,
+              0.7
+            ],
+            [
+              250,
+              0.7
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.8
+            ],
+            [
+              310,
+              0.3
+            ],
+            [
+              330,
+              0.35
+            ],
+            [
+              350,
+              0.2
+            ],
+            [
+              370,
+              0.2
+            ],
+            [
+              390,
+              0.5
+            ],
+            [
+              410,
+              0.15
+            ],
+            [
+              430,
+              0.2
+            ],
+            [
+              450,
+              0.45
+            ],
+            [
+              470,
+              0.2
+            ],
+            [
+              490,
+              0.3
+            ]
+          ]
+        }
+      ]
+    },
+    "without_switch": {
+      "0.0": [
+        {
+          "pre_switch_winrate": 0.6,
+          "post_switch_winrate": 0.7,
+          "immediate_after_winrate": 0.675,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 795,
+          "windows": [
+            [
+              10,
+              0.65
+            ],
+            [
+              30,
+              0.8
+            ],
+            [
+              50,
+              0.6
+            ],
+            [
+              70,
+              0.5
+            ],
+            [
+              90,
+              0.8
+            ],
+            [
+              110,
+              0.7
+            ],
+            [
+              130,
+              0.6
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.85
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.65
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.55
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.5
+            ],
+            [
+              310,
+              0.65
+            ],
+            [
+              330,
+              0.7
+            ],
+            [
+              350,
+              0.65
+            ],
+            [
+              370,
+              0.6
+            ],
+            [
+              390,
+              0.65
+            ],
+            [
+              410,
+              0.65
+            ],
+            [
+              430,
+              0.7
+            ],
+            [
+              450,
+              0.7
+            ],
+            [
+              470,
+              0.7
+            ],
+            [
+              490,
+              0.75
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.65,
+          "post_switch_winrate": 0.65,
+          "immediate_after_winrate": 0.775,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 780,
+          "windows": [
+            [
+              10,
+              0.8
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.55
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.6
+            ],
+            [
+              130,
+              0.65
+            ],
+            [
+              150,
+              0.6
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.8
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.65
+            ],
+            [
+              270,
+              0.55
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.8
+            ],
+            [
+              330,
+              0.75
+            ],
+            [
+              350,
+              0.85
+            ],
+            [
+              370,
+              0.65
+            ],
+            [
+              390,
+              0.7
+            ],
+            [
+              410,
+              0.55
+            ],
+            [
+              430,
+              0.85
+            ],
+            [
+              450,
+              0.6
+            ],
+            [
+              470,
+              0.65
+            ],
+            [
+              490,
+              0.6
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.69,
+          "post_switch_winrate": 0.7,
+          "immediate_after_winrate": 0.7,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 786,
+          "windows": [
+            [
+              10,
+              0.65
+            ],
+            [
+              30,
+              0.75
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.8
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.6
+            ],
+            [
+              130,
+              0.65
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.6
+            ],
+            [
+              190,
+              0.6
+            ],
+            [
+              210,
+              0.65
+            ],
+            [
+              230,
+              0.8
+            ],
+            [
+              250,
+              0.65
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.75
+            ],
+            [
+              330,
+              0.65
+            ],
+            [
+              350,
+              0.7
+            ],
+            [
+              370,
+              0.8
+            ],
+            [
+              390,
+              0.6
+            ],
+            [
+              410,
+              0.75
+            ],
+            [
+              430,
+              0.5
+            ],
+            [
+              450,
+              0.9
+            ],
+            [
+              470,
+              0.55
+            ],
+            [
+              490,
+              0.8
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.69,
+          "post_switch_winrate": 0.66,
+          "immediate_after_winrate": 0.525,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 759,
+          "windows": [
+            [
+              10,
+              0.7
+            ],
+            [
+              30,
+              0.6
+            ],
+            [
+              50,
+              0.85
+            ],
+            [
+              70,
+              0.75
+            ],
+            [
+              90,
+              0.55
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.65
+            ],
+            [
+              150,
+              0.6
+            ],
+            [
+              170,
+              0.6
+            ],
+            [
+              190,
+              0.5
+            ],
+            [
+              210,
+              0.75
+            ],
+            [
+              230,
+              0.6
+            ],
+            [
+              250,
+              0.8
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.6
+            ],
+            [
+              310,
+              0.6
+            ],
+            [
+              330,
+              0.45
+            ],
+            [
+              350,
+              0.75
+            ],
+            [
+              370,
+              0.75
+            ],
+            [
+              390,
+              0.6
+            ],
+            [
+              410,
+              0.75
+            ],
+            [
+              430,
+              0.55
+            ],
+            [
+              450,
+              0.8
+            ],
+            [
+              470,
+              0.65
+            ],
+            [
+              490,
+              0.55
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.63,
+          "post_switch_winrate": 0.61,
+          "immediate_after_winrate": 0.625,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 798,
+          "windows": [
+            [
+              10,
+              0.55
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.55
+            ],
+            [
+              70,
+              0.75
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.55
+            ],
+            [
+              130,
+              0.55
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.65
+            ],
+            [
+              190,
+              0.75
+            ],
+            [
+              210,
+              0.5
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.7
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.6
+            ],
+            [
+              310,
+              0.75
+            ],
+            [
+              330,
+              0.5
+            ],
+            [
+              350,
+              0.55
+            ],
+            [
+              370,
+              0.6
+            ],
+            [
+              390,
+              0.75
+            ],
+            [
+              410,
+              0.55
+            ],
+            [
+              430,
+              0.6
+            ],
+            [
+              450,
+              0.65
+            ],
+            [
+              470,
+              0.7
+            ],
+            [
+              490,
+              0.55
+            ]
+          ]
+        }
+      ],
+      "0.001": [
+        {
+          "pre_switch_winrate": 0.67,
+          "post_switch_winrate": 0.68,
+          "immediate_after_winrate": 0.7,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 794,
+          "windows": [
+            [
+              10,
+              0.55
+            ],
+            [
+              30,
+              0.7
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.6
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.6
+            ],
+            [
+              150,
+              0.8
+            ],
+            [
+              170,
+              0.7
+            ],
+            [
+              190,
+              0.55
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.7
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.7
+            ],
+            [
+              330,
+              0.7
+            ],
+            [
+              350,
+              0.65
+            ],
+            [
+              370,
+              0.7
+            ],
+            [
+              390,
+              0.5
+            ],
+            [
+              410,
+              0.65
+            ],
+            [
+              430,
+              0.7
+            ],
+            [
+              450,
+              0.7
+            ],
+            [
+              470,
+              0.65
+            ],
+            [
+              490,
+              0.7
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.69,
+          "post_switch_winrate": 0.65,
+          "immediate_after_winrate": 0.575,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 781,
+          "windows": [
+            [
+              10,
+              0.7
+            ],
+            [
+              30,
+              0.6
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.75
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.75
+            ],
+            [
+              130,
+              0.65
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.75
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.55
+            ],
+            [
+              270,
+              0.8
+            ],
+            [
+              290,
+              0.75
+            ],
+            [
+              310,
+              0.5
+            ],
+            [
+              330,
+              0.65
+            ],
+            [
+              350,
+              0.6
+            ],
+            [
+              370,
+              0.55
+            ],
+            [
+              390,
+              0.8
+            ],
+            [
+              410,
+              0.7
+            ],
+            [
+              430,
+              0.75
+            ],
+            [
+              450,
+              0.6
+            ],
+            [
+              470,
+              0.65
+            ],
+            [
+              490,
+              0.55
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.66,
+          "post_switch_winrate": 0.68,
+          "immediate_after_winrate": 0.725,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 787,
+          "windows": [
+            [
+              10,
+              0.8
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.6
+            ],
+            [
+              110,
+              0.55
+            ],
+            [
+              130,
+              0.75
+            ],
+            [
+              150,
+              0.8
+            ],
+            [
+              170,
+              0.6
+            ],
+            [
+              190,
+              0.65
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.75
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.65
+            ],
+            [
+              310,
+              0.75
+            ],
+            [
+              330,
+              0.7
+            ],
+            [
+              350,
+              0.65
+            ],
+            [
+              370,
+              0.65
+            ],
+            [
+              390,
+              0.6
+            ],
+            [
+              410,
+              0.65
+            ],
+            [
+              430,
+              0.7
+            ],
+            [
+              450,
+              0.75
+            ],
+            [
+              470,
+              0.7
+            ],
+            [
+              490,
+              0.6
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.75,
+          "post_switch_winrate": 0.61,
+          "immediate_after_winrate": 0.8,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 784,
+          "windows": [
+            [
+              10,
+              0.4
+            ],
+            [
+              30,
+              0.7
+            ],
+            [
+              50,
+              0.75
+            ],
+            [
+              70,
+              0.6
+            ],
+            [
+              90,
+              0.6
+            ],
+            [
+              110,
+              0.8
+            ],
+            [
+              130,
+              0.8
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.55
+            ],
+            [
+              190,
+              0.8
+            ],
+            [
+              210,
+              0.9
+            ],
+            [
+              230,
+              0.85
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.85
+            ],
+            [
+              290,
+              0.55
+            ],
+            [
+              310,
+              0.7
+            ],
+            [
+              330,
+              0.9
+            ],
+            [
+              350,
+              0.75
+            ],
+            [
+              370,
+              0.7
+            ],
+            [
+              390,
+              0.6
+            ],
+            [
+              410,
+              0.6
+            ],
+            [
+              430,
+              0.7
+            ],
+            [
+              450,
+              0.45
+            ],
+            [
+              470,
+              0.65
+            ],
+            [
+              490,
+              0.65
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.69,
+          "post_switch_winrate": 0.66,
+          "immediate_after_winrate": 0.6,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 793,
+          "windows": [
+            [
+              10,
+              0.55
+            ],
+            [
+              30,
+              0.75
+            ],
+            [
+              50,
+              0.85
+            ],
+            [
+              70,
+              0.5
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.8
+            ],
+            [
+              130,
+              0.7
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.7
+            ],
+            [
+              190,
+              0.8
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.75
+            ],
+            [
+              250,
+              0.8
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.65
+            ],
+            [
+              310,
+              0.45
+            ],
+            [
+              330,
+              0.75
+            ],
+            [
+              350,
+              0.85
+            ],
+            [
+              370,
+              0.6
+            ],
+            [
+              390,
+              0.8
+            ],
+            [
+              410,
+              0.65
+            ],
+            [
+              430,
+              0.4
+            ],
+            [
+              450,
+              0.8
+            ],
+            [
+              470,
+              0.75
+            ],
+            [
+              490,
+              0.7
+            ]
+          ]
+        }
+      ],
+      "0.005": [
+        {
+          "pre_switch_winrate": 0.65,
+          "post_switch_winrate": 0.71,
+          "immediate_after_winrate": 0.75,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 778,
+          "windows": [
+            [
+              10,
+              0.85
+            ],
+            [
+              30,
+              0.9
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.8
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.75
+            ],
+            [
+              190,
+              0.8
+            ],
+            [
+              210,
+              0.8
+            ],
+            [
+              230,
+              0.5
+            ],
+            [
+              250,
+              0.75
+            ],
+            [
+              270,
+              0.75
+            ],
+            [
+              290,
+              0.45
+            ],
+            [
+              310,
+              0.75
+            ],
+            [
+              330,
+              0.75
+            ],
+            [
+              350,
+              0.65
+            ],
+            [
+              370,
+              0.55
+            ],
+            [
+              390,
+              0.6
+            ],
+            [
+              410,
+              0.7
+            ],
+            [
+              430,
+              0.75
+            ],
+            [
+              450,
+              0.7
+            ],
+            [
+              470,
+              0.75
+            ],
+            [
+              490,
+              0.65
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.68,
+          "post_switch_winrate": 0.63,
+          "immediate_after_winrate": 0.7,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 793,
+          "windows": [
+            [
+              10,
+              0.75
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.6
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.8
+            ],
+            [
+              130,
+              0.45
+            ],
+            [
+              150,
+              0.6
+            ],
+            [
+              170,
+              0.75
+            ],
+            [
+              190,
+              0.75
+            ],
+            [
+              210,
+              0.65
+            ],
+            [
+              230,
+              0.7
+            ],
+            [
+              250,
+              0.65
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.95
+            ],
+            [
+              330,
+              0.45
+            ],
+            [
+              350,
+              0.6
+            ],
+            [
+              370,
+              0.7
+            ],
+            [
+              390,
+              0.65
+            ],
+            [
+              410,
+              0.6
+            ],
+            [
+              430,
+              0.65
+            ],
+            [
+              450,
+              0.85
+            ],
+            [
+              470,
+              0.7
+            ],
+            [
+              490,
+              0.35
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.64,
+          "post_switch_winrate": 0.64,
+          "immediate_after_winrate": 0.575,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 768,
+          "windows": [
+            [
+              10,
+              0.75
+            ],
+            [
+              30,
+              0.6
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.45
+            ],
+            [
+              110,
+              0.75
+            ],
+            [
+              130,
+              0.7
+            ],
+            [
+              150,
+              0.55
+            ],
+            [
+              170,
+              0.65
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.45
+            ],
+            [
+              250,
+              0.75
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.75
+            ],
+            [
+              310,
+              0.7
+            ],
+            [
+              330,
+              0.45
+            ],
+            [
+              350,
+              0.6
+            ],
+            [
+              370,
+              0.65
+            ],
+            [
+              390,
+              0.45
+            ],
+            [
+              410,
+              0.75
+            ],
+            [
+              430,
+              0.6
+            ],
+            [
+              450,
+              0.65
+            ],
+            [
+              470,
+              0.6
+            ],
+            [
+              490,
+              0.6
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.7,
+          "post_switch_winrate": 0.76,
+          "immediate_after_winrate": 0.575,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 778,
+          "windows": [
+            [
+              10,
+              0.7
+            ],
+            [
+              30,
+              0.75
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.55
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.5
+            ],
+            [
+              130,
+              0.5
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.6
+            ],
+            [
+              190,
+              0.6
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.6
+            ],
+            [
+              250,
+              0.7
+            ],
+            [
+              270,
+              0.75
+            ],
+            [
+              290,
+              0.75
+            ],
+            [
+              310,
+              0.6
+            ],
+            [
+              330,
+              0.55
+            ],
+            [
+              350,
+              0.65
+            ],
+            [
+              370,
+              0.55
+            ],
+            [
+              390,
+              0.75
+            ],
+            [
+              410,
+              0.8
+            ],
+            [
+              430,
+              0.8
+            ],
+            [
+              450,
+              0.8
+            ],
+            [
+              470,
+              0.85
+            ],
+            [
+              490,
+              0.55
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.7,
+          "post_switch_winrate": 0.62,
+          "immediate_after_winrate": 0.625,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 791,
+          "windows": [
+            [
+              10,
+              0.55
+            ],
+            [
+              30,
+              0.8
+            ],
+            [
+              50,
+              0.6
+            ],
+            [
+              70,
+              0.65
+            ],
+            [
+              90,
+              0.5
+            ],
+            [
+              110,
+              0.7
+            ],
+            [
+              130,
+              0.75
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.55
+            ],
+            [
+              190,
+              0.85
+            ],
+            [
+              210,
+              0.65
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.65
+            ],
+            [
+              270,
+              0.8
+            ],
+            [
+              290,
+              0.75
+            ],
+            [
+              310,
+              0.55
+            ],
+            [
+              330,
+              0.7
+            ],
+            [
+              350,
+              0.7
+            ],
+            [
+              370,
+              0.85
+            ],
+            [
+              390,
+              0.7
+            ],
+            [
+              410,
+              0.7
+            ],
+            [
+              430,
+              0.8
+            ],
+            [
+              450,
+              0.5
+            ],
+            [
+              470,
+              0.4
+            ],
+            [
+              490,
+              0.7
+            ]
+          ]
+        }
+      ],
+      "0.01": [
+        {
+          "pre_switch_winrate": 0.72,
+          "post_switch_winrate": 0.69,
+          "immediate_after_winrate": 0.8,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 776,
+          "windows": [
+            [
+              10,
+              0.55
+            ],
+            [
+              30,
+              0.35
+            ],
+            [
+              50,
+              0.75
+            ],
+            [
+              70,
+              0.6
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.8
+            ],
+            [
+              150,
+              0.55
+            ],
+            [
+              170,
+              0.85
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.8
+            ],
+            [
+              250,
+              0.8
+            ],
+            [
+              270,
+              0.8
+            ],
+            [
+              290,
+              0.5
+            ],
+            [
+              310,
+              0.65
+            ],
+            [
+              330,
+              0.95
+            ],
+            [
+              350,
+              0.85
+            ],
+            [
+              370,
+              0.55
+            ],
+            [
+              390,
+              0.5
+            ],
+            [
+              410,
+              0.65
+            ],
+            [
+              430,
+              0.75
+            ],
+            [
+              450,
+              0.85
+            ],
+            [
+              470,
+              0.55
+            ],
+            [
+              490,
+              0.65
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.58,
+          "post_switch_winrate": 0.65,
+          "immediate_after_winrate": 0.7,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 781,
+          "windows": [
+            [
+              10,
+              0.75
+            ],
+            [
+              30,
+              0.6
+            ],
+            [
+              50,
+              0.85
+            ],
+            [
+              70,
+              0.5
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.7
+            ],
+            [
+              130,
+              0.5
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.65
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.5
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.55
+            ],
+            [
+              310,
+              0.75
+            ],
+            [
+              330,
+              0.65
+            ],
+            [
+              350,
+              0.6
+            ],
+            [
+              370,
+              0.65
+            ],
+            [
+              390,
+              0.85
+            ],
+            [
+              410,
+              0.6
+            ],
+            [
+              430,
+              0.6
+            ],
+            [
+              450,
+              0.65
+            ],
+            [
+              470,
+              0.7
+            ],
+            [
+              490,
+              0.7
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.71,
+          "post_switch_winrate": 0.61,
+          "immediate_after_winrate": 0.625,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 783,
+          "windows": [
+            [
+              10,
+              0.65
+            ],
+            [
+              30,
+              0.8
+            ],
+            [
+              50,
+              0.6
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.75
+            ],
+            [
+              150,
+              0.7
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.9
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.8
+            ],
+            [
+              250,
+              0.65
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.6
+            ],
+            [
+              330,
+              0.65
+            ],
+            [
+              350,
+              0.55
+            ],
+            [
+              370,
+              0.7
+            ],
+            [
+              390,
+              0.75
+            ],
+            [
+              410,
+              0.65
+            ],
+            [
+              430,
+              0.65
+            ],
+            [
+              450,
+              0.6
+            ],
+            [
+              470,
+              0.65
+            ],
+            [
+              490,
+              0.5
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.62,
+          "post_switch_winrate": 0.69,
+          "immediate_after_winrate": 0.75,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 785,
+          "windows": [
+            [
+              10,
+              0.75
+            ],
+            [
+              30,
+              0.75
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.55
+            ],
+            [
+              90,
+              0.95
+            ],
+            [
+              110,
+              0.7
+            ],
+            [
+              130,
+              0.75
+            ],
+            [
+              150,
+              0.7
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.5
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.5
+            ],
+            [
+              250,
+              0.7
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.65
+            ],
+            [
+              310,
+              0.8
+            ],
+            [
+              330,
+              0.7
+            ],
+            [
+              350,
+              0.5
+            ],
+            [
+              370,
+              0.85
+            ],
+            [
+              390,
+              0.55
+            ],
+            [
+              410,
+              0.7
+            ],
+            [
+              430,
+              0.65
+            ],
+            [
+              450,
+              0.65
+            ],
+            [
+              470,
+              0.6
+            ],
+            [
+              490,
+              0.85
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.68,
+          "post_switch_winrate": 0.71,
+          "immediate_after_winrate": 0.65,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 794,
+          "windows": [
+            [
+              10,
+              0.8
+            ],
+            [
+              30,
+              0.7
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.6
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.6
+            ],
+            [
+              150,
+              0.5
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.85
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.6
+            ],
+            [
+              250,
+              0.75
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.75
+            ],
+            [
+              310,
+              0.65
+            ],
+            [
+              330,
+              0.65
+            ],
+            [
+              350,
+              0.85
+            ],
+            [
+              370,
+              0.75
+            ],
+            [
+              390,
+              0.45
+            ],
+            [
+              410,
+              0.75
+            ],
+            [
+              430,
+              0.7
+            ],
+            [
+              450,
+              0.75
+            ],
+            [
+              470,
+              0.7
+            ],
+            [
+              490,
+              0.65
+            ]
+          ]
+        }
+      ],
+      "0.02": [
+        {
+          "pre_switch_winrate": 0.67,
+          "post_switch_winrate": 0.66,
+          "immediate_after_winrate": 0.625,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 806,
+          "windows": [
+            [
+              10,
+              0.75
+            ],
+            [
+              30,
+              0.8
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.75
+            ],
+            [
+              110,
+              0.55
+            ],
+            [
+              130,
+              0.7
+            ],
+            [
+              150,
+              0.55
+            ],
+            [
+              170,
+              0.55
+            ],
+            [
+              190,
+              0.75
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.85
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.6
+            ],
+            [
+              310,
+              0.55
+            ],
+            [
+              330,
+              0.7
+            ],
+            [
+              350,
+              0.8
+            ],
+            [
+              370,
+              0.7
+            ],
+            [
+              390,
+              0.6
+            ],
+            [
+              410,
+              0.8
+            ],
+            [
+              430,
+              0.8
+            ],
+            [
+              450,
+              0.5
+            ],
+            [
+              470,
+              0.6
+            ],
+            [
+              490,
+              0.6
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.68,
+          "post_switch_winrate": 0.66,
+          "immediate_after_winrate": 0.8,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 774,
+          "windows": [
+            [
+              10,
+              0.45
+            ],
+            [
+              30,
+              0.75
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.75
+            ],
+            [
+              90,
+              0.75
+            ],
+            [
+              110,
+              0.8
+            ],
+            [
+              130,
+              0.5
+            ],
+            [
+              150,
+              0.7
+            ],
+            [
+              170,
+              0.75
+            ],
+            [
+              190,
+              0.3
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.5
+            ],
+            [
+              250,
+              0.75
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.75
+            ],
+            [
+              310,
+              0.75
+            ],
+            [
+              330,
+              0.85
+            ],
+            [
+              350,
+              0.45
+            ],
+            [
+              370,
+              0.75
+            ],
+            [
+              390,
+              0.8
+            ],
+            [
+              410,
+              0.75
+            ],
+            [
+              430,
+              0.55
+            ],
+            [
+              450,
+              0.7
+            ],
+            [
+              470,
+              0.55
+            ],
+            [
+              490,
+              0.75
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.67,
+          "post_switch_winrate": 0.68,
+          "immediate_after_winrate": 0.55,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 802,
+          "windows": [
+            [
+              10,
+              0.65
+            ],
+            [
+              30,
+              0.5
+            ],
+            [
+              50,
+              0.9
+            ],
+            [
+              70,
+              0.6
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.6
+            ],
+            [
+              130,
+              0.75
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.8
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.8
+            ],
+            [
+              270,
+              0.55
+            ],
+            [
+              290,
+              0.55
+            ],
+            [
+              310,
+              0.55
+            ],
+            [
+              330,
+              0.55
+            ],
+            [
+              350,
+              0.75
+            ],
+            [
+              370,
+              0.75
+            ],
+            [
+              390,
+              0.55
+            ],
+            [
+              410,
+              0.7
+            ],
+            [
+              430,
+              0.75
+            ],
+            [
+              450,
+              0.7
+            ],
+            [
+              470,
+              0.6
+            ],
+            [
+              490,
+              0.65
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.65,
+          "post_switch_winrate": 0.73,
+          "immediate_after_winrate": 0.65,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 792,
+          "windows": [
+            [
+              10,
+              0.5
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.8
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.6
+            ],
+            [
+              130,
+              0.85
+            ],
+            [
+              150,
+              0.7
+            ],
+            [
+              170,
+              0.65
+            ],
+            [
+              190,
+              0.65
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.45
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.9
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.8
+            ],
+            [
+              330,
+              0.5
+            ],
+            [
+              350,
+              0.65
+            ],
+            [
+              370,
+              0.55
+            ],
+            [
+              390,
+              0.7
+            ],
+            [
+              410,
+              0.8
+            ],
+            [
+              430,
+              0.65
+            ],
+            [
+              450,
+              0.75
+            ],
+            [
+              470,
+              0.8
+            ],
+            [
+              490,
+              0.65
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.69,
+          "post_switch_winrate": 0.54,
+          "immediate_after_winrate": 0.7,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 769,
+          "windows": [
+            [
+              10,
+              0.9
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.6
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.5
+            ],
+            [
+              130,
+              0.65
+            ],
+            [
+              150,
+              0.6
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.8
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.7
+            ],
+            [
+              250,
+              0.8
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.6
+            ],
+            [
+              310,
+              0.6
+            ],
+            [
+              330,
+              0.8
+            ],
+            [
+              350,
+              0.65
+            ],
+            [
+              370,
+              0.6
+            ],
+            [
+              390,
+              0.65
+            ],
+            [
+              410,
+              0.5
+            ],
+            [
+              430,
+              0.6
+            ],
+            [
+              450,
+              0.65
+            ],
+            [
+              470,
+              0.5
+            ],
+            [
+              490,
+              0.45
+            ]
+          ]
+        }
+      ],
+      "0.05": [
+        {
+          "pre_switch_winrate": 0.7,
+          "post_switch_winrate": 0.67,
+          "immediate_after_winrate": 0.8,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 785,
+          "windows": [
+            [
+              10,
+              0.75
+            ],
+            [
+              30,
+              0.55
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.65
+            ],
+            [
+              90,
+              0.7
+            ],
+            [
+              110,
+              0.7
+            ],
+            [
+              130,
+              0.75
+            ],
+            [
+              150,
+              0.8
+            ],
+            [
+              170,
+              0.75
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.45
+            ],
+            [
+              230,
+              0.75
+            ],
+            [
+              250,
+              0.7
+            ],
+            [
+              270,
+              0.8
+            ],
+            [
+              290,
+              0.8
+            ],
+            [
+              310,
+              0.75
+            ],
+            [
+              330,
+              0.85
+            ],
+            [
+              350,
+              0.8
+            ],
+            [
+              370,
+              0.7
+            ],
+            [
+              390,
+              0.8
+            ],
+            [
+              410,
+              0.6
+            ],
+            [
+              430,
+              0.9
+            ],
+            [
+              450,
+              0.7
+            ],
+            [
+              470,
+              0.65
+            ],
+            [
+              490,
+              0.5
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.7,
+          "post_switch_winrate": 0.64,
+          "immediate_after_winrate": 0.7,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 814,
+          "windows": [
+            [
+              10,
+              0.55
+            ],
+            [
+              30,
+              0.7
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.75
+            ],
+            [
+              110,
+              0.55
+            ],
+            [
+              130,
+              0.65
+            ],
+            [
+              150,
+              0.6
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.65
+            ],
+            [
+              210,
+              0.55
+            ],
+            [
+              230,
+              0.7
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.75
+            ],
+            [
+              290,
+              0.9
+            ],
+            [
+              310,
+              0.6
+            ],
+            [
+              330,
+              0.8
+            ],
+            [
+              350,
+              0.7
+            ],
+            [
+              370,
+              0.8
+            ],
+            [
+              390,
+              0.65
+            ],
+            [
+              410,
+              0.55
+            ],
+            [
+              430,
+              0.65
+            ],
+            [
+              450,
+              0.8
+            ],
+            [
+              470,
+              0.6
+            ],
+            [
+              490,
+              0.6
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.69,
+          "post_switch_winrate": 0.72,
+          "immediate_after_winrate": 0.7,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 790,
+          "windows": [
+            [
+              10,
+              0.6
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.55
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.6
+            ],
+            [
+              130,
+              0.65
+            ],
+            [
+              150,
+              0.8
+            ],
+            [
+              170,
+              0.55
+            ],
+            [
+              190,
+              0.45
+            ],
+            [
+              210,
+              0.75
+            ],
+            [
+              230,
+              0.75
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.8
+            ],
+            [
+              330,
+              0.6
+            ],
+            [
+              350,
+              0.65
+            ],
+            [
+              370,
+              0.65
+            ],
+            [
+              390,
+              0.75
+            ],
+            [
+              410,
+              0.65
+            ],
+            [
+              430,
+              0.75
+            ],
+            [
+              450,
+              0.7
+            ],
+            [
+              470,
+              0.8
+            ],
+            [
+              490,
+              0.7
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.68,
+          "post_switch_winrate": 0.69,
+          "immediate_after_winrate": 0.6,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 778,
+          "windows": [
+            [
+              10,
+              0.75
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.65
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.65
+            ],
+            [
+              110,
+              0.55
+            ],
+            [
+              130,
+              0.85
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.6
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.75
+            ],
+            [
+              230,
+              0.7
+            ],
+            [
+              250,
+              0.7
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.6
+            ],
+            [
+              310,
+              0.45
+            ],
+            [
+              330,
+              0.75
+            ],
+            [
+              350,
+              0.5
+            ],
+            [
+              370,
+              0.5
+            ],
+            [
+              390,
+              0.5
+            ],
+            [
+              410,
+              0.7
+            ],
+            [
+              430,
+              0.65
+            ],
+            [
+              450,
+              0.75
+            ],
+            [
+              470,
+              0.7
+            ],
+            [
+              490,
+              0.65
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.65,
+          "post_switch_winrate": 0.64,
+          "immediate_after_winrate": 0.725,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 782,
+          "windows": [
+            [
+              10,
+              0.7
+            ],
+            [
+              30,
+              0.75
+            ],
+            [
+              50,
+              0.55
+            ],
+            [
+              70,
+              0.5
+            ],
+            [
+              90,
+              0.45
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.7
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.65
+            ],
+            [
+              190,
+              0.7
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.55
+            ],
+            [
+              250,
+              0.85
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.6
+            ],
+            [
+              310,
+              0.6
+            ],
+            [
+              330,
+              0.85
+            ],
+            [
+              350,
+              0.5
+            ],
+            [
+              370,
+              0.7
+            ],
+            [
+              390,
+              0.7
+            ],
+            [
+              410,
+              0.6
+            ],
+            [
+              430,
+              0.55
+            ],
+            [
+              450,
+              0.8
+            ],
+            [
+              470,
+              0.7
+            ],
+            [
+              490,
+              0.55
+            ]
+          ]
+        }
+      ],
+      "0.1": [
+        {
+          "pre_switch_winrate": 0.58,
+          "post_switch_winrate": 0.65,
+          "immediate_after_winrate": 0.675,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 773,
+          "windows": [
+            [
+              10,
+              0.6
+            ],
+            [
+              30,
+              0.6
+            ],
+            [
+              50,
+              0.6
+            ],
+            [
+              70,
+              0.5
+            ],
+            [
+              90,
+              0.6
+            ],
+            [
+              110,
+              0.75
+            ],
+            [
+              130,
+              0.75
+            ],
+            [
+              150,
+              0.65
+            ],
+            [
+              170,
+              0.7
+            ],
+            [
+              190,
+              0.65
+            ],
+            [
+              210,
+              0.45
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.55
+            ],
+            [
+              310,
+              0.9
+            ],
+            [
+              330,
+              0.45
+            ],
+            [
+              350,
+              0.85
+            ],
+            [
+              370,
+              0.75
+            ],
+            [
+              390,
+              0.85
+            ],
+            [
+              410,
+              0.7
+            ],
+            [
+              430,
+              0.65
+            ],
+            [
+              450,
+              0.65
+            ],
+            [
+              470,
+              0.7
+            ],
+            [
+              490,
+              0.55
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.69,
+          "post_switch_winrate": 0.73,
+          "immediate_after_winrate": 0.8,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 770,
+          "windows": [
+            [
+              10,
+              0.85
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.7
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.6
+            ],
+            [
+              110,
+              0.75
+            ],
+            [
+              130,
+              0.6
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.7
+            ],
+            [
+              190,
+              0.55
+            ],
+            [
+              210,
+              0.85
+            ],
+            [
+              230,
+              0.65
+            ],
+            [
+              250,
+              0.6
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.7
+            ],
+            [
+              310,
+              0.7
+            ],
+            [
+              330,
+              0.9
+            ],
+            [
+              350,
+              0.8
+            ],
+            [
+              370,
+              0.7
+            ],
+            [
+              390,
+              0.7
+            ],
+            [
+              410,
+              0.65
+            ],
+            [
+              430,
+              0.85
+            ],
+            [
+              450,
+              0.65
+            ],
+            [
+              470,
+              0.7
+            ],
+            [
+              490,
+              0.8
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.72,
+          "post_switch_winrate": 0.64,
+          "immediate_after_winrate": 0.65,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 800,
+          "windows": [
+            [
+              10,
+              0.8
+            ],
+            [
+              30,
+              0.7
+            ],
+            [
+              50,
+              0.9
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.45
+            ],
+            [
+              110,
+              0.6
+            ],
+            [
+              130,
+              0.8
+            ],
+            [
+              150,
+              0.6
+            ],
+            [
+              170,
+              0.6
+            ],
+            [
+              190,
+              0.8
+            ],
+            [
+              210,
+              0.7
+            ],
+            [
+              230,
+              0.8
+            ],
+            [
+              250,
+              0.8
+            ],
+            [
+              270,
+              0.5
+            ],
+            [
+              290,
+              0.8
+            ],
+            [
+              310,
+              0.65
+            ],
+            [
+              330,
+              0.65
+            ],
+            [
+              350,
+              0.75
+            ],
+            [
+              370,
+              0.7
+            ],
+            [
+              390,
+              0.75
+            ],
+            [
+              410,
+              0.7
+            ],
+            [
+              430,
+              0.65
+            ],
+            [
+              450,
+              0.45
+            ],
+            [
+              470,
+              0.6
+            ],
+            [
+              490,
+              0.8
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.7,
+          "post_switch_winrate": 0.7,
+          "immediate_after_winrate": 0.6,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 756,
+          "windows": [
+            [
+              10,
+              0.5
+            ],
+            [
+              30,
+              0.6
+            ],
+            [
+              50,
+              0.85
+            ],
+            [
+              70,
+              0.8
+            ],
+            [
+              90,
+              0.6
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.55
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.65
+            ],
+            [
+              190,
+              0.75
+            ],
+            [
+              210,
+              0.6
+            ],
+            [
+              230,
+              0.7
+            ],
+            [
+              250,
+              0.85
+            ],
+            [
+              270,
+              0.7
+            ],
+            [
+              290,
+              0.65
+            ],
+            [
+              310,
+              0.55
+            ],
+            [
+              330,
+              0.65
+            ],
+            [
+              350,
+              0.7
+            ],
+            [
+              370,
+              0.75
+            ],
+            [
+              390,
+              0.65
+            ],
+            [
+              410,
+              0.75
+            ],
+            [
+              430,
+              0.75
+            ],
+            [
+              450,
+              0.6
+            ],
+            [
+              470,
+              0.8
+            ],
+            [
+              490,
+              0.6
+            ]
+          ]
+        },
+        {
+          "pre_switch_winrate": 0.72,
+          "post_switch_winrate": 0.68,
+          "immediate_after_winrate": 0.75,
+          "adaptation_game": null,
+          "adaptation_speed": null,
+          "tile_churn_rate": null,
+          "final_tiles": 782,
+          "windows": [
+            [
+              10,
+              0.7
+            ],
+            [
+              30,
+              0.65
+            ],
+            [
+              50,
+              0.6
+            ],
+            [
+              70,
+              0.7
+            ],
+            [
+              90,
+              0.8
+            ],
+            [
+              110,
+              0.65
+            ],
+            [
+              130,
+              0.85
+            ],
+            [
+              150,
+              0.75
+            ],
+            [
+              170,
+              0.8
+            ],
+            [
+              190,
+              0.75
+            ],
+            [
+              210,
+              0.75
+            ],
+            [
+              230,
+              0.7
+            ],
+            [
+              250,
+              0.7
+            ],
+            [
+              270,
+              0.65
+            ],
+            [
+              290,
+              0.8
+            ],
+            [
+              310,
+              0.85
+            ],
+            [
+              330,
+              0.65
+            ],
+            [
+              350,
+              0.65
+            ],
+            [
+              370,
+              0.7
+            ],
+            [
+              390,
+              0.75
+            ],
+            [
+              410,
+              0.75
+            ],
+            [
+              430,
+              0.45
+            ],
+            [
+              450,
+              0.65
+            ],
+            [
+              470,
+              0.7
+            ],
+            [
+              490,
+              0.85
+            ]
+          ]
+        }
+      ]
+    }
   }
 }
