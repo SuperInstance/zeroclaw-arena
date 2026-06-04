@@ -300,7 +300,7 @@ def main():
     print("CONTINUOUS ACTION SPACE — TILE FIELD EXPERIMENT")
     print("=" * 70)
 
-    bin_counts = [4, 8, 16, 32, 64]
+    bin_counts = [4, 8, 16, 32]
     n_runs = 3
     base_episodes = 500
 
