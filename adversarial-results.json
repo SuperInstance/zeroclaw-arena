@@ -1,0 +1,116 @@
+{
+  "experiment": "adversarial_tiles",
+  "hypothesis": "Adversarially-trained fields develop more robust strategies",
+  "phases": {
+    "phase1_independent_games": 200,
+    "phase2_adversarial_games": 300
+  },
+  "adversarial_training_summary": {
+    "X": 215,
+    "O": 52,
+    "draw": 33
+  },
+  "cooperative_training_summary": {
+    "X": 241,
+    "O": 46,
+    "draw": 13
+  },
+  "evaluation": {
+    "adversarial_a_vs_random": {
+      "wins": 681,
+      "draws": 116,
+      "losses": 203,
+      "win_rate": 0.681,
+      "draw_rate": 0.116
+    },
+    "adversarial_b_vs_random": {
+      "wins": 695,
+      "draws": 102,
+      "losses": 203,
+      "win_rate": 0.695,
+      "draw_rate": 0.102
+    },
+    "adversarial_a_vs_b": {
+      "x_wins": 827,
+      "o_wins": 122,
+      "draws": 51
+    },
+    "adversarial_a_vs_independent": {
+      "x_wins": 803,
+      "o_wins": 146,
+      "draws": 51
+    },
+    "adversarial_b_vs_independent": {
+      "x_wins": 816,
+      "o_wins": 129,
+      "draws": 55
+    },
+    "independent_vs_random": {
+      "wins": 662,
+      "draws": 112,
+      "losses": 226,
+      "win_rate": 0.662,
+      "draw_rate": 0.112
+    },
+    "cooperative_vs_random": {
+      "wins": 683,
+      "draws": 112,
+      "losses": 205,
+      "win_rate": 0.683,
+      "draw_rate": 0.112
+    },
+    "cooperative_vs_independent": {
+      "x_wins": 807,
+      "o_wins": 142,
+      "draws": 51
+    }
+  },
+  "robustness": {
+    "adversarial_a": {
+      "tile_count": 1998,
+      "score_variance": 0.038519,
+      "visit_balance": 0,
+      "avg_score": 0.5879,
+      "total_states_explored": 1998
+    },
+    "adversarial_b": {
+      "tile_count": 3100,
+      "score_variance": 0.046193,
+      "visit_balance": 0,
+      "avg_score": 0.5001,
+      "total_states_explored": 3100
+    },
+    "independent": {
+      "tile_count": 3357,
+      "score_variance": 0.041475,
+      "visit_balance": 0,
+      "avg_score": 0.5694,
+      "total_states_explored": 3357
+    },
+    "cooperative_x": {
+      "tile_count": 2630,
+      "score_variance": 0.044598,
+      "visit_balance": 0,
+      "avg_score": 0.5056,
+      "total_states_explored": 2630
+    }
+  },
+  "conclusions": {
+    "best_win_rate_vs_random": {
+      "method": "adversarial_b",
+      "win_rate": 0.695
+    },
+    "most_robust_strategy": {
+      "method": "independent",
+      "score_variance": 0.041475
+    },
+    "adversarial_a_outperforms_independent": true,
+    "adversarial_b_outperforms_independent": true,
+    "adversarial_pair_balanced": false,
+    "adv_a_win_rate": 0.681,
+    "adv_b_win_rate": 0.695,
+    "indep_win_rate": 0.662,
+    "coop_win_rate": 0.683,
+    "hypothesis_supported": false
+  }
+}
