@@ -1,0 +1,343 @@
+{
+  "config": {
+    "game": "TicTacToe",
+    "num_train": 500,
+    "num_eval": 100,
+    "opponent_types": [
+      "random",
+      "greedy",
+      "center_preferring",
+      "edge_preferring",
+      "copycat",
+      "anti_copycat",
+      "weighted_random"
+    ],
+    "training_strategies": [
+      "single_random",
+      "single_greedy",
+      "multi_rotate",
+      "tournament"
+    ]
+  },
+  "training_tile_counts": {
+    "single_random": 782,
+    "single_greedy": 115,
+    "multi_rotate": 736,
+    "tournament": 714
+  },
+  "evaluation": {
+    "single_random": {
+      "random": {
+        "wins": 66,
+        "draws": 8,
+        "losses": 26,
+        "total": 100,
+        "win_rate": 0.66,
+        "draw_rate": 0.08,
+        "loss_rate": 0.26
+      },
+      "greedy": {
+        "wins": 30,
+        "draws": 1,
+        "losses": 69,
+        "total": 100,
+        "win_rate": 0.3,
+        "draw_rate": 0.01,
+        "loss_rate": 0.69
+      },
+      "center_preferring": {
+        "wins": 53,
+        "draws": 18,
+        "losses": 29,
+        "total": 100,
+        "win_rate": 0.53,
+        "draw_rate": 0.18,
+        "loss_rate": 0.29
+      },
+      "edge_preferring": {
+        "wins": 67,
+        "draws": 11,
+        "losses": 22,
+        "total": 100,
+        "win_rate": 0.67,
+        "draw_rate": 0.11,
+        "loss_rate": 0.22
+      },
+      "copycat": {
+        "wins": 63,
+        "draws": 14,
+        "losses": 23,
+        "total": 100,
+        "win_rate": 0.63,
+        "draw_rate": 0.14,
+        "loss_rate": 0.23
+      },
+      "anti_copycat": {
+        "wins": 70,
+        "draws": 5,
+        "losses": 25,
+        "total": 100,
+        "win_rate": 0.7,
+        "draw_rate": 0.05,
+        "loss_rate": 0.25
+      },
+      "weighted_random": {
+        "wins": 68,
+        "draws": 8,
+        "losses": 24,
+        "total": 100,
+        "win_rate": 0.68,
+        "draw_rate": 0.08,
+        "loss_rate": 0.24
+      }
+    },
+    "single_greedy": {
+      "random": {
+        "wins": 64,
+        "draws": 11,
+        "losses": 25,
+        "total": 100,
+        "win_rate": 0.64,
+        "draw_rate": 0.11,
+        "loss_rate": 0.25
+      },
+      "greedy": {
+        "wins": 39,
+        "draws": 1,
+        "losses": 60,
+        "total": 100,
+        "win_rate": 0.39,
+        "draw_rate": 0.01,
+        "loss_rate": 0.6
+      },
+      "center_preferring": {
+        "wins": 68,
+        "draws": 8,
+        "losses": 24,
+        "total": 100,
+        "win_rate": 0.68,
+        "draw_rate": 0.08,
+        "loss_rate": 0.24
+      },
+      "edge_preferring": {
+        "wins": 75,
+        "draws": 10,
+        "losses": 15,
+        "total": 100,
+        "win_rate": 0.75,
+        "draw_rate": 0.1,
+        "loss_rate": 0.15
+      },
+      "copycat": {
+        "wins": 60,
+        "draws": 19,
+        "losses": 21,
+        "total": 100,
+        "win_rate": 0.6,
+        "draw_rate": 0.19,
+        "loss_rate": 0.21
+      },
+      "anti_copycat": {
+        "wins": 70,
+        "draws": 6,
+        "losses": 24,
+        "total": 100,
+        "win_rate": 0.7,
+        "draw_rate": 0.06,
+        "loss_rate": 0.24
+      },
+      "weighted_random": {
+        "wins": 67,
+        "draws": 8,
+        "losses": 25,
+        "total": 100,
+        "win_rate": 0.67,
+        "draw_rate": 0.08,
+        "loss_rate": 0.25
+      }
+    },
+    "multi_rotate": {
+      "random": {
+        "wins": 72,
+        "draws": 9,
+        "losses": 19,
+        "total": 100,
+        "win_rate": 0.72,
+        "draw_rate": 0.09,
+        "loss_rate": 0.19
+      },
+      "greedy": {
+        "wins": 28,
+        "draws": 1,
+        "losses": 71,
+        "total": 100,
+        "win_rate": 0.28,
+        "draw_rate": 0.01,
+        "loss_rate": 0.71
+      },
+      "center_preferring": {
+        "wins": 59,
+        "draws": 15,
+        "losses": 26,
+        "total": 100,
+        "win_rate": 0.59,
+        "draw_rate": 0.15,
+        "loss_rate": 0.26
+      },
+      "edge_preferring": {
+        "wins": 75,
+        "draws": 10,
+        "losses": 15,
+        "total": 100,
+        "win_rate": 0.75,
+        "draw_rate": 0.1,
+        "loss_rate": 0.15
+      },
+      "copycat": {
+        "wins": 53,
+        "draws": 26,
+        "losses": 21,
+        "total": 100,
+        "win_rate": 0.53,
+        "draw_rate": 0.26,
+        "loss_rate": 0.21
+      },
+      "anti_copycat": {
+        "wins": 70,
+        "draws": 3,
+        "losses": 27,
+        "total": 100,
+        "win_rate": 0.7,
+        "draw_rate": 0.03,
+        "loss_rate": 0.27
+      },
+      "weighted_random": {
+        "wins": 70,
+        "draws": 8,
+        "losses": 22,
+        "total": 100,
+        "win_rate": 0.7,
+        "draw_rate": 0.08,
+        "loss_rate": 0.22
+      }
+    },
+    "tournament": {
+      "random": {
+        "wins": 64,
+        "draws": 10,
+        "losses": 26,
+        "total": 100,
+        "win_rate": 0.64,
+        "draw_rate": 0.1,
+        "loss_rate": 0.26
+      },
+      "greedy": {
+        "wins": 32,
+        "draws": 0,
+        "losses": 68,
+        "total": 100,
+        "win_rate": 0.32,
+        "draw_rate": 0.0,
+        "loss_rate": 0.68
+      },
+      "center_preferring": {
+        "wins": 57,
+        "draws": 12,
+        "losses": 31,
+        "total": 100,
+        "win_rate": 0.57,
+        "draw_rate": 0.12,
+        "loss_rate": 0.31
+      },
+      "edge_preferring": {
+        "wins": 80,
+        "draws": 9,
+        "losses": 11,
+        "total": 100,
+        "win_rate": 0.8,
+        "draw_rate": 0.09,
+        "loss_rate": 0.11
+      },
+      "copycat": {
+        "wins": 61,
+        "draws": 15,
+        "losses": 24,
+        "total": 100,
+        "win_rate": 0.61,
+        "draw_rate": 0.15,
+        "loss_rate": 0.24
+      },
+      "anti_copycat": {
+        "wins": 69,
+        "draws": 8,
+        "losses": 23,
+        "total": 100,
+        "win_rate": 0.69,
+        "draw_rate": 0.08,
+        "loss_rate": 0.23
+      },
+      "weighted_random": {
+        "wins": 69,
+        "draws": 13,
+        "losses": 18,
+        "total": 100,
+        "win_rate": 0.69,
+        "draw_rate": 0.13,
+        "loss_rate": 0.18
+      }
+    }
+  },
+  "analysis": {
+    "single_random": {
+      "avg_win_rate": 0.5957142857142858,
+      "min_win_rate": 0.3,
+      "max_win_rate": 0.7,
+      "std_win_rate": 0.13124210374692402,
+      "consistency_range": 0.39999999999999997,
+      "best_opponent": "anti_copycat",
+      "worst_opponent": "greedy"
+    },
+    "single_greedy": {
+      "avg_win_rate": 0.6328571428571428,
+      "min_win_rate": 0.39,
+      "max_win_rate": 0.75,
+      "std_win_rate": 0.10819483559292278,
+      "consistency_range": 0.36,
+      "best_opponent": "edge_preferring",
+      "worst_opponent": "greedy"
+    },
+    "multi_rotate": {
+      "avg_win_rate": 0.6100000000000001,
+      "min_win_rate": 0.28,
+      "max_win_rate": 0.75,
+      "std_win_rate": 0.15287716824767708,
+      "consistency_range": 0.47,
+      "best_opponent": "edge_preferring",
+      "worst_opponent": "greedy"
+    },
+    "tournament": {
+      "avg_win_rate": 0.6171428571428572,
+      "min_win_rate": 0.32,
+      "max_win_rate": 0.8,
+      "std_win_rate": 0.1389464733232895,
+      "consistency_range": 0.48000000000000004,
+      "best_opponent": "edge_preferring",
+      "worst_opponent": "greedy"
+    }
+  },
+  "conclusion": {
+    "most_consistent": "single_greedy",
+    "best_average_performance": "single_greedy",
+    "best_peak_performance": "tournament",
+    "multi_vs_single": {
+      "avg_win_rate_diff": 0.014285714285714346,
+      "peak_win_rate_diff": 0.050000000000000044,
+      "consistency_diff": 0.07,
+      "multi_sacrifices_peak": false,
+      "multi_more_consistent": false,
+      "multi_better_average": true,
+      "answer": null
+    },
+    "answer": "Multi-opponent training IMPROVES average performance (+1.4%) | Multi-opponent training does NOT sacrifice peak performance (+5.0%) | Multi-opponent training is NOT more consistent (range diff: +0.070)"
+  }
+}
