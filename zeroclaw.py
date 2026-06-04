@@ -23,6 +23,10 @@ import sqlite3
 import random
 import math
 import statistics
+import numpy as np
+
+# ─── Tile Exploration Flag ─────────────────────────────
+USE_TILE_EXPLORATION = True  # When True, use tile-field Monte Carlo instead of random exploration
 from dataclasses import dataclass, field, asdict
 from typing import Optional, Any
 from pathlib import Path
@@ -553,6 +557,102 @@ class Go9x9:
             return -1.0
         return 0.0
 
+# ─── StateTile for Tile-Field Exploration ──────────────────
+
+class StateTile:
+    """A tile representing one game state with scored reflexes (legal actions)."""
+
+    def __init__(self, state_hash: str, state_str: str, actions: list[str]):
+        self.state_hash = state_hash
+        self.state_str = state_str
+        self.reflexes: dict[str, dict] = {
+            a: {"score": 0.5, "chosen": 0, "won": 0} for a in actions
+        }
+        self.entropy = 1.0  # high = uncertain
+
+    def best_action(self, legal_actions: list[str], n_simulations: int = 20,
+                    game=None) -> str:
+        """Pick the best action using Monte Carlo simulation + learned scores."""
+        if not legal_actions:
+            return ''
+        if len(legal_actions) == 1:
+            return legal_actions[0]
+
+        # Ensure all legal actions have a reflex entry
+        for a in legal_actions:
+            if a not in self.reflexes:
+                self.reflexes[a] = {"score": 0.5, "chosen": 0, "won": 0}
+
+        action_values = {}
+        for action in legal_actions:
+            # Monte Carlo simulation
+            sim_wins = 0
+            sims_per_action = max(1, n_simulations // len(legal_actions))
+
+            if game is not None:
+                for _ in range(sims_per_action):
+                    winner = self._simulate_playout(game, action)
+                    if winner == 'X':
+                        sim_wins += 1
+
+            sim_score = sim_wins / max(sims_per_action, 1)
+            learned_score = self.reflexes[action]["score"]
+            n_chosen = self.reflexes[action]["chosen"]
+            confidence = min(n_chosen / 20.0, 0.8)
+
+            action_values[action] = (
+                confidence * learned_score + (1 - confidence) * sim_score
+            )
+
+        # Softmax selection (temperature=0.3)
+        actions_list = list(action_values.keys())
+        values = np.array([action_values[a] for a in actions_list])
+        temperature = 0.3
+        exp_vals = np.exp(values / temperature)
+        probs = exp_vals / exp_vals.sum()
+
+        return np.random.choice(actions_list, p=probs)
+
+    def record(self, action: str, won: bool):
+        if action in self.reflexes:
+            self.reflexes[action]["chosen"] += 1
+            if won:
+                self.reflexes[action]["won"] += 1
+
+    def evolve(self):
+        """Update scores based on accumulated win rates."""
+        for action, data in self.reflexes.items():
+            if data["chosen"] > 0:
+                wr = data["won"] / data["chosen"]
+                data["score"] += 0.05 * (wr - data["score"])
+                data["score"] = max(0.05, min(0.95, data["score"]))
+
+    def _simulate_playout(self, real_game, first_action) -> Optional[str]:
+        """Run a random playout from the current state + first_action."""
+        game_copy = type(real_game)()
+        # Copy board state
+        if hasattr(real_game, 'board'):
+            game_copy.board = (
+                [row[:] for row in real_game.board]
+                if isinstance(real_game.board[0], list)
+                else real_game.board[:]
+            )
+        for attr in ('current', 'done', 'winner', 'turn'):
+            if hasattr(real_game, attr):
+                setattr(game_copy, attr, getattr(real_game, attr))
+
+        game_copy.step(first_action)
+
+        # Play randomly to completion
+        while not game_copy.done:
+            actions = game_copy.legal_actions()
+            if not actions:
+                break
+            game_copy.step(random.choice(actions))
+
+        return getattr(game_copy, 'winner', None)
+
+
 # ─── ZeroClaw Agent ───────────────────────────────────────
 
 class ZeroClaw:
@@ -596,6 +696,10 @@ class ZeroClaw:
         else:
             self.gpu_engine = None
         
+        # Tile-field state for tile exploration
+        self.tile_field: dict[str, StateTile] = {}  # state_hash -> StateTile
+        self.tile_evolve_every = 25  # evolve tile scores every N games
+
         self._load_state()
         self._load_gpu_state()
     
@@ -661,6 +765,10 @@ class ZeroClaw:
     
     def explore(self, game, num_games: int = 100):
         """Play many games to explore the state space."""
+        if USE_TILE_EXPLORATION:
+            self.explore_tile_field(game, num_games)
+            return
+
         print(f"  {self.name}: Exploring {num_games} games of {self.game_name}...")
         for i in range(num_games):
             self.play_game(game, policy="random")
@@ -677,6 +785,99 @@ class ZeroClaw:
             batch_vecs = self.gpu_engine.hash_embed_batch(new_states)
             self.gpu_engine.add_batch(batch_vecs, new_metadata)
             print(f"    GPU batch-embedded {len(new_states)} states ({len(self.gpu_engine)} total in GPU index)")
+
+    def explore_tile_field(self, game, num_games: int = 100, n_simulations: int = 20):
+        """Explore using tile-field Monte Carlo instead of random."""
+        print(f"  {self.name}: Tile-field exploring {num_games} games of {self.game_name} (sims={n_simulations})...")
+
+        for i in range(num_games):
+            game.reset()
+            history = []  # (state_hash, action) pairs for this game
+
+            while not game.done:
+                state = game.state()
+                actions = game.legal_actions()
+                if not actions:
+                    break
+
+                state_hash = state.hash()
+
+                # Get or create StateTile
+                if state_hash not in self.tile_field:
+                    self.tile_field[state_hash] = StateTile(
+                        state_hash, str(state), actions
+                    )
+                tile = self.tile_field[state_hash]
+
+                # Use tile to choose action
+                if game.current == 'X' or getattr(game, 'current', 'player') == 'player':
+                    action = tile.best_action(actions, n_simulations, game)
+                else:
+                    action = random.choice(actions)
+
+                # Record transition
+                reward, done = game.step(action)
+                next_state = game.state()
+                t = Transition(
+                    state_hash=state_hash,
+                    state_str=str(state),
+                    action=action,
+                    reward=reward,
+                    next_state_hash=next_state.hash(),
+                    next_state_str=str(next_state),
+                    game_over=done,
+                    winner=getattr(game, 'winner', None)
+                )
+                self.transitions.append(t)
+
+                # Store in vector DB
+                self.vdb.insert(
+                    f"{state_hash}:{action}",
+                    f"{state}|{action}",
+                    {"state": state.state_str, "action": action, "reward": reward,
+                     "turn": state.turn, "game_over": done}
+                )
+
+                history.append((state_hash, action))
+
+            # Record outcome
+            self.stats["games_played"] += 1
+            won = False
+            if hasattr(game, 'winner'):
+                if game.winner in ('X', 'player', 'white'):
+                    self.stats["wins"] += 1
+                    won = True
+                elif game.winner in ('draw', None):
+                    self.stats["draws"] += 1
+                else:
+                    self.stats["losses"] += 1
+
+            # Update tile records with outcome
+            for state_hash, action in history:
+                if state_hash in self.tile_field:
+                    self.tile_field[state_hash].record(action, won)
+
+            # Evolve tile scores periodically
+            if (i + 1) % self.tile_evolve_every == 0:
+                for tile in self.tile_field.values():
+                    tile.evolve()
+
+            if (i + 1) % 25 == 0:
+                win_rate = self.stats["wins"] / max(self.stats["games_played"], 1)
+                print(f"    {i+1}/{num_games} games | win_rate={win_rate:.1%} | "
+                      f"tiles={len(self.tile_field)} | transitions={len(self.transitions)}")
+
+        print(f"  Tile field: {len(self.tile_field)} tiles learned over {num_games} games")
+
+        # GPU batch embedding
+        if self.gpu_engine and len(self.transitions) > 100:
+            new_states = [f"{t.state_str}|{t.action}" for t in self.transitions[-num_games*10:]]
+            new_metadata = [{"state": t.state_str, "action": t.action, "reward": t.reward,
+                             "turn": 0, "game_over": t.game_over}
+                            for t in self.transitions[-num_games*10:]]
+            batch_vecs = self.gpu_engine.hash_embed_batch(new_states)
+            self.gpu_engine.add_batch(batch_vecs, new_metadata)
+            print(f"    GPU batch-embedded {len(new_states)} states")
     
     # ── Phase 2: OBSERVE ──────────────────────────────────
     
@@ -849,7 +1050,7 @@ def choose_action(state_str, legal_actions):
             
             # Compile the script code
             try:
-                namespace = {"random": random, "math": math, "statistics": statistics}
+                namespace = {"random": random, "math": math, "statistics": statistics, "np": np}
                 exec(script["code"], namespace)
                 choose_fn = namespace.get("choose_action")
                 if not choose_fn:
@@ -1089,26 +1290,41 @@ def cross_game_mining(output_path: str = "cross_game_patterns.json"):
 
 # ─── Main: Run the ZeroClaw Arena ────────────────────────
 
-def run_arena():
-    """Run multiple ZeroClaws learning different games simultaneously."""
+def run_arena(games=None, num_explore=50, num_evolve=3, num_exploit=50):
+    """Run multiple ZeroClaws learning different games simultaneously.
+    
+    Args:
+        games: list of game names to run (default: all)
+        num_explore: games per exploration phase
+        num_evolve: number of evolution generations  
+        num_exploit: games in exploit/test phase
+    """
     
     print("╔══════════════════════════════════════════════════╗")
     print("║         ZEROCLAW ARENA — Game Learning           ║")
     print("╚══════════════════════════════════════════════════╝")
     
-    games = {
-        "tictactoe": TicTacToe(),
-        "blackjack": Blackjack(),
-        "connect4": Connect4(),
-        "go9x9": Go9x9(),
+    all_games = {
+        "tictactoe": TicTacToe,
+        "blackjack": Blackjack,
+        "connect4": Connect4,
+        "go9x9": Go9x9,
     }
     
     # Add chess if available
     try:
         import chess
-        games["chess_endgame"] = ChessEndgame()
+        all_games["chess_endgame"] = ChessEndgame
     except ImportError:
         pass
+
+    # Filter if specific games requested
+    if games:
+        game_classes = {k: v for k, v in all_games.items() if k in games}
+    else:
+        game_classes = all_games
+
+    games = {name: cls() for name, cls in game_classes.items()}
     
     # Create ZeroClaws
     claws = {}
@@ -1116,8 +1332,8 @@ def run_arena():
         claw_name = f"zeroclaw-{game_name}"
         claws[game_name] = ZeroClaw(claw_name, game_name)
     
-    # ── Run 5 generations ────────────────────────────────
-    for gen in range(1, 4):
+    # ── Run evolution generations ──────────────────────────
+    for gen in range(1, num_evolve + 1):
         print(f"\n{'#'*60}")
         print(f"  GENERATION {gen}")
         print(f"{'#'*60}")
@@ -1127,8 +1343,8 @@ def run_arena():
             
             # Phase 1: Explore (play games)
             print(f"\n🎮 {game_name} — Exploration")
-            num_explore = 50 if game_name not in ("chess_endgame", "go9x9") else 10 if game_name == "go9x9" else 20
-            claw.explore(game, num_games=num_explore)
+            explore_n = num_explore if game_name not in ("chess_endgame", "go9x9") else max(num_explore // 5, 3)
+            claw.explore(game, num_games=explore_n)
             
             # Phase 2: Analyze and generate scripts
             print(f"\n🔬 {game_name} — Pattern Analysis")
@@ -1143,7 +1359,7 @@ def run_arena():
             # Phase 4: Play with learned scripts
             print(f"\n🧠 {game_name} — Script-Guided Play")
             prev_stats = dict(claw.stats)
-            claw.explore(game, num_games=50)
+            claw.explore(game, num_games=num_exploit)
             
             # Check improvement
             old_wr = prev_stats["wins"] / max(prev_stats["games_played"], 1)
