@@ -1,0 +1,925 @@
+{
+  "experiment": "min_opponent_exposure",
+  "description": "How few training games to reach 55% win rate on TTT?",
+  "diverse": {
+    "checkpoints": [
+      {
+        "training_games": 10,
+        "mode": "diverse",
+        "num_tiles": 798,
+        "total_visits": 36,
+        "avg_visits_per_tile": 0.05,
+        "score_distribution": {
+          "mean": 0.5,
+          "std": 0.0,
+          "min": 0.5,
+          "max": 0.5,
+          "n": 3458
+        },
+        "evaluation": {
+          "wins": 353,
+          "losses": 97,
+          "draws": 50,
+          "win_rate": 0.706,
+          "loss_rate": 0.194,
+          "draw_rate": 0.1
+        }
+      },
+      {
+        "training_games": 20,
+        "mode": "diverse",
+        "num_tiles": 1046,
+        "total_visits": 74,
+        "avg_visits_per_tile": 0.07,
+        "score_distribution": {
+          "mean": 0.5,
+          "std": 0.0,
+          "min": 0.5,
+          "max": 0.5,
+          "n": 4408
+        },
+        "evaluation": {
+          "wins": 353,
+          "losses": 100,
+          "draws": 47,
+          "win_rate": 0.706,
+          "loss_rate": 0.2,
+          "draw_rate": 0.094
+        }
+      },
+      {
+        "training_games": 30,
+        "mode": "diverse",
+        "num_tiles": 1284,
+        "total_visits": 113,
+        "avg_visits_per_tile": 0.09,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.0028,
+          "min": 0.475,
+          "max": 0.525,
+          "n": 5300
+        },
+        "evaluation": {
+          "wins": 330,
+          "losses": 107,
+          "draws": 63,
+          "win_rate": 0.66,
+          "loss_rate": 0.214,
+          "draw_rate": 0.126
+        }
+      },
+      {
+        "training_games": 40,
+        "mode": "diverse",
+        "num_tiles": 1411,
+        "total_visits": 151,
+        "avg_visits_per_tile": 0.11,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.0027,
+          "min": 0.475,
+          "max": 0.525,
+          "n": 5783
+        },
+        "evaluation": {
+          "wins": 330,
+          "losses": 109,
+          "draws": 61,
+          "win_rate": 0.66,
+          "loss_rate": 0.218,
+          "draw_rate": 0.122
+        }
+      },
+      {
+        "training_games": 50,
+        "mode": "diverse",
+        "num_tiles": 1450,
+        "total_visits": 188,
+        "avg_visits_per_tile": 0.13,
+        "score_distribution": {
+          "mean": 0.5004,
+          "std": 0.0058,
+          "min": 0.4512,
+          "max": 0.5488,
+          "n": 5926
+        },
+        "evaluation": {
+          "wins": 332,
+          "losses": 111,
+          "draws": 57,
+          "win_rate": 0.664,
+          "loss_rate": 0.222,
+          "draw_rate": 0.114
+        }
+      },
+      {
+        "training_games": 60,
+        "mode": "diverse",
+        "num_tiles": 1512,
+        "total_visits": 226,
+        "avg_visits_per_tile": 0.15,
+        "score_distribution": {
+          "mean": 0.5004,
+          "std": 0.0057,
+          "min": 0.4512,
+          "max": 0.5488,
+          "n": 6148
+        },
+        "evaluation": {
+          "wins": 326,
+          "losses": 112,
+          "draws": 62,
+          "win_rate": 0.652,
+          "loss_rate": 0.224,
+          "draw_rate": 0.124
+        }
+      },
+      {
+        "training_games": 70,
+        "mode": "diverse",
+        "num_tiles": 1608,
+        "total_visits": 264,
+        "avg_visits_per_tile": 0.16,
+        "score_distribution": {
+          "mean": 0.5004,
+          "std": 0.0055,
+          "min": 0.4512,
+          "max": 0.5488,
+          "n": 6482
+        },
+        "evaluation": {
+          "wins": 334,
+          "losses": 115,
+          "draws": 51,
+          "win_rate": 0.668,
+          "loss_rate": 0.23,
+          "draw_rate": 0.102
+        }
+      },
+      {
+        "training_games": 80,
+        "mode": "diverse",
+        "num_tiles": 1646,
+        "total_visits": 302,
+        "avg_visits_per_tile": 0.18,
+        "score_distribution": {
+          "mean": 0.5008,
+          "std": 0.0089,
+          "min": 0.4287,
+          "max": 0.5713,
+          "n": 6612
+        },
+        "evaluation": {
+          "wins": 348,
+          "losses": 104,
+          "draws": 48,
+          "win_rate": 0.696,
+          "loss_rate": 0.208,
+          "draw_rate": 0.096
+        }
+      },
+      {
+        "training_games": 90,
+        "mode": "diverse",
+        "num_tiles": 1678,
+        "total_visits": 338,
+        "avg_visits_per_tile": 0.2,
+        "score_distribution": {
+          "mean": 0.5008,
+          "std": 0.0088,
+          "min": 0.4287,
+          "max": 0.5713,
+          "n": 6712
+        },
+        "evaluation": {
+          "wins": 343,
+          "losses": 107,
+          "draws": 50,
+          "win_rate": 0.686,
+          "loss_rate": 0.214,
+          "draw_rate": 0.1
+        }
+      },
+      {
+        "training_games": 100,
+        "mode": "diverse",
+        "num_tiles": 1742,
+        "total_visits": 374,
+        "avg_visits_per_tile": 0.21,
+        "score_distribution": {
+          "mean": 0.5013,
+          "std": 0.0124,
+          "min": 0.4073,
+          "max": 0.5927,
+          "n": 6936
+        },
+        "evaluation": {
+          "wins": 347,
+          "losses": 104,
+          "draws": 49,
+          "win_rate": 0.694,
+          "loss_rate": 0.208,
+          "draw_rate": 0.098
+        }
+      },
+      {
+        "training_games": 110,
+        "mode": "diverse",
+        "num_tiles": 1769,
+        "total_visits": 412,
+        "avg_visits_per_tile": 0.23,
+        "score_distribution": {
+          "mean": 0.5012,
+          "std": 0.0124,
+          "min": 0.4073,
+          "max": 0.5927,
+          "n": 7031
+        },
+        "evaluation": {
+          "wins": 352,
+          "losses": 101,
+          "draws": 47,
+          "win_rate": 0.704,
+          "loss_rate": 0.202,
+          "draw_rate": 0.094
+        }
+      },
+      {
+        "training_games": 120,
+        "mode": "diverse",
+        "num_tiles": 1818,
+        "total_visits": 449,
+        "avg_visits_per_tile": 0.25,
+        "score_distribution": {
+          "mean": 0.5012,
+          "std": 0.0122,
+          "min": 0.4073,
+          "max": 0.5927,
+          "n": 7194
+        },
+        "evaluation": {
+          "wins": 353,
+          "losses": 102,
+          "draws": 45,
+          "win_rate": 0.706,
+          "loss_rate": 0.204,
+          "draw_rate": 0.09
+        }
+      },
+      {
+        "training_games": 130,
+        "mode": "diverse",
+        "num_tiles": 1843,
+        "total_visits": 487,
+        "avg_visits_per_tile": 0.26,
+        "score_distribution": {
+          "mean": 0.5018,
+          "std": 0.0161,
+          "min": 0.3869,
+          "max": 0.6131,
+          "n": 7279
+        },
+        "evaluation": {
+          "wins": 336,
+          "losses": 110,
+          "draws": 54,
+          "win_rate": 0.672,
+          "loss_rate": 0.22,
+          "draw_rate": 0.108
+        }
+      },
+      {
+        "training_games": 140,
+        "mode": "diverse",
+        "num_tiles": 1849,
+        "total_visits": 524,
+        "avg_visits_per_tile": 0.28,
+        "score_distribution": {
+          "mean": 0.5018,
+          "std": 0.016,
+          "min": 0.3869,
+          "max": 0.6131,
+          "n": 7299
+        },
+        "evaluation": {
+          "wins": 341,
+          "losses": 103,
+          "draws": 56,
+          "win_rate": 0.682,
+          "loss_rate": 0.206,
+          "draw_rate": 0.112
+        }
+      },
+      {
+        "training_games": 150,
+        "mode": "diverse",
+        "num_tiles": 1860,
+        "total_visits": 561,
+        "avg_visits_per_tile": 0.3,
+        "score_distribution": {
+          "mean": 0.5024,
+          "std": 0.0201,
+          "min": 0.3675,
+          "max": 0.6325,
+          "n": 7334
+        },
+        "evaluation": {
+          "wins": 338,
+          "losses": 112,
+          "draws": 50,
+          "win_rate": 0.676,
+          "loss_rate": 0.224,
+          "draw_rate": 0.1
+        }
+      },
+      {
+        "training_games": 160,
+        "mode": "diverse",
+        "num_tiles": 1860,
+        "total_visits": 599,
+        "avg_visits_per_tile": 0.32,
+        "score_distribution": {
+          "mean": 0.5024,
+          "std": 0.0201,
+          "min": 0.3675,
+          "max": 0.6325,
+          "n": 7334
+        },
+        "evaluation": {
+          "wins": 338,
+          "losses": 112,
+          "draws": 50,
+          "win_rate": 0.676,
+          "loss_rate": 0.224,
+          "draw_rate": 0.1
+        }
+      },
+      {
+        "training_games": 170,
+        "mode": "diverse",
+        "num_tiles": 1863,
+        "total_visits": 639,
+        "avg_visits_per_tile": 0.34,
+        "score_distribution": {
+          "mean": 0.5024,
+          "std": 0.0201,
+          "min": 0.3675,
+          "max": 0.6325,
+          "n": 7343
+        },
+        "evaluation": {
+          "wins": 338,
+          "losses": 112,
+          "draws": 50,
+          "win_rate": 0.676,
+          "loss_rate": 0.224,
+          "draw_rate": 0.1
+        }
+      },
+      {
+        "training_games": 180,
+        "mode": "diverse",
+        "num_tiles": 1872,
+        "total_visits": 677,
+        "avg_visits_per_tile": 0.36,
+        "score_distribution": {
+          "mean": 0.503,
+          "std": 0.0243,
+          "min": 0.3492,
+          "max": 0.6508,
+          "n": 7370
+        },
+        "evaluation": {
+          "wins": 348,
+          "losses": 105,
+          "draws": 47,
+          "win_rate": 0.696,
+          "loss_rate": 0.21,
+          "draw_rate": 0.094
+        }
+      },
+      {
+        "training_games": 190,
+        "mode": "diverse",
+        "num_tiles": 1876,
+        "total_visits": 715,
+        "avg_visits_per_tile": 0.38,
+        "score_distribution": {
+          "mean": 0.503,
+          "std": 0.0243,
+          "min": 0.3492,
+          "max": 0.6508,
+          "n": 7384
+        },
+        "evaluation": {
+          "wins": 348,
+          "losses": 105,
+          "draws": 47,
+          "win_rate": 0.696,
+          "loss_rate": 0.21,
+          "draw_rate": 0.094
+        }
+      },
+      {
+        "training_games": 200,
+        "mode": "diverse",
+        "num_tiles": 1876,
+        "total_visits": 754,
+        "avg_visits_per_tile": 0.4,
+        "score_distribution": {
+          "mean": 0.5038,
+          "std": 0.0286,
+          "min": 0.3317,
+          "max": 0.6683,
+          "n": 7384
+        },
+        "evaluation": {
+          "wins": 348,
+          "losses": 105,
+          "draws": 47,
+          "win_rate": 0.696,
+          "loss_rate": 0.21,
+          "draw_rate": 0.094
+        }
+      }
+    ],
+    "milestones": {
+      "first_55_pct": 10,
+      "plateau_start": 20,
+      "click_moment": {
+        "from_games": 70,
+        "to_games": 80,
+        "win_rate_jump": 0.028,
+        "from_tiles": 1608,
+        "to_tiles": 1646
+      },
+      "peak_win_rate": 0.706,
+      "final_win_rate": 0.696
+    }
+  },
+  "memorize": {
+    "checkpoints": [
+      {
+        "training_games": 10,
+        "mode": "memorize",
+        "num_tiles": 807,
+        "total_visits": 41,
+        "avg_visits_per_tile": 0.05,
+        "score_distribution": {
+          "mean": 0.5,
+          "std": 0.0025,
+          "min": 0.475,
+          "max": 0.525,
+          "n": 3599
+        },
+        "evaluation": {
+          "wins": 347,
+          "losses": 101,
+          "draws": 52,
+          "win_rate": 0.694,
+          "loss_rate": 0.202,
+          "draw_rate": 0.104
+        }
+      },
+      {
+        "training_games": 20,
+        "mode": "memorize",
+        "num_tiles": 1142,
+        "total_visits": 82,
+        "avg_visits_per_tile": 0.07,
+        "score_distribution": {
+          "mean": 0.5,
+          "std": 0.0042,
+          "min": 0.4512,
+          "max": 0.5488,
+          "n": 4880
+        },
+        "evaluation": {
+          "wins": 349,
+          "losses": 95,
+          "draws": 56,
+          "win_rate": 0.698,
+          "loss_rate": 0.19,
+          "draw_rate": 0.112
+        }
+      },
+      {
+        "training_games": 30,
+        "mode": "memorize",
+        "num_tiles": 1298,
+        "total_visits": 123,
+        "avg_visits_per_tile": 0.09,
+        "score_distribution": {
+          "mean": 0.5,
+          "std": 0.0058,
+          "min": 0.4287,
+          "max": 0.5713,
+          "n": 5476
+        },
+        "evaluation": {
+          "wins": 335,
+          "losses": 111,
+          "draws": 54,
+          "win_rate": 0.67,
+          "loss_rate": 0.222,
+          "draw_rate": 0.108
+        }
+      },
+      {
+        "training_games": 40,
+        "mode": "memorize",
+        "num_tiles": 1410,
+        "total_visits": 164,
+        "avg_visits_per_tile": 0.12,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.0073,
+          "min": 0.4073,
+          "max": 0.5927,
+          "n": 5880
+        },
+        "evaluation": {
+          "wins": 350,
+          "losses": 101,
+          "draws": 49,
+          "win_rate": 0.7,
+          "loss_rate": 0.202,
+          "draw_rate": 0.098
+        }
+      },
+      {
+        "training_games": 50,
+        "mode": "memorize",
+        "num_tiles": 1482,
+        "total_visits": 205,
+        "avg_visits_per_tile": 0.14,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.0087,
+          "min": 0.3869,
+          "max": 0.6131,
+          "n": 6136
+        },
+        "evaluation": {
+          "wins": 344,
+          "losses": 107,
+          "draws": 49,
+          "win_rate": 0.688,
+          "loss_rate": 0.214,
+          "draw_rate": 0.098
+        }
+      },
+      {
+        "training_games": 60,
+        "mode": "memorize",
+        "num_tiles": 1547,
+        "total_visits": 246,
+        "avg_visits_per_tile": 0.16,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.01,
+          "min": 0.3675,
+          "max": 0.6325,
+          "n": 6369
+        },
+        "evaluation": {
+          "wins": 335,
+          "losses": 113,
+          "draws": 52,
+          "win_rate": 0.67,
+          "loss_rate": 0.226,
+          "draw_rate": 0.104
+        }
+      },
+      {
+        "training_games": 70,
+        "mode": "memorize",
+        "num_tiles": 1593,
+        "total_visits": 287,
+        "avg_visits_per_tile": 0.18,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.0112,
+          "min": 0.3492,
+          "max": 0.6508,
+          "n": 6539
+        },
+        "evaluation": {
+          "wins": 342,
+          "losses": 108,
+          "draws": 50,
+          "win_rate": 0.684,
+          "loss_rate": 0.216,
+          "draw_rate": 0.1
+        }
+      },
+      {
+        "training_games": 80,
+        "mode": "memorize",
+        "num_tiles": 1644,
+        "total_visits": 328,
+        "avg_visits_per_tile": 0.2,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.0123,
+          "min": 0.3317,
+          "max": 0.6683,
+          "n": 6714
+        },
+        "evaluation": {
+          "wins": 340,
+          "losses": 109,
+          "draws": 51,
+          "win_rate": 0.68,
+          "loss_rate": 0.218,
+          "draw_rate": 0.102
+        }
+      },
+      {
+        "training_games": 90,
+        "mode": "memorize",
+        "num_tiles": 1669,
+        "total_visits": 369,
+        "avg_visits_per_tile": 0.22,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.0135,
+          "min": 0.3151,
+          "max": 0.6849,
+          "n": 6803
+        },
+        "evaluation": {
+          "wins": 348,
+          "losses": 103,
+          "draws": 49,
+          "win_rate": 0.696,
+          "loss_rate": 0.206,
+          "draw_rate": 0.098
+        }
+      },
+      {
+        "training_games": 100,
+        "mode": "memorize",
+        "num_tiles": 1713,
+        "total_visits": 410,
+        "avg_visits_per_tile": 0.24,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.0145,
+          "min": 0.2994,
+          "max": 0.7006,
+          "n": 6959
+        },
+        "evaluation": {
+          "wins": 332,
+          "losses": 116,
+          "draws": 52,
+          "win_rate": 0.664,
+          "loss_rate": 0.232,
+          "draw_rate": 0.104
+        }
+      },
+      {
+        "training_games": 110,
+        "mode": "memorize",
+        "num_tiles": 1744,
+        "total_visits": 451,
+        "avg_visits_per_tile": 0.26,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.0154,
+          "min": 0.2844,
+          "max": 0.7156,
+          "n": 7062
+        },
+        "evaluation": {
+          "wins": 330,
+          "losses": 120,
+          "draws": 50,
+          "win_rate": 0.66,
+          "loss_rate": 0.24,
+          "draw_rate": 0.1
+        }
+      },
+      {
+        "training_games": 120,
+        "mode": "memorize",
+        "num_tiles": 1765,
+        "total_visits": 492,
+        "avg_visits_per_tile": 0.28,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.0164,
+          "min": 0.2702,
+          "max": 0.7298,
+          "n": 7135
+        },
+        "evaluation": {
+          "wins": 330,
+          "losses": 117,
+          "draws": 53,
+          "win_rate": 0.66,
+          "loss_rate": 0.234,
+          "draw_rate": 0.106
+        }
+      },
+      {
+        "training_games": 130,
+        "mode": "memorize",
+        "num_tiles": 1785,
+        "total_visits": 533,
+        "avg_visits_per_tile": 0.3,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.0172,
+          "min": 0.2567,
+          "max": 0.7433,
+          "n": 7203
+        },
+        "evaluation": {
+          "wins": 324,
+          "losses": 128,
+          "draws": 48,
+          "win_rate": 0.648,
+          "loss_rate": 0.256,
+          "draw_rate": 0.096
+        }
+      },
+      {
+        "training_games": 140,
+        "mode": "memorize",
+        "num_tiles": 1821,
+        "total_visits": 574,
+        "avg_visits_per_tile": 0.32,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.018,
+          "min": 0.2438,
+          "max": 0.7562,
+          "n": 7331
+        },
+        "evaluation": {
+          "wins": 316,
+          "losses": 136,
+          "draws": 48,
+          "win_rate": 0.632,
+          "loss_rate": 0.272,
+          "draw_rate": 0.096
+        }
+      },
+      {
+        "training_games": 150,
+        "mode": "memorize",
+        "num_tiles": 1829,
+        "total_visits": 615,
+        "avg_visits_per_tile": 0.34,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.0188,
+          "min": 0.2316,
+          "max": 0.7684,
+          "n": 7355
+        },
+        "evaluation": {
+          "wins": 329,
+          "losses": 128,
+          "draws": 43,
+          "win_rate": 0.658,
+          "loss_rate": 0.256,
+          "draw_rate": 0.086
+        }
+      },
+      {
+        "training_games": 160,
+        "mode": "memorize",
+        "num_tiles": 1830,
+        "total_visits": 656,
+        "avg_visits_per_tile": 0.36,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.0196,
+          "min": 0.2201,
+          "max": 0.7799,
+          "n": 7358
+        },
+        "evaluation": {
+          "wins": 319,
+          "losses": 135,
+          "draws": 46,
+          "win_rate": 0.638,
+          "loss_rate": 0.27,
+          "draw_rate": 0.092
+        }
+      },
+      {
+        "training_games": 170,
+        "mode": "memorize",
+        "num_tiles": 1836,
+        "total_visits": 697,
+        "avg_visits_per_tile": 0.38,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.0204,
+          "min": 0.2091,
+          "max": 0.7909,
+          "n": 7378
+        },
+        "evaluation": {
+          "wins": 319,
+          "losses": 133,
+          "draws": 48,
+          "win_rate": 0.638,
+          "loss_rate": 0.266,
+          "draw_rate": 0.096
+        }
+      },
+      {
+        "training_games": 180,
+        "mode": "memorize",
+        "num_tiles": 1837,
+        "total_visits": 738,
+        "avg_visits_per_tile": 0.4,
+        "score_distribution": {
+          "mean": 0.5001,
+          "std": 0.0211,
+          "min": 0.1986,
+          "max": 0.8014,
+          "n": 7381
+        },
+        "evaluation": {
+          "wins": 319,
+          "losses": 133,
+          "draws": 48,
+          "win_rate": 0.638,
+          "loss_rate": 0.266,
+          "draw_rate": 0.096
+        }
+      },
+      {
+        "training_games": 190,
+        "mode": "memorize",
+        "num_tiles": 1841,
+        "total_visits": 779,
+        "avg_visits_per_tile": 0.42,
+        "score_distribution": {
+          "mean": 0.5002,
+          "std": 0.0218,
+          "min": 0.1887,
+          "max": 0.8113,
+          "n": 7393
+        },
+        "evaluation": {
+          "wins": 325,
+          "losses": 134,
+          "draws": 41,
+          "win_rate": 0.65,
+          "loss_rate": 0.268,
+          "draw_rate": 0.082
+        }
+      },
+      {
+        "training_games": 200,
+        "mode": "memorize",
+        "num_tiles": 1846,
+        "total_visits": 820,
+        "avg_visits_per_tile": 0.44,
+        "score_distribution": {
+          "mean": 0.5002,
+          "std": 0.0224,
+          "min": 0.1792,
+          "max": 0.8208,
+          "n": 7410
+        },
+        "evaluation": {
+          "wins": 330,
+          "losses": 131,
+          "draws": 39,
+          "win_rate": 0.66,
+          "loss_rate": 0.262,
+          "draw_rate": 0.078
+        }
+      }
+    ],
+    "milestones": {
+      "first_55_pct": 10,
+      "plateau_start": 20,
+      "click_moment": {
+        "from_games": 30,
+        "to_games": 40,
+        "win_rate_jump": 0.03,
+        "from_tiles": 1298,
+        "to_tiles": 1410
+      },
+      "peak_win_rate": 0.7,
+      "final_win_rate": 0.66
+    }
+  },
+  "conclusions": {
+    "min_games_for_55_diverse": 10,
+    "min_games_for_55_memorize": 10,
+    "diversity_advantage": "diverse better",
+    "plateau_games_diverse": 20,
+    "plateau_games_memorize": 20
+  }
+}
