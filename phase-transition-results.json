@@ -1,0 +1,96 @@
+{
+  "temperatures": {
+    "0.01": {
+      "temperature": 0.01,
+      "win_rate": 0.63,
+      "magnetization": 0.1634518851770566,
+      "energy": 8.023052880975916,
+      "tiles": 802
+    },
+    "0.05": {
+      "temperature": 0.05,
+      "win_rate": 0.616,
+      "magnetization": 0.1631417654889759,
+      "energy": 8.136546729449673,
+      "tiles": 894
+    },
+    "0.1": {
+      "temperature": 0.1,
+      "win_rate": 0.602,
+      "magnetization": 0.15938660794438386,
+      "energy": 8.194228554465333,
+      "tiles": 941
+    },
+    "0.15": {
+      "temperature": 0.15,
+      "win_rate": 0.606,
+      "magnetization": 0.1619427599385937,
+      "energy": 8.150542138131412,
+      "tiles": 900
+    },
+    "0.2": {
+      "temperature": 0.2,
+      "win_rate": 0.568,
+      "magnetization": 0.1606146885641307,
+      "energy": 8.157155064229038,
+      "tiles": 899
+    },
+    "0.3": {
+      "temperature": 0.3,
+      "win_rate": 0.55,
+      "magnetization": 0.16265436487912638,
+      "energy": 8.154706088595134,
+      "tiles": 897
+    },
+    "0.5": {
+      "temperature": 0.5,
+      "win_rate": 0.538,
+      "magnetization": 0.16365847922537766,
+      "energy": 8.154092605927547,
+      "tiles": 905
+    },
+    "0.8": {
+      "temperature": 0.8,
+      "win_rate": 0.562,
+      "magnetization": 0.16123702460031877,
+      "energy": 8.156279405236262,
+      "tiles": 900
+    },
+    "1.0": {
+      "temperature": 1.0,
+      "win_rate": 0.606,
+      "magnetization": 0.16083178930466965,
+      "energy": 8.162009659377631,
+      "tiles": 906
+    },
+    "1.5": {
+      "temperature": 1.5,
+      "win_rate": 0.582,
+      "magnetization": 0.16086758008590205,
+      "energy": 8.155433232121965,
+      "tiles": 899
+    },
+    "2.0": {
+      "temperature": 2.0,
+      "win_rate": 0.598,
+      "magnetization": 0.15943050643534454,
+      "energy": 8.169427936100787,
+      "tiles": 920
+    },
+    "3.0": {
+      "temperature": 3.0,
+      "win_rate": 0.598,
+      "magnetization": 0.16176741800154937,
+      "energy": 8.167366499164626,
+      "tiles": 915
+    },
+    "5.0": {
+      "temperature": 5.0,
+      "win_rate": 0.59,
+      "magnetization": 0.16023008003955164,
+      "energy": 8.170244957732603,
+      "tiles": 919
+    }
+  },
+  "critical_T": 0.07500000000000001
+}
