@@ -300,6 +300,70 @@ class ChessEndgame:
         return random.choice(actions) if actions else None
 
 
+class Connect4:
+    """Connect 4 game for ZeroClaw learning."""
+    
+    def __init__(self, rows=6, cols=7):
+        self.rows = rows
+        self.cols = cols
+        self.reset()
+    
+    def reset(self):
+        self.board = [[' ']*self.cols for _ in range(self.rows)]
+        self.current = 'X'  # X=Red, O=Yellow
+        self.turn = 0
+        self.done = False
+        self.winner = None
+    
+    def state(self) -> GameState:
+        board_str = ''.join(''.join(row) for row in self.board)
+        return GameState(board_str, self.turn, self.current)
+    
+    def legal_actions(self) -> list[str]:
+        if self.done:
+            return []
+        return [str(c) for c in range(self.cols) if self.board[0][c] == ' ']
+    
+    def step(self, action: str) -> tuple[float, bool]:
+        col = int(action)
+        if col < 0 or col >= self.cols or self.board[0][col] != ' ':
+            return -1.0, True  # illegal
+        
+        # Drop piece
+        row = self.rows - 1
+        while row >= 0 and self.board[row][col] != ' ':
+            row -= 1
+        if row < 0:
+            return -1.0, True
+        
+        self.board[row][col] = self.current
+        self.turn += 1
+        
+        # Check win (horizontal, vertical, both diagonals)
+        directions = [(0,1),(1,0),(1,1),(1,-1)]
+        for dr, dc in directions:
+            count = 1
+            for sign in [1, -1]:
+                r, c = row + sign*dr, col + sign*dc
+                while 0 <= r < self.rows and 0 <= c < self.cols and self.board[r][c] == self.current:
+                    count += 1
+                    r += sign*dr
+                    c += sign*dc
+            if count >= 4:
+                self.done = True
+                self.winner = self.current
+                reward = 1.0 if self.current == 'X' else -1.0
+                return reward, True
+        
+        # Check draw
+        if self.turn >= self.rows * self.cols:
+            self.done = True
+            return 0.0, True
+        
+        self.current = 'O' if self.current == 'X' else 'X'
+        return 0.0, False
+
+
 # ─── ZeroClaw Agent ───────────────────────────────────────
 
 class ZeroClaw:
@@ -736,6 +800,7 @@ def run_arena():
     games = {
         "tictactoe": TicTacToe(),
         "blackjack": Blackjack(),
+        "connect4": Connect4(),
     }
     
     # Add chess if available
@@ -752,7 +817,7 @@ def run_arena():
         claws[game_name] = ZeroClaw(claw_name, game_name)
     
     # ── Run 5 generations ────────────────────────────────
-    for gen in range(1, 6):
+    for gen in range(1, 4):
         print(f"\n{'#'*60}")
         print(f"  GENERATION {gen}")
         print(f"{'#'*60}")

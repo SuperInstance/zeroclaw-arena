@@ -292,7 +292,7 @@ def benchmark():
     # Import game
     import sys
     sys.path.insert(0, '.')
-    from zeroclaw import TicTacToe, Blackjack, ChessEndgame
+    from zeroclaw import TicTacToe, Blackjack, ChessEndgame, Connect4
     
     print("╔══════════════════════════════════════════════════╗")
     print("║     REFLEX PLAYER — Vector DB as Game Engine     ║")
@@ -473,6 +473,59 @@ def benchmark():
         print(f"    ReflexPlayer: {reflex_wr:.1%} wins")
         print(f"    RandomPlayer: {random_wr:.1%} wins")
         print(f"    Advantage:    {(reflex_wr - random_wr)*100:+.1f}pp")
+    
+    # ── Connect 4 ──────────────────────────────────────
+    print("\n" + "="*60)
+    print("  CONNECT 4: Reflex vs Random")
+    print("="*60)
+    
+    game = Connect4()
+    db_path = "/tmp/zeroclaw-sandbox/zeroclaw-connect4/vectors.db"
+    
+    if Path(db_path).exists():
+        reflex = ReflexPlayer("reflex-c4", db_path)
+        
+        print("\n  ReflexPlayer vs Random Opponent (200 games):")
+        for _ in range(200):
+            game.reset()
+            while not game.done:
+                state = game.state()
+                actions = game.legal_actions()
+                if not actions: break
+                
+                if game.current == 'X':
+                    action = reflex.choose_action(str(state), actions, temperature=0.0)
+                else:
+                    action = random.choice(actions)
+                
+                game.step(action)
+            
+            if game.winner == 'X':
+                reflex.stats["wins"] += 1
+            elif game.winner == 'O':
+                reflex.stats["losses"] += 1
+            else:
+                reflex.stats["draws"] += 1
+        
+        reflex_wr = reflex.stats["wins"] / 200
+        reflex_draws = reflex.stats["draws"] / 200
+        
+        random_wr = 0
+        for _ in range(200):
+            game.reset()
+            while not game.done:
+                actions = game.legal_actions()
+                if not actions: break
+                game.step(random.choice(actions))
+            if game.winner == 'X':
+                random_wr += 1
+        random_wr /= 200
+        
+        print(f"    ReflexPlayer: {reflex_wr:.1%} wins, {reflex_draws:.1%} draws")
+        print(f"    RandomPlayer: {random_wr:.1%} wins")
+        print(f"    Advantage:    {(reflex_wr - random_wr)*100:+.1f}pp")
+    else:
+        print("    No vector DB found — run ZeroClaw arena first")
     
     print(f"\n{'='*60}")
     print(f"  CONCLUSION: The vector DB IS the player.")
