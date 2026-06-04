@@ -1,0 +1,139 @@
+{
+  "experiment": "curriculum_learning",
+  "hypothesis": "Curriculum training produces stronger tile fields than single-regime training",
+  "training_games": 500,
+  "eval_games": 1000,
+  "regimes": {
+    "curriculum": {
+      "evaluations": {
+        "TicTacToe": {
+          "wins": 410,
+          "draws": 97,
+          "losses": 493,
+          "win_rate": 0.41,
+          "total": 1000
+        },
+        "Connect4": {
+          "wins": 484,
+          "draws": 2,
+          "losses": 514,
+          "win_rate": 0.484,
+          "total": 1000
+        },
+        "train_TicTacToe_eval_Connect4": {
+          "wins": 514,
+          "draws": 3,
+          "losses": 483,
+          "win_rate": 0.514,
+          "total": 1000
+        },
+        "train_Connect4_eval_TicTacToe": {
+          "wins": 455,
+          "draws": 79,
+          "losses": 466,
+          "win_rate": 0.455,
+          "total": 1000
+        }
+      }
+    },
+    "random_only": {
+      "evaluations": {
+        "TicTacToe": {
+          "wins": 429,
+          "draws": 95,
+          "losses": 476,
+          "win_rate": 0.429,
+          "total": 1000
+        },
+        "Connect4": {
+          "wins": 494,
+          "draws": 0,
+          "losses": 506,
+          "win_rate": 0.494,
+          "total": 1000
+        },
+        "train_TicTacToe_eval_Connect4": {
+          "wins": 483,
+          "draws": 0,
+          "losses": 517,
+          "win_rate": 0.483,
+          "total": 1000
+        },
+        "train_Connect4_eval_TicTacToe": {
+          "wins": 446,
+          "draws": 96,
+          "losses": 458,
+          "win_rate": 0.446,
+          "total": 1000
+        }
+      }
+    },
+    "self_play_only": {
+      "evaluations": {
+        "TicTacToe": {
+          "wins": 423,
+          "draws": 115,
+          "losses": 462,
+          "win_rate": 0.423,
+          "total": 1000
+        },
+        "Connect4": {
+          "wins": 499,
+          "draws": 2,
+          "losses": 499,
+          "win_rate": 0.499,
+          "total": 1000
+        },
+        "train_TicTacToe_eval_Connect4": {
+          "wins": 478,
+          "draws": 2,
+          "losses": 520,
+          "win_rate": 0.478,
+          "total": 1000
+        },
+        "train_Connect4_eval_TicTacToe": {
+          "wins": 451,
+          "draws": 75,
+          "losses": 474,
+          "win_rate": 0.451,
+          "total": 1000
+        }
+      }
+    },
+    "mixed_only": {
+      "evaluations": {
+        "TicTacToe": {
+          "wins": 460,
+          "draws": 92,
+          "losses": 448,
+          "win_rate": 0.46,
+          "total": 1000
+        },
+        "Connect4": {
+          "wins": 473,
+          "draws": 3,
+          "losses": 524,
+          "win_rate": 0.473,
+          "total": 1000
+        },
+        "train_TicTacToe_eval_Connect4": {
+          "wins": 503,
+          "draws": 1,
+          "losses": 496,
+          "win_rate": 0.503,
+          "total": 1000
+        },
+        "train_Connect4_eval_TicTacToe": {
+          "wins": 443,
+          "draws": 93,
+          "losses": 464,
+          "win_rate": 0.443,
+          "total": 1000
+        }
+      }
+    }
+  },
+  "best_regime": "mixed_only",
+  "best_combined_win_rate": 0.4665,
+  "hypothesis_supported": false
+}

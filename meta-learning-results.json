@@ -1,0 +1,243 @@
+{
+  "holdem_meta_test": {
+    "meta_learning_curve": [
+      [
+        25,
+        0.15
+      ],
+      [
+        50,
+        0.275
+      ],
+      [
+        75,
+        0.2625
+      ],
+      [
+        100,
+        0.2875
+      ],
+      [
+        125,
+        0.225
+      ],
+      [
+        150,
+        0.2875
+      ],
+      [
+        175,
+        0.2
+      ],
+      [
+        200,
+        0.2
+      ]
+    ],
+    "random_learning_curve": [
+      [
+        25,
+        0.1625
+      ],
+      [
+        50,
+        0.175
+      ],
+      [
+        75,
+        0.15
+      ],
+      [
+        100,
+        0.25
+      ],
+      [
+        125,
+        0.125
+      ],
+      [
+        150,
+        0.2125
+      ],
+      [
+        175,
+        0.25
+      ],
+      [
+        200,
+        0.175
+      ]
+    ],
+    "feature_learning_curve": [
+      [
+        25,
+        0.1375
+      ],
+      [
+        50,
+        0.1625
+      ],
+      [
+        75,
+        0.175
+      ],
+      [
+        100,
+        0.25
+      ],
+      [
+        125,
+        0.1875
+      ],
+      [
+        150,
+        0.2875
+      ],
+      [
+        175,
+        0.1875
+      ],
+      [
+        200,
+        0.1375
+      ]
+    ],
+    "meta_speed": null,
+    "random_speed": null,
+    "feature_speed": null,
+    "meta_final": 0.2,
+    "random_final": 0.175,
+    "feature_final": 0.138
+  },
+  "negative_transfer": {
+    "ttt_prior_curve": [
+      [
+        25,
+        0.64
+      ],
+      [
+        50,
+        0.72
+      ],
+      [
+        75,
+        0.56
+      ],
+      [
+        100,
+        0.66
+      ],
+      [
+        125,
+        0.72
+      ],
+      [
+        150,
+        0.7
+      ]
+    ],
+    "fresh_curve": [
+      [
+        25,
+        0.76
+      ],
+      [
+        50,
+        0.68
+      ],
+      [
+        75,
+        0.66
+      ],
+      [
+        100,
+        0.64
+      ],
+      [
+        125,
+        0.68
+      ],
+      [
+        150,
+        0.64
+      ]
+    ],
+    "ttt_prior_final": 0.7,
+    "fresh_final": 0.64,
+    "transfer_effect": 0.06,
+    "verdict": "Unexpected POSITIVE transfer",
+    "ttt_prior_speed": 25,
+    "fresh_speed": 25
+  },
+  "positive_transfer": {
+    "variant_prior_curve": [
+      [
+        25,
+        0.54
+      ],
+      [
+        50,
+        0.62
+      ],
+      [
+        75,
+        0.76
+      ],
+      [
+        100,
+        0.62
+      ],
+      [
+        125,
+        0.7
+      ],
+      [
+        150,
+        0.62
+      ]
+    ],
+    "fresh_curve": [
+      [
+        25,
+        0.66
+      ],
+      [
+        50,
+        0.82
+      ],
+      [
+        75,
+        0.6
+      ],
+      [
+        100,
+        0.6
+      ],
+      [
+        125,
+        0.64
+      ],
+      [
+        150,
+        0.58
+      ]
+    ],
+    "variant_prior_final": 0.62,
+    "fresh_final": 0.58,
+    "transfer_effect": 0.04,
+    "verdict": "POSITIVE TRANSFER \u2014 variant diversity helps!",
+    "variant_prior_speed": 50,
+    "fresh_speed": 25
+  },
+  "summary": {
+    "meta_prior_size": 3140,
+    "feature_prior_size": 18,
+    "meta_advantage": 0.025,
+    "feature_advantage": -0.037,
+    "speedup": null,
+    "negative_transfer_effect": 0.06,
+    "positive_transfer_effect": 0.04,
+    "conclusion": "confirmed"
+  },
+  "elapsed_seconds": 9.6
+}
