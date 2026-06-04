@@ -301,14 +301,17 @@ def main():
     print("=" * 70)
 
     bin_counts = [4, 8, 16, 32, 64]
-    n_runs = 5
+    n_runs = 3
     base_episodes = 500
 
     all_results = {}
 
     for n_bins in bin_counts:
-        # Scale episodes with action space — but cap at 2000
-        num_episodes = min(2000, base_episodes + (n_bins * n_bins * 2))
+        # Scale episodes with action space — but cap at 1500
+        num_episodes = min(1500, base_episodes + (n_bins * n_bins * 2))
+        # For very large action spaces, use fewer episodes
+        if n_bins * n_bins > 2000:
+            num_episodes = min(800, num_episodes)
         print(f"\n{'─' * 60}")
         print(f"BIN COUNT: {n_bins} ({n_bins*n_bins} discrete actions, {num_episodes} episodes)")
         print(f"{'─' * 60}")
