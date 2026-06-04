@@ -1,0 +1,39 @@
+{
+  "n_games": 24,
+  "n_generations": 100,
+  "final_win_rates": {
+    "ttt_standard": 0.6766666666666666,
+    "ttt_corners": 0.52,
+    "ttt_center": 0.39666666666666667,
+    "ttt_sparse": 0.18333333333333332,
+    "c4_standard": 0.6733333333333333,
+    "c4_aggressive": 0.3566666666666667,
+    "c4_defensive": 0.47,
+    "c4_sparse": 0.14333333333333334,
+    "holdem_preflop": 0.62,
+    "holdem_flop": 0.45,
+    "holdem_river": 0.34,
+    "holdem_bluff": 0.21,
+    "chess_pawn": 0.6633333333333333,
+    "chess_knight": 0.52,
+    "go_9x9": 0.6733333333333333,
+    "go_territory": 0.33666666666666667,
+    "trading_trend": 0.46,
+    "trading_vol": 0.3333333333333333,
+    "driving_city": 0.5933333333333334,
+    "driving_highway": 0.53,
+    "negotiation": 0.15333333333333332,
+    "resource_mgmt": 0.36666666666666664,
+    "predator_prey": 0.68,
+    "ecology": 0.42333333333333334
+  },
+  "entropy_change_mean": 0.14066335450636538,
+  "score_diversity_mean": 0.1118983726919912,
+  "action_dominance_mean": 0.204375,
+  "reward_type_performance": {
+    "binary": 0.6542857142857142,
+    "marginal": 0.48190476190476195,
+    "progressive": 0.355,
+    "sparse": 0.1725
+  }
+}
