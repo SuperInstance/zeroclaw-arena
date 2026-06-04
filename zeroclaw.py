@@ -1001,6 +1001,81 @@ def choose_action(state_str, legal_actions):
                 self.gpu_engine.load(str(path))
 
 
+# ─── Cross-Game Pattern Mining ───────────────────────────
+
+def cross_game_mining(output_path: str = "cross_game_patterns.json"):
+    """
+    Load tic-tac-toe and Connect4 GPU vector DBs,
+    use the GPU engine to find cross-game patterns,
+    and save the top 10 most-similar states between games.
+    """
+    print("\n" + "=" * 60)
+    print("  Cross-Game Pattern Mining")
+    print("=" * 60)
+    
+    # Build GPU engines for each game by running exploration
+    ttt = TicTacToe()
+    c4 = Connect4()
+    
+    ttt_claw = ZeroClaw("cross-ttt", "tictactoe")
+    c4_claw = ZeroClaw("cross-c4", "connect4")
+    
+    # Collect transitions
+    print("  Collecting tic-tac-toe transitions...")
+    ttt_claw.explore(ttt, num_games=200)
+    print("  Collecting Connect4 transitions...")
+    c4_claw.explore(c4, num_games=200)
+    
+    # Build dedicated GPU engines for each game's states
+    ttt_engine = GPUVectorEngine(dim=64)
+    c4_engine = GPUVectorEngine(dim=64)
+    
+    ttt_states = [f"{t.state_str}|{t.action}" for t in ttt_claw.transitions]
+    ttt_meta = [{"game": "tictactoe", "state": t.state_str, "action": t.action, "reward": t.reward} for t in ttt_claw.transitions]
+    
+    c4_states = [f"{t.state_str}|{t.action}" for t in c4_claw.transitions]
+    c4_meta = [{"game": "connect4", "state": t.state_str, "action": t.action, "reward": t.reward} for t in c4_claw.transitions]
+    
+    ttt_vecs = ttt_engine.hash_embed_batch(ttt_states)
+    ttt_engine.add_batch(ttt_vecs, ttt_meta)
+    
+    c4_vecs = c4_engine.hash_embed_batch(c4_states)
+    c4_engine.add_batch(c4_vecs, c4_meta)
+    
+    print(f"  TTT GPU index: {len(ttt_engine)} vectors")
+    print(f"  C4 GPU index: {len(c4_engine)} vectors")
+    
+    # Cross-game search: find most similar states between the two games
+    print("  Running cross-game similarity search...")
+    cross_results = ttt_engine.cross_game_search(c4_engine, top_k=10)
+    
+    patterns = []
+    for ttt_idx, c4_idx, sim in cross_results:
+        ttt_info = ttt_engine.metadata[ttt_idx] if ttt_idx < len(ttt_engine.metadata) else {}
+        c4_info = c4_engine.metadata[c4_idx] if c4_idx < len(c4_engine.metadata) else {}
+        patterns.append({
+            "rank": len(patterns) + 1,
+            "similarity": round(sim, 6),
+            "ttt_state": ttt_info.get("state", "?")[:50],
+            "ttt_action": ttt_info.get("action", "?"),
+            "ttt_reward": ttt_info.get("reward", 0),
+            "c4_state": c4_info.get("state", "?")[:50],
+            "c4_action": c4_info.get("action", "?"),
+            "c4_reward": c4_info.get("reward", 0),
+        })
+    
+    # Save results
+    with open(output_path, "w") as f:
+        json.dump({"cross_game_patterns": patterns, "ttt_vectors": len(ttt_engine), "c4_vectors": len(c4_engine)}, f, indent=2)
+    
+    print(f"\n  Top 10 cross-game patterns:")
+    for p in patterns:
+        print(f"    #{p['rank']}: sim={p['similarity']:.4f} | TTT({p['ttt_action']}, r={p['ttt_reward']:.1f}) <-> C4({p['c4_action']}, r={p['c4_reward']:.1f})")
+    
+    print(f"\n  Saved to {output_path}")
+    return patterns
+
+
 # ─── Main: Run the ZeroClaw Arena ────────────────────────
 
 def run_arena():
