@@ -35,6 +35,13 @@ try:
 except ImportError:
     GPU_AVAILABLE = False
 
+# torch-vector-search — optional, replaces SQLite VectorDB with GPU-accelerated backend
+try:
+    from vector_store import VectorStore
+    TORCH_VECTOR_AVAILABLE = True
+except ImportError:
+    TORCH_VECTOR_AVAILABLE = False
+
 
 # ─── Vector DB (lightweight, no dependencies) ─────────────
 
@@ -565,7 +572,11 @@ class ZeroClaw:
         self.sandbox_dir = Path(sandbox_dir) / name
         self.sandbox_dir.mkdir(parents=True, exist_ok=True)
         
-        self.vdb = VectorDB(str(self.sandbox_dir / "vectors.db"))
+        # Use torch-vector-search backend when available, fall back to SQLite
+        if TORCH_VECTOR_AVAILABLE:
+            self.vdb = VectorStore(str(self.sandbox_dir / "vectors.db"))
+        else:
+            self.vdb = VectorDB(str(self.sandbox_dir / "vectors.db"))
         self.transitions: list[Transition] = []
         self.scripts: list[dict] = []  # discovered automation scripts
         self.generation = 0
