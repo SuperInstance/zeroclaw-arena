@@ -1,0 +1,57 @@
+{
+  "experiment": "tile_compiler",
+  "description": "Compile trained tile field into deterministic zero-dep lookup",
+  "training": {
+    "games": 1000,
+    "tiles_learned": 1644,
+    "tiles_compiled": 1174
+  },
+  "evaluation": {
+    "tile_field": {
+      "x_wins": 812,
+      "o_wins": 124,
+      "draws": 64,
+      "win_rate": 0.812,
+      "total_time_s": 0.5709,
+      "ms_per_game": 0.571
+    },
+    "compiled": {
+      "x_wins": 768,
+      "o_wins": 127,
+      "draws": 105,
+      "win_rate": 0.768,
+      "total_time_s": 0.7404,
+      "ms_per_game": 0.74
+    },
+    "gap": 0.044,
+    "speedup": 0.77,
+    "within_threshold": true
+  },
+  "analysis": {
+    "code_bytes": 56527,
+    "lookup_entries": 1174,
+    "action_distribution": {
+      "8": 96,
+      "5": 90,
+      "4": 168,
+      "0": 201,
+      "1": 136,
+      "2": 166,
+      "3": 113,
+      "7": 91,
+      "6": 113
+    }
+  },
+  "edge_tests_passed": true,
+  "innovation": {
+    "concept": "Learn with gradients/simulation, deploy with lookups",
+    "tile_field_is": "TRAINING algorithm (needs numpy, random, simulation)",
+    "compiled_policy_is": "DEPLOYED artifact (zero dependencies, O(1) lookup)",
+    "deployment_targets": [
+      "microcontrollers",
+      "browsers",
+      "paper",
+      "any Python"
+    ]
+  }
+}
