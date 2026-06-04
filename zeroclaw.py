@@ -364,6 +364,181 @@ class Connect4:
         return 0.0, False
 
 
+# ─── Go 9x9 ───────────────────────────────────────────────
+
+class Go9x9:
+    """Simplified 9x9 Go for ZeroClaw learning.
+    
+    Rules:
+    - Black plays first
+    - Simple ko rule (can't repeat previous board state)
+    - Game ends when both players pass
+    - Score = territory + captures (Chinese scoring)
+    - Komi: 5.5 for White
+    """
+    
+    def __init__(self, size=9):
+        self.size = size
+        self.reset()
+    
+    def reset(self):
+        self.board = [['.' for _ in range(self.size)] for _ in range(self.size)]
+        self.current = 'B'  # B=Black, W=White
+        self.turn = 0
+        self.done = False
+        self.winner = None
+        self.captures = {'B': 0, 'W': 0}
+        self.previous_board = None
+        self.passes = 0
+        self.komi = 5.5
+    
+    def state(self) -> GameState:
+        board_str = ''.join(''.join(row) for row in self.board)
+        return GameState(f"{board_str}_C{self.captures['B']}_{self.captures['W']}", self.turn, self.current)
+    
+    def legal_actions(self) -> list[str]:
+        if self.done:
+            return []
+        actions = ['pass']
+        for r in range(self.size):
+            for c in range(self.size):
+                if self.board[r][c] == '.':
+                    if self._is_legal(r, c):
+                        actions.append(f"{r},{c}")
+        return actions
+    
+    def _is_legal(self, r, c) -> bool:
+        """Check if placing at (r,c) is legal."""
+        test_board = [row[:] for row in self.board]
+        test_board[r][c] = self.current
+        
+        opp = 'W' if self.current == 'B' else 'B'
+        captured = 0
+        for dr, dc in [(-1,0),(1,0),(0,-1),(0,1)]:
+            nr, nc = r+dr, c+dc
+            if 0 <= nr < self.size and 0 <= nc < self.size and test_board[nr][nc] == opp:
+                group, liberties = self._get_group(test_board, nr, nc)
+                if liberties == 0:
+                    captured += len(group)
+        
+        if captured == 0:
+            _, liberties = self._get_group(test_board, r, c)
+            if liberties == 0:
+                return False
+        
+        board_str = ''.join(''.join(row) for row in test_board)
+        if self.previous_board and board_str == self.previous_board:
+            return False
+        
+        return True
+    
+    def _get_group(self, board, r, c):
+        """Get all stones in the group and count liberties."""
+        color = board[r][c]
+        if color == '.':
+            return [], 0
+        visited = set()
+        group = []
+        liberties = set()
+        stack = [(r, c)]
+        while stack:
+            cr, cc = stack.pop()
+            if (cr, cc) in visited:
+                continue
+            visited.add((cr, cc))
+            group.append((cr, cc))
+            for dr, dc in [(-1,0),(1,0),(0,-1),(0,1)]:
+                nr, nc = cr+dr, cc+dc
+                if 0 <= nr < self.size and 0 <= nc < self.size:
+                    if board[nr][nc] == '.':
+                        liberties.add((nr, nc))
+                    elif board[nr][nc] == color and (nr, nc) not in visited:
+                        stack.append((nr, nc))
+        return group, len(liberties)
+    
+    def step(self, action: str) -> tuple[float, bool]:
+        if action == 'pass':
+            self.passes += 1
+            if self.passes >= 2:
+                self._score_game()
+                return self._get_reward(), True
+            self.previous_board = ''.join(''.join(row) for row in self.board)
+            self.current = 'W' if self.current == 'B' else 'B'
+            self.turn += 1
+            return 0.0, False
+        
+        r, c = map(int, action.split(','))
+        if not self._is_legal(r, c):
+            return -1.0, True
+        
+        self.previous_board = ''.join(''.join(row) for row in self.board)
+        
+        self.board[r][c] = self.current
+        self.passes = 0
+        
+        opp = 'W' if self.current == 'B' else 'B'
+        for dr, dc in [(-1,0),(1,0),(0,-1),(0,1)]:
+            nr, nc = r+dr, c+dc
+            if 0 <= nr < self.size and 0 <= nc < self.size and self.board[nr][nc] == opp:
+                group, liberties = self._get_group(self.board, nr, nc)
+                if liberties == 0:
+                    for gr, gc in group:
+                        self.board[gr][gc] = '.'
+                    self.captures[self.current] += len(group)
+        
+        self.current = 'W' if self.current == 'B' else 'B'
+        self.turn += 1
+        
+        if self.turn >= self.size * self.size * 2:
+            self._score_game()
+            return self._get_reward(), True
+        
+        return 0.0, False
+    
+    def _score_game(self):
+        """Chinese scoring: territory + stones on board."""
+        self.done = True
+        scores = {'B': 0, 'W': 0}
+        for r in range(self.size):
+            for c in range(self.size):
+                if self.board[r][c] != '.':
+                    scores[self.board[r][c]] += 1
+                else:
+                    owner = self._get_territory(r, c)
+                    if owner in scores:
+                        scores[owner] += 1
+        
+        scores['W'] += self.komi
+        self.winner = 'B' if scores['B'] > scores['W'] else 'W'
+    
+    def _get_territory(self, r, c):
+        """Flood fill to find territory owner."""
+        visited = set()
+        colors = set()
+        stack = [(r, c)]
+        while stack:
+            cr, cc = stack.pop()
+            if (cr, cc) in visited:
+                continue
+            visited.add((cr, cc))
+            for dr, dc in [(-1,0),(1,0),(0,-1),(0,1)]:
+                nr, nc = cr+dr, cc+dc
+                if 0 <= nr < self.size and 0 <= nc < self.size:
+                    if self.board[nr][nc] == '.':
+                        stack.append((nr, nc))
+                    else:
+                        colors.add(self.board[nr][nc])
+        if len(colors) == 1:
+            return colors.pop()
+        return None
+    
+    def _get_reward(self) -> float:
+        if self.winner == 'B':
+            return 1.0
+        elif self.winner == 'W':
+            return -1.0
+        return 0.0
+
 # ─── ZeroClaw Agent ───────────────────────────────────────
 
 class ZeroClaw:
@@ -801,6 +976,7 @@ def run_arena():
         "tictactoe": TicTacToe(),
         "blackjack": Blackjack(),
         "connect4": Connect4(),
+        "go9x9": Go9x9(),
     }
     
     # Add chess if available
@@ -827,7 +1003,7 @@ def run_arena():
             
             # Phase 1: Explore (play games)
             print(f"\n🎮 {game_name} — Exploration")
-            num_explore = 50 if game_name != "chess_endgame" else 20
+            num_explore = 50 if game_name not in ("chess_endgame", "go9x9") else 10 if game_name == "go9x9" else 20
             claw.explore(game, num_games=num_explore)
             
             # Phase 2: Analyze and generate scripts
