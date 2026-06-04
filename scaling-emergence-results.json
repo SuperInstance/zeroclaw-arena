@@ -1,0 +1,119 @@
+{
+  "24": {
+    "n_envs": 24,
+    "wr_mean": 0.4345833333333333,
+    "wr_std": 0.13536152723560546,
+    "wr_range": [
+      0.12,
+      0.575
+    ],
+    "entropy_change_mean": 0.11432271990423266,
+    "entropy_increased_pct": 75.0,
+    "converged_60pct": 0,
+    "converged_pct": 0.0,
+    "strategy_clusters": 7,
+    "reward_performance": {
+      "binary": 0.495,
+      "marginal": 0.5212500000000001,
+      "progressive": 0.34,
+      "sparse": 0.125,
+      "adversarial": 0.505,
+      "cooperative": 0.5066666666666667,
+      "noisy": 0.5316666666666666
+    },
+    "reward_entropy": {
+      "binary": 1.261944985937605,
+      "marginal": 1.248678754121574,
+      "progressive": 1.3875559723197897,
+      "sparse": 1.987012891166211,
+      "adversarial": 1.2843020786018167,
+      "cooperative": 1.2839391154340605,
+      "noisy": 1.290913677287312
+    },
+    "complexity_performance": {
+      "low": 0.4273684210526316,
+      "mid": 0.4333333333333333,
+      "high": 0.505
+    },
+    "score_diversity_mean": 0.05662514082972936,
+    "time_sec": 2.853889063000679
+  },
+  "240": {
+    "n_envs": 240,
+    "wr_mean": 0.4273958333333333,
+    "wr_std": 0.14435268436242843,
+    "wr_range": [
+      0.08,
+      0.62
+    ],
+    "entropy_change_mean": 0.13002160324235473,
+    "entropy_increased_pct": 82.5,
+    "converged_60pct": 2,
+    "converged_pct": 0.8333333333333334,
+    "strategy_clusters": 10,
+    "reward_performance": {
+      "binary": 0.4888571428571428,
+      "marginal": 0.49528571428571433,
+      "progressive": 0.35617647058823526,
+      "sparse": 0.10617647058823529,
+      "adversarial": 0.5004411764705882,
+      "cooperative": 0.49411764705882355,
+      "noisy": 0.5469117647058823
+    },
+    "reward_entropy": {
+      "binary": 1.2815706785590866,
+      "marginal": 1.2762182457317206,
+      "progressive": 1.4260512195713364,
+      "sparse": 1.983563594707606,
+      "adversarial": 1.2776944607666254,
+      "cooperative": 1.2687288383043813,
+      "noisy": 1.2865762271902765
+    },
+    "complexity_performance": {
+      "low": 0.42085820895522386,
+      "mid": 0.4369767441860465,
+      "high": 0.43000000000000005
+    },
+    "score_diversity_mean": 0.057510669146598394,
+    "time_sec": 29.825275479000993
+  },
+  "2400": {
+    "n_envs": 2400,
+    "wr_mean": 0.42819375,
+    "wr_std": 0.1487192473900767,
+    "wr_range": [
+      0.04,
+      0.655
+    ],
+    "entropy_change_mean": 0.13113304184954339,
+    "entropy_increased_pct": 82.29166666666666,
+    "converged_60pct": 20,
+    "converged_pct": 0.8333333333333334,
+    "strategy_clusters": 14,
+    "reward_performance": {
+      "binary": 0.49857142857142855,
+      "marginal": 0.502332361516035,
+      "progressive": 0.35051020408163264,
+      "sparse": 0.10205539358600584,
+      "adversarial": 0.4998396501457726,
+      "cooperative": 0.495204081632653,
+      "noisy": 0.5491959064327485
+    },
+    "reward_entropy": {
+      "binary": 1.2760599370138026,
+      "marginal": 1.273181850493013,
+      "progressive": 1.4206957010973154,
+      "sparse": 1.9887845387793868,
+      "adversarial": 1.2719461970694785,
+      "cooperative": 1.2751874875217066,
+      "noisy": 1.2957342214061962
+    },
+    "complexity_performance": {
+      "low": 0.4296269177126918,
+      "mid": 0.425606826801517,
+      "high": 0.4281428571428571
+    },
+    "score_diversity_mean": 0.057587139459614335,
+    "time_sec": 299.95563948800554
+  }
+}
