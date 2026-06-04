@@ -572,6 +572,54 @@ def print_results(results):
         print()
 
 
+def analyze_well_trained(tiles, oracle, x_states):
+    """Filter to only states where tile field has differentiated scores."""
+    print(f"\n{'='*60}")
+    print("WELL-TRAINED STATES ANALYSIS (score variance > 0)")
+    print(f"{'='*60}")
+
+    neg_agree = 0
+    pos_agree = 0
+    total = 0
+
+    for game in x_states:
+        actions = game.legal_actions()
+        if len(actions) <= 1:
+            continue
+
+        shash = game.state_hash()
+        tile = tiles.get(shash)
+        if tile is None:
+            continue
+
+        scores = [tile.reflexes.get(a, {}).get("score", 0.5) for a in actions]
+        if len(set(round(s, 3) for s in scores)) <= 1:
+            continue  # All scores are the same — not differentiated
+
+        total += 1
+        nash_worst = oracle.worst_actions(game)
+        nash_best = oracle.best_actions(game)
+        tile_worst = tile.tile_worst_action(actions)
+        tile_best = tile.tile_best_action(actions)
+
+        if tile_worst in nash_worst:
+            neg_agree += 1
+        if tile_best in nash_best:
+            pos_agree += 1
+
+    if total == 0:
+        print("  No well-trained states found.")
+        return
+
+    print(f"  Well-trained states: {total}")
+    print(f"  Negative space agreement: {neg_agree}/{total} = {neg_agree/total:.1%}")
+    print(f"  Positive space agreement: {pos_agree}/{total} = {pos_agree/total:.1%}")
+    if neg_agree / total > 0.8:
+        print(f"  ✅ NEGATIVE HYPOTHESIS CONFIRMED on well-trained states")
+    else:
+        print(f"  ❌ Negative hypothesis not confirmed even on well-trained states")
+
+
 def save_results(results, stats, filename="nash-distance-results.json"):
     """Save results to JSON."""
     n = results["states_with_tiles"]
