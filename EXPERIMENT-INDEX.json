@@ -1,5 +1,5 @@
 {
-  "total_experiments": 22,
+  "total_experiments": 23,
   "timestamp": "2026-06-03T22:30:00AKST",
   "experiments": [
     "blackjack-results",
@@ -23,7 +23,8 @@
     "reflex-evolution-v2-results",
     "tile-conservation-connect4-results",
     "tile-conservation-results",
-    "tile-vs-random-results"
+    "tile-vs-random-results",
+    "evolutionary-arms-race-results"
   ],
   "summary": {
     "games_tested": [
