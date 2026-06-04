@@ -1,0 +1,1518 @@
+{
+  "experiment": "multiplayer_divergence",
+  "description": "3-player poker divergence test",
+  "hypothesis": "3-player is MORE divergent than 2-player due to larger strategy space",
+  "phases": {
+    "1": {
+      "wins": [
+        156,
+        179,
+        165
+      ],
+      "win_rates": [
+        0.312,
+        0.358,
+        0.33
+      ],
+      "folds": 4,
+      "showdowns": 496,
+      "distances": {
+        "0-1": 1.5874507866387544,
+        "0-2": 1.5874507866387544,
+        "1-2": 0.0
+      },
+      "tiles": [
+        4,
+        8,
+        8
+      ]
+    },
+    "2": {
+      "wins": [
+        172,
+        172,
+        156
+      ],
+      "win_rates": [
+        0.344,
+        0.344,
+        0.312
+      ],
+      "folds": 34,
+      "showdowns": 466,
+      "distances": {
+        "0-1": 2.2198236066785357,
+        "0-2": 1.9465596503685567,
+        "1-2": 1.009692481118871
+      },
+      "tiles": [
+        4,
+        9,
+        8
+      ]
+    },
+    "3": {
+      "wins": [
+        196,
+        150,
+        154
+      ],
+      "win_rates": [
+        0.392,
+        0.3,
+        0.308
+      ],
+      "folds": 41,
+      "showdowns": 459,
+      "distances": {
+        "0-1": 2.595670873554128,
+        "0-2": 2.2425192392782587,
+        "1-2": 1.235181499947818
+      },
+      "tiles": [
+        4,
+        9,
+        8
+      ]
+    }
+  },
+  "distance_trajectory": [
+    {
+      "phase": 1,
+      "hand": 25,
+      "d_alice_bob": 0.7937253933193771,
+      "d_alice_carol": 0.0,
+      "d_bob_carol": 0.7937253933193771
+    },
+    {
+      "phase": 1,
+      "hand": 50,
+      "d_alice_bob": 0.7937253933193771,
+      "d_alice_carol": 0.7937253933193771,
+      "d_bob_carol": 0.0
+    },
+    {
+      "phase": 1,
+      "hand": 75,
+      "d_alice_bob": 0.7937253933193771,
+      "d_alice_carol": 1.1224972160321822,
+      "d_bob_carol": 0.7937253933193771
+    },
+    {
+      "phase": 1,
+      "hand": 100,
+      "d_alice_bob": 0.7937253933193771,
+      "d_alice_carol": 1.1224972160321822,
+      "d_bob_carol": 0.7937253933193771
+    },
+    {
+      "phase": 1,
+      "hand": 125,
+      "d_alice_bob": 0.7937253933193771,
+      "d_alice_carol": 1.1224972160321822,
+      "d_bob_carol": 0.7937253933193771
+    },
+    {
+      "phase": 1,
+      "hand": 150,
+      "d_alice_bob": 0.7937253933193771,
+      "d_alice_carol": 1.1224972160321822,
+      "d_bob_carol": 0.7937253933193771
+    },
+    {
+      "phase": 1,
+      "hand": 175,
+      "d_alice_bob": 1.374772708486752,
+      "d_alice_carol": 1.1224972160321822,
+      "d_bob_carol": 0.7937253933193771
+    },
+    {
+      "phase": 1,
+      "hand": 200,
+      "d_alice_bob": 1.374772708486752,
+      "d_alice_carol": 1.1224972160321822,
+      "d_bob_carol": 0.7937253933193771
+    },
+    {
+      "phase": 1,
+      "hand": 225,
+      "d_alice_bob": 1.374772708486752,
+      "d_alice_carol": 1.1224972160321822,
+      "d_bob_carol": 0.7937253933193771
+    },
+    {
+      "phase": 1,
+      "hand": 250,
+      "d_alice_bob": 1.374772708486752,
+      "d_alice_carol": 1.1224972160321822,
+      "d_bob_carol": 0.7937253933193771
+    },
+    {
+      "phase": 1,
+      "hand": 275,
+      "d_alice_bob": 1.374772708486752,
+      "d_alice_carol": 1.1224972160321822,
+      "d_bob_carol": 0.7937253933193771
+    },
+    {
+      "phase": 1,
+      "hand": 300,
+      "d_alice_bob": 1.5874507866387544,
+      "d_alice_carol": 1.5874507866387544,
+      "d_bob_carol": 0.0
+    },
+    {
+      "phase": 1,
+      "hand": 325,
+      "d_alice_bob": 1.5874507866387544,
+      "d_alice_carol": 1.5874507866387544,
+      "d_bob_carol": 0.0
+    },
+    {
+      "phase": 1,
+      "hand": 350,
+      "d_alice_bob": 1.5874507866387544,
+      "d_alice_carol": 1.5874507866387544,
+      "d_bob_carol": 0.0
+    },
+    {
+      "phase": 1,
+      "hand": 375,
+      "d_alice_bob": 1.5874507866387544,
+      "d_alice_carol": 1.5874507866387544,
+      "d_bob_carol": 0.0
+    },
+    {
+      "phase": 1,
+      "hand": 400,
+      "d_alice_bob": 1.5874507866387544,
+      "d_alice_carol": 1.5874507866387544,
+      "d_bob_carol": 0.0
+    },
+    {
+      "phase": 1,
+      "hand": 425,
+      "d_alice_bob": 1.5874507866387544,
+      "d_alice_carol": 1.5874507866387544,
+      "d_bob_carol": 0.0
+    },
+    {
+      "phase": 1,
+      "hand": 450,
+      "d_alice_bob": 1.5874507866387544,
+      "d_alice_carol": 1.5874507866387544,
+      "d_bob_carol": 0.0
+    },
+    {
+      "phase": 1,
+      "hand": 475,
+      "d_alice_bob": 1.5874507866387544,
+      "d_alice_carol": 1.5874507866387544,
+      "d_bob_carol": 0.0
+    },
+    {
+      "phase": 1,
+      "hand": 500,
+      "d_alice_bob": 1.5874507866387544,
+      "d_alice_carol": 1.5874507866387544,
+      "d_bob_carol": 0.0
+    },
+    {
+      "phase": 2,
+      "hand": 525,
+      "d_alice_bob": 1.5874507866387544,
+      "d_alice_carol": 1.5874507866387544,
+      "d_bob_carol": 0.0
+    },
+    {
+      "phase": 2,
+      "hand": 550,
+      "d_alice_bob": 1.616828221905445,
+      "d_alice_carol": 1.618840632473287,
+      "d_bob_carol": 0.07785729201622893
+    },
+    {
+      "phase": 2,
+      "hand": 575,
+      "d_alice_bob": 1.616828221905445,
+      "d_alice_carol": 1.618840632473287,
+      "d_bob_carol": 0.07785729201622893
+    },
+    {
+      "phase": 2,
+      "hand": 600,
+      "d_alice_bob": 1.652443640062222,
+      "d_alice_carol": 1.6553881478029164,
+      "d_bob_carol": 0.1318248449870193
+    },
+    {
+      "phase": 2,
+      "hand": 625,
+      "d_alice_bob": 1.652443640062222,
+      "d_alice_carol": 1.6553881478029164,
+      "d_bob_carol": 0.1318248449870193
+    },
+    {
+      "phase": 2,
+      "hand": 650,
+      "d_alice_bob": 1.8858871185281318,
+      "d_alice_carol": 1.693296674536459,
+      "d_bob_carol": 0.8277111083349966
+    },
+    {
+      "phase": 2,
+      "hand": 675,
+      "d_alice_bob": 1.8858871185281318,
+      "d_alice_carol": 1.693296674536459,
+      "d_bob_carol": 0.8277111083349966
+    },
+    {
+      "phase": 2,
+      "hand": 700,
+      "d_alice_bob": 1.938546345876225,
+      "d_alice_carol": 1.7263510632171883,
+      "d_bob_carol": 0.8533547979480108
+    },
+    {
+      "phase": 2,
+      "hand": 725,
+      "d_alice_bob": 1.938546345876225,
+      "d_alice_carol": 1.7263510632171883,
+      "d_bob_carol": 0.8533547979480108
+    },
+    {
+      "phase": 2,
+      "hand": 750,
+      "d_alice_bob": 1.9898920743735498,
+      "d_alice_carol": 1.760547758811373,
+      "d_bob_carol": 0.8815017684126156
+    },
+    {
+      "phase": 2,
+      "hand": 775,
+      "d_alice_bob": 1.9898920743735498,
+      "d_alice_carol": 1.760547758811373,
+      "d_bob_carol": 0.8815017684126156
+    },
+    {
+      "phase": 2,
+      "hand": 800,
+      "d_alice_bob": 2.0382360647040847,
+      "d_alice_carol": 1.7977291300820353,
+      "d_bob_carol": 0.9078672139913013
+    },
+    {
+      "phase": 2,
+      "hand": 825,
+      "d_alice_bob": 2.0382360647040847,
+      "d_alice_carol": 1.7977291300820353,
+      "d_bob_carol": 0.9078672139913013
+    },
+    {
+      "phase": 2,
+      "hand": 850,
+      "d_alice_bob": 2.083222683006142,
+      "d_alice_carol": 1.8370625555649953,
+      "d_bob_carol": 0.9331286952210023
+    },
+    {
+      "phase": 2,
+      "hand": 875,
+      "d_alice_bob": 2.083222683006142,
+      "d_alice_carol": 1.8370625555649953,
+      "d_bob_carol": 0.9331286952210023
+    },
+    {
+      "phase": 2,
+      "hand": 900,
+      "d_alice_bob": 2.1278835221784353,
+      "d_alice_carol": 1.8740954578907443,
+      "d_bob_carol": 0.9604536352481349
+    },
+    {
+      "phase": 2,
+      "hand": 925,
+      "d_alice_bob": 2.1278835221784353,
+      "d_alice_carol": 1.8740954578907443,
+      "d_bob_carol": 0.9604536352481349
+    },
+    {
+      "phase": 2,
+      "hand": 950,
+      "d_alice_bob": 2.1745756446383018,
+      "d_alice_carol": 1.9098571169518346,
+      "d_bob_carol": 0.984834090563024
+    },
+    {
+      "phase": 2,
+      "hand": 975,
+      "d_alice_bob": 2.1745756446383018,
+      "d_alice_carol": 1.9098571169518346,
+      "d_bob_carol": 0.984834090563024
+    },
+    {
+      "phase": 2,
+      "hand": 1000,
+      "d_alice_bob": 2.2198236066785357,
+      "d_alice_carol": 1.9465596503685567,
+      "d_bob_carol": 1.009692481118871
+    },
+    {
+      "phase": 3,
+      "hand": 1025,
+      "d_alice_bob": 2.2198236066785357,
+      "d_alice_carol": 1.9465596503685567,
+      "d_bob_carol": 1.009692481118871
+    },
+    {
+      "phase": 3,
+      "hand": 1050,
+      "d_alice_bob": 2.2622051109494947,
+      "d_alice_carol": 1.9843264283511988,
+      "d_bob_carol": 1.0346814075943078
+    },
+    {
+      "phase": 3,
+      "hand": 1075,
+      "d_alice_bob": 2.2622051109494947,
+      "d_alice_carol": 1.9843264283511988,
+      "d_bob_carol": 1.0346814075943078
+    },
+    {
+      "phase": 3,
+      "hand": 1100,
+      "d_alice_bob": 2.303390077139995,
+      "d_alice_carol": 2.0184372852398815,
+      "d_bob_carol": 1.0589430426801025
+    },
+    {
+      "phase": 3,
+      "hand": 1125,
+      "d_alice_bob": 2.303390077139995,
+      "d_alice_carol": 2.0184372852398815,
+      "d_bob_carol": 1.0589430426801025
+    },
+    {
+      "phase": 3,
+      "hand": 1150,
+      "d_alice_bob": 2.342500813011063,
+      "d_alice_carol": 2.051326683365941,
+      "d_bob_carol": 1.0837248863369515
+    },
+    {
+      "phase": 3,
+      "hand": 1175,
+      "d_alice_bob": 2.342500813011063,
+      "d_alice_carol": 2.051326683365941,
+      "d_bob_carol": 1.0837248863369515
+    },
+    {
+      "phase": 3,
+      "hand": 1200,
+      "d_alice_bob": 2.380929785699626,
+      "d_alice_carol": 2.0829186012641117,
+      "d_bob_carol": 1.1080916910175393
+    },
+    {
+      "phase": 3,
+      "hand": 1225,
+      "d_alice_bob": 2.380929785699626,
+      "d_alice_carol": 2.0829186012641117,
+      "d_bob_carol": 1.1080916910175393
+    },
+    {
+      "phase": 3,
+      "hand": 1250,
+      "d_alice_bob": 2.419132335997988,
+      "d_alice_carol": 2.1139460386321023,
+      "d_bob_carol": 1.1317674897477292
+    },
+    {
+      "phase": 3,
+      "hand": 1275,
+      "d_alice_bob": 2.419132335997988,
+      "d_alice_carol": 2.1139460386321023,
+      "d_bob_carol": 1.1317674897477292
+    },
+    {
+      "phase": 3,
+      "hand": 1300,
+      "d_alice_bob": 2.4565804957252975,
+      "d_alice_carol": 2.14374648456593,
+      "d_bob_carol": 1.1556604259718901
+    },
+    {
+      "phase": 3,
+      "hand": 1325,
+      "d_alice_bob": 2.4565804957252975,
+      "d_alice_carol": 2.14374648456593,
+      "d_bob_carol": 1.1556604259718901
+    },
+    {
+      "phase": 3,
+      "hand": 1350,
+      "d_alice_bob": 2.492685986399288,
+      "d_alice_carol": 2.1724038673488812,
+      "d_bob_carol": 1.1782617341610486
+    },
+    {
+      "phase": 3,
+      "hand": 1375,
+      "d_alice_bob": 2.492685986399288,
+      "d_alice_carol": 2.1724038673488812,
+      "d_bob_carol": 1.1782617341610486
+    },
+    {
+      "phase": 3,
+      "hand": 1400,
+      "d_alice_bob": 2.528303195780507,
+      "d_alice_carol": 2.195661171777533,
+      "d_bob_carol": 1.2006322369939462
+    },
+    {
+      "phase": 3,
+      "hand": 1425,
+      "d_alice_bob": 2.528303195780507,
+      "d_alice_carol": 2.195661171777533,
+      "d_bob_carol": 1.2006322369939462
+    },
+    {
+      "phase": 3,
+      "hand": 1450,
+      "d_alice_bob": 2.5624458585061642,
+      "d_alice_carol": 2.2187891460260505,
+      "d_bob_carol": 1.221503832144908
+    },
+    {
+      "phase": 3,
+      "hand": 1475,
+      "d_alice_bob": 2.5624458585061642,
+      "d_alice_carol": 2.2187891460260505,
+      "d_bob_carol": 1.221503832144908
+    },
+    {
+      "phase": 3,
+      "hand": 1500,
+      "d_alice_bob": 2.595670873554128,
+      "d_alice_carol": 2.2425192392782587,
+      "d_bob_carol": 1.235181499947818
+    }
+  ],
+  "winrate_trajectory": [
+    {
+      "phase": 1,
+      "hand": 25,
+      "wr_alice": 0.44,
+      "wr_bob": 0.28,
+      "wr_carol": 0.28
+    },
+    {
+      "phase": 1,
+      "hand": 50,
+      "wr_alice": 0.32,
+      "wr_bob": 0.34,
+      "wr_carol": 0.34
+    },
+    {
+      "phase": 1,
+      "hand": 75,
+      "wr_alice": 0.30666666666666664,
+      "wr_bob": 0.36,
+      "wr_carol": 0.3333333333333333
+    },
+    {
+      "phase": 1,
+      "hand": 100,
+      "wr_alice": 0.27,
+      "wr_bob": 0.41,
+      "wr_carol": 0.32
+    },
+    {
+      "phase": 1,
+      "hand": 125,
+      "wr_alice": 0.304,
+      "wr_bob": 0.384,
+      "wr_carol": 0.312
+    },
+    {
+      "phase": 1,
+      "hand": 150,
+      "wr_alice": 0.3,
+      "wr_bob": 0.36,
+      "wr_carol": 0.34
+    },
+    {
+      "phase": 1,
+      "hand": 175,
+      "wr_alice": 0.30857142857142855,
+      "wr_bob": 0.35428571428571426,
+      "wr_carol": 0.33714285714285713
+    },
+    {
+      "phase": 1,
+      "hand": 200,
+      "wr_alice": 0.29,
+      "wr_bob": 0.355,
+      "wr_carol": 0.355
+    },
+    {
+      "phase": 1,
+      "hand": 225,
+      "wr_alice": 0.28444444444444444,
+      "wr_bob": 0.37333333333333335,
+      "wr_carol": 0.3422222222222222
+    },
+    {
+      "phase": 1,
+      "hand": 250,
+      "wr_alice": 0.284,
+      "wr_bob": 0.356,
+      "wr_carol": 0.36
+    },
+    {
+      "phase": 1,
+      "hand": 275,
+      "wr_alice": 0.2872727272727273,
+      "wr_bob": 0.36727272727272725,
+      "wr_carol": 0.34545454545454546
+    },
+    {
+      "phase": 1,
+      "hand": 300,
+      "wr_alice": 0.2966666666666667,
+      "wr_bob": 0.36666666666666664,
+      "wr_carol": 0.33666666666666667
+    },
+    {
+      "phase": 1,
+      "hand": 325,
+      "wr_alice": 0.3046153846153846,
+      "wr_bob": 0.3569230769230769,
+      "wr_carol": 0.3384615384615385
+    },
+    {
+      "phase": 1,
+      "hand": 350,
+      "wr_alice": 0.32,
+      "wr_bob": 0.3514285714285714,
+      "wr_carol": 0.32857142857142857
+    },
+    {
+      "phase": 1,
+      "hand": 375,
+      "wr_alice": 0.32266666666666666,
+      "wr_bob": 0.3466666666666667,
+      "wr_carol": 0.33066666666666666
+    },
+    {
+      "phase": 1,
+      "hand": 400,
+      "wr_alice": 0.3175,
+      "wr_bob": 0.345,
+      "wr_carol": 0.3375
+    },
+    {
+      "phase": 1,
+      "hand": 425,
+      "wr_alice": 0.3129411764705882,
+      "wr_bob": 0.34823529411764703,
+      "wr_carol": 0.3388235294117647
+    },
+    {
+      "phase": 1,
+      "hand": 450,
+      "wr_alice": 0.31333333333333335,
+      "wr_bob": 0.3488888888888889,
+      "wr_carol": 0.3377777777777778
+    },
+    {
+      "phase": 1,
+      "hand": 475,
+      "wr_alice": 0.3136842105263158,
+      "wr_bob": 0.35789473684210527,
+      "wr_carol": 0.32842105263157895
+    },
+    {
+      "phase": 1,
+      "hand": 500,
+      "wr_alice": 0.312,
+      "wr_bob": 0.358,
+      "wr_carol": 0.33
+    },
+    {
+      "phase": 2,
+      "hand": 525,
+      "wr_alice": 0.32,
+      "wr_bob": 0.36,
+      "wr_carol": 0.32
+    },
+    {
+      "phase": 2,
+      "hand": 550,
+      "wr_alice": 0.38,
+      "wr_bob": 0.38,
+      "wr_carol": 0.24
+    },
+    {
+      "phase": 2,
+      "hand": 575,
+      "wr_alice": 0.3466666666666667,
+      "wr_bob": 0.4,
+      "wr_carol": 0.25333333333333335
+    },
+    {
+      "phase": 2,
+      "hand": 600,
+      "wr_alice": 0.37,
+      "wr_bob": 0.37,
+      "wr_carol": 0.26
+    },
+    {
+      "phase": 2,
+      "hand": 625,
+      "wr_alice": 0.368,
+      "wr_bob": 0.344,
+      "wr_carol": 0.288
+    },
+    {
+      "phase": 2,
+      "hand": 650,
+      "wr_alice": 0.35333333333333333,
+      "wr_bob": 0.3466666666666667,
+      "wr_carol": 0.3
+    },
+    {
+      "phase": 2,
+      "hand": 675,
+      "wr_alice": 0.33714285714285713,
+      "wr_bob": 0.36,
+      "wr_carol": 0.3028571428571429
+    },
+    {
+      "phase": 2,
+      "hand": 700,
+      "wr_alice": 0.34,
+      "wr_bob": 0.345,
+      "wr_carol": 0.315
+    },
+    {
+      "phase": 2,
+      "hand": 725,
+      "wr_alice": 0.3377777777777778,
+      "wr_bob": 0.36,
+      "wr_carol": 0.3022222222222222
+    },
+    {
+      "phase": 2,
+      "hand": 750,
+      "wr_alice": 0.344,
+      "wr_bob": 0.364,
+      "wr_carol": 0.292
+    },
+    {
+      "phase": 2,
+      "hand": 775,
+      "wr_alice": 0.3381818181818182,
+      "wr_bob": 0.36363636363636365,
+      "wr_carol": 0.29818181818181816
+    },
+    {
+      "phase": 2,
+      "hand": 800,
+      "wr_alice": 0.33,
+      "wr_bob": 0.3566666666666667,
+      "wr_carol": 0.31333333333333335
+    },
+    {
+      "phase": 2,
+      "hand": 825,
+      "wr_alice": 0.3323076923076923,
+      "wr_bob": 0.3415384615384615,
+      "wr_carol": 0.3261538461538461
+    },
+    {
+      "phase": 2,
+      "hand": 850,
+      "wr_alice": 0.32571428571428573,
+      "wr_bob": 0.33714285714285713,
+      "wr_carol": 0.33714285714285713
+    },
+    {
+      "phase": 2,
+      "hand": 875,
+      "wr_alice": 0.3413333333333333,
+      "wr_bob": 0.33066666666666666,
+      "wr_carol": 0.328
+    },
+    {
+      "phase": 2,
+      "hand": 900,
+      "wr_alice": 0.3425,
+      "wr_bob": 0.34,
+      "wr_carol": 0.3175
+    },
+    {
+      "phase": 2,
+      "hand": 925,
+      "wr_alice": 0.3458823529411765,
+      "wr_bob": 0.3341176470588235,
+      "wr_carol": 0.32
+    },
+    {
+      "phase": 2,
+      "hand": 950,
+      "wr_alice": 0.3377777777777778,
+      "wr_bob": 0.3422222222222222,
+      "wr_carol": 0.32
+    },
+    {
+      "phase": 2,
+      "hand": 975,
+      "wr_alice": 0.33473684210526317,
+      "wr_bob": 0.35157894736842105,
+      "wr_carol": 0.3136842105263158
+    },
+    {
+      "phase": 2,
+      "hand": 1000,
+      "wr_alice": 0.344,
+      "wr_bob": 0.344,
+      "wr_carol": 0.312
+    },
+    {
+      "phase": 3,
+      "hand": 1025,
+      "wr_alice": 0.48,
+      "wr_bob": 0.2,
+      "wr_carol": 0.32
+    },
+    {
+      "phase": 3,
+      "hand": 1050,
+      "wr_alice": 0.44,
+      "wr_bob": 0.18,
+      "wr_carol": 0.38
+    },
+    {
+      "phase": 3,
+      "hand": 1075,
+      "wr_alice": 0.4266666666666667,
+      "wr_bob": 0.18666666666666668,
+      "wr_carol": 0.38666666666666666
+    },
+    {
+      "phase": 3,
+      "hand": 1100,
+      "wr_alice": 0.43,
+      "wr_bob": 0.19,
+      "wr_carol": 0.38
+    },
+    {
+      "phase": 3,
+      "hand": 1125,
+      "wr_alice": 0.416,
+      "wr_bob": 0.216,
+      "wr_carol": 0.368
+    },
+    {
+      "phase": 3,
+      "hand": 1150,
+      "wr_alice": 0.42,
+      "wr_bob": 0.23333333333333334,
+      "wr_carol": 0.3466666666666667
+    },
+    {
+      "phase": 3,
+      "hand": 1175,
+      "wr_alice": 0.4,
+      "wr_bob": 0.2571428571428571,
+      "wr_carol": 0.34285714285714286
+    },
+    {
+      "phase": 3,
+      "hand": 1200,
+      "wr_alice": 0.385,
+      "wr_bob": 0.28,
+      "wr_carol": 0.335
+    },
+    {
+      "phase": 3,
+      "hand": 1225,
+      "wr_alice": 0.39555555555555555,
+      "wr_bob": 0.29333333333333333,
+      "wr_carol": 0.3111111111111111
+    },
+    {
+      "phase": 3,
+      "hand": 1250,
+      "wr_alice": 0.396,
+      "wr_bob": 0.296,
+      "wr_carol": 0.308
+    },
+    {
+      "phase": 3,
+      "hand": 1275,
+      "wr_alice": 0.4,
+      "wr_bob": 0.29454545454545455,
+      "wr_carol": 0.3054545454545455
+    },
+    {
+      "phase": 3,
+      "hand": 1300,
+      "wr_alice": 0.4,
+      "wr_bob": 0.2966666666666667,
+      "wr_carol": 0.30333333333333334
+    },
+    {
+      "phase": 3,
+      "hand": 1325,
+      "wr_alice": 0.4,
+      "wr_bob": 0.29846153846153844,
+      "wr_carol": 0.30153846153846153
+    },
+    {
+      "phase": 3,
+      "hand": 1350,
+      "wr_alice": 0.40285714285714286,
+      "wr_bob": 0.29428571428571426,
+      "wr_carol": 0.3028571428571429
+    },
+    {
+      "phase": 3,
+      "hand": 1375,
+      "wr_alice": 0.4,
+      "wr_bob": 0.2986666666666667,
+      "wr_carol": 0.30133333333333334
+    },
+    {
+      "phase": 3,
+      "hand": 1400,
+      "wr_alice": 0.4025,
+      "wr_bob": 0.295,
+      "wr_carol": 0.3025
+    },
+    {
+      "phase": 3,
+      "hand": 1425,
+      "wr_alice": 0.39294117647058824,
+      "wr_bob": 0.2964705882352941,
+      "wr_carol": 0.31058823529411766
+    },
+    {
+      "phase": 3,
+      "hand": 1450,
+      "wr_alice": 0.4,
+      "wr_bob": 0.2866666666666667,
+      "wr_carol": 0.31333333333333335
+    },
+    {
+      "phase": 3,
+      "hand": 1475,
+      "wr_alice": 0.3957894736842105,
+      "wr_bob": 0.2905263157894737,
+      "wr_carol": 0.3136842105263158
+    },
+    {
+      "phase": 3,
+      "hand": 1500,
+      "wr_alice": 0.392,
+      "wr_bob": 0.3,
+      "wr_carol": 0.308
+    }
+  ],
+  "analysis": {
+    "mean_distance_initial": 1.0583,
+    "mean_distance_final": 2.0245,
+    "divergence_ratio": 1.9129,
+    "monotonic_increasing": false,
+    "any_pair_converged": false
+  },
+  "verdict": "STRONGLY DIVERGENT - 3-player amplifies divergence vs 2-player",
+  "player_fields": {
+    "player_0": {
+      "player_id": 0,
+      "n_tiles": 4,
+      "tiles": {
+        "h0:pos0:act3": {
+          "state": "h0:pos0:act3",
+          "visits": 910,
+          "momentum": -0.5,
+          "reflexes": {
+            "fold": {
+              "score": 0.088,
+              "chosen": 135,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.321,
+              "chosen": 329,
+              "won": 65
+            },
+            "raise": {
+              "score": 0.331,
+              "chosen": 299,
+              "won": 63
+            },
+            "bluff": {
+              "score": 0.3,
+              "chosen": 147,
+              "won": 48
+            }
+          }
+        },
+        "h1:pos0:act3": {
+          "state": "h1:pos0:act3",
+          "visits": 425,
+          "momentum": 1.95,
+          "reflexes": {
+            "fold": {
+              "score": 0.088,
+              "chosen": 44,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.532,
+              "chosen": 128,
+              "won": 77
+            },
+            "raise": {
+              "score": 0.514,
+              "chosen": 184,
+              "won": 97
+            },
+            "bluff": {
+              "score": 0.461,
+              "chosen": 69,
+              "won": 42
+            }
+          }
+        },
+        "h2:pos0:act3": {
+          "state": "h2:pos0:act3",
+          "visits": 122,
+          "momentum": 1.95,
+          "reflexes": {
+            "fold": {
+              "score": 0.092,
+              "chosen": 18,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.757,
+              "chosen": 39,
+              "won": 38
+            },
+            "raise": {
+              "score": 0.693,
+              "chosen": 47,
+              "won": 41
+            },
+            "bluff": {
+              "score": 0.574,
+              "chosen": 18,
+              "won": 15
+            }
+          }
+        },
+        "h3:pos0:act3": {
+          "state": "h3:pos0:act3",
+          "visits": 43,
+          "momentum": 2.0,
+          "reflexes": {
+            "fold": {
+              "score": 0.113,
+              "chosen": 3,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.757,
+              "chosen": 19,
+              "won": 18
+            },
+            "raise": {
+              "score": 0.739,
+              "chosen": 14,
+              "won": 13
+            },
+            "bluff": {
+              "score": 0.691,
+              "chosen": 7,
+              "won": 7
+            }
+          }
+        }
+      }
+    },
+    "player_1": {
+      "player_id": 1,
+      "n_tiles": 9,
+      "tiles": {
+        "h0:pos1:act2": {
+          "state": "h0:pos1:act2",
+          "visits": 114,
+          "momentum": 1.2,
+          "reflexes": {
+            "fold": {
+              "score": 0.088,
+              "chosen": 15,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.542,
+              "chosen": 41,
+              "won": 22
+            },
+            "raise": {
+              "score": 0.522,
+              "chosen": 41,
+              "won": 18
+            },
+            "bluff": {
+              "score": 0.335,
+              "chosen": 17,
+              "won": 6
+            }
+          }
+        },
+        "h0:pos1:act3": {
+          "state": "h0:pos1:act3",
+          "visits": 781,
+          "momentum": -0.3,
+          "reflexes": {
+            "fold": {
+              "score": 0.088,
+              "chosen": 109,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.338,
+              "chosen": 279,
+              "won": 59
+            },
+            "raise": {
+              "score": 0.336,
+              "chosen": 278,
+              "won": 54
+            },
+            "bluff": {
+              "score": 0.234,
+              "chosen": 115,
+              "won": 17
+            }
+          }
+        },
+        "h1:pos1:act2": {
+          "state": "h1:pos1:act2",
+          "visits": 57,
+          "momentum": 2.0,
+          "reflexes": {
+            "fold": {
+              "score": 0.092,
+              "chosen": 10,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.677,
+              "chosen": 18,
+              "won": 16
+            },
+            "raise": {
+              "score": 0.693,
+              "chosen": 18,
+              "won": 14
+            },
+            "bluff": {
+              "score": 0.4,
+              "chosen": 11,
+              "won": 6
+            }
+          }
+        },
+        "h1:pos1:act3": {
+          "state": "h1:pos1:act3",
+          "visits": 378,
+          "momentum": 1.85,
+          "reflexes": {
+            "fold": {
+              "score": 0.088,
+              "chosen": 51,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.514,
+              "chosen": 152,
+              "won": 80
+            },
+            "raise": {
+              "score": 0.524,
+              "chosen": 121,
+              "won": 65
+            },
+            "bluff": {
+              "score": 0.408,
+              "chosen": 54,
+              "won": 27
+            }
+          }
+        },
+        "h2:pos1:act2": {
+          "state": "h2:pos1:act2",
+          "visits": 22,
+          "momentum": 1.75,
+          "reflexes": {
+            "fold": {
+              "score": 0.1,
+              "chosen": 2,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.76,
+              "chosen": 5,
+              "won": 5
+            },
+            "raise": {
+              "score": 0.748,
+              "chosen": 12,
+              "won": 11
+            },
+            "bluff": {
+              "score": 0.571,
+              "chosen": 3,
+              "won": 3
+            }
+          }
+        },
+        "h2:pos1:act3": {
+          "state": "h2:pos1:act3",
+          "visits": 104,
+          "momentum": 2.0,
+          "reflexes": {
+            "fold": {
+              "score": 0.088,
+              "chosen": 12,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.601,
+              "chosen": 41,
+              "won": 27
+            },
+            "raise": {
+              "score": 0.666,
+              "chosen": 30,
+              "won": 24
+            },
+            "bluff": {
+              "score": 0.614,
+              "chosen": 21,
+              "won": 18
+            }
+          }
+        },
+        "h3:pos1:act2": {
+          "state": "h3:pos1:act2",
+          "visits": 6,
+          "momentum": 0.45,
+          "reflexes": {
+            "fold": {
+              "score": 0.108,
+              "chosen": 1,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.76,
+              "chosen": 1,
+              "won": 1
+            },
+            "raise": {
+              "score": 0.779,
+              "chosen": 3,
+              "won": 3
+            },
+            "bluff": {
+              "score": 0.664,
+              "chosen": 1,
+              "won": 1
+            }
+          }
+        },
+        "h3:pos1:act3": {
+          "state": "h3:pos1:act3",
+          "visits": 37,
+          "momentum": 1.6,
+          "reflexes": {
+            "fold": {
+              "score": 0.088,
+              "chosen": 6,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.687,
+              "chosen": 15,
+              "won": 13
+            },
+            "raise": {
+              "score": 0.558,
+              "chosen": 11,
+              "won": 7
+            },
+            "bluff": {
+              "score": 0.508,
+              "chosen": 5,
+              "won": 3
+            }
+          }
+        },
+        "h4:pos1:act2": {
+          "state": "h4:pos1:act2",
+          "visits": 1,
+          "momentum": 0.1,
+          "reflexes": {
+            "fold": {
+              "score": 0.2,
+              "chosen": 0,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.5,
+              "chosen": 0,
+              "won": 0
+            },
+            "raise": {
+              "score": 0.76,
+              "chosen": 1,
+              "won": 1
+            },
+            "bluff": {
+              "score": 0.3,
+              "chosen": 0,
+              "won": 0
+            }
+          }
+        }
+      }
+    },
+    "player_2": {
+      "player_id": 2,
+      "n_tiles": 8,
+      "tiles": {
+        "h0:pos2:act2": {
+          "state": "h0:pos2:act2",
+          "visits": 220,
+          "momentum": -0.5,
+          "reflexes": {
+            "fold": {
+              "score": 0.088,
+              "chosen": 38,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.358,
+              "chosen": 72,
+              "won": 20
+            },
+            "raise": {
+              "score": 0.406,
+              "chosen": 69,
+              "won": 23
+            },
+            "bluff": {
+              "score": 0.194,
+              "chosen": 41,
+              "won": 9
+            }
+          }
+        },
+        "h0:pos2:act3": {
+          "state": "h0:pos2:act3",
+          "visits": 679,
+          "momentum": -0.5,
+          "reflexes": {
+            "fold": {
+              "score": 0.088,
+              "chosen": 95,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.338,
+              "chosen": 234,
+              "won": 50
+            },
+            "raise": {
+              "score": 0.314,
+              "chosen": 248,
+              "won": 38
+            },
+            "bluff": {
+              "score": 0.274,
+              "chosen": 102,
+              "won": 21
+            }
+          }
+        },
+        "h1:pos2:act2": {
+          "state": "h1:pos2:act2",
+          "visits": 95,
+          "momentum": 1.9,
+          "reflexes": {
+            "fold": {
+              "score": 0.088,
+              "chosen": 9,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.502,
+              "chosen": 24,
+              "won": 13
+            },
+            "raise": {
+              "score": 0.663,
+              "chosen": 43,
+              "won": 32
+            },
+            "bluff": {
+              "score": 0.488,
+              "chosen": 19,
+              "won": 12
+            }
+          }
+        },
+        "h1:pos2:act3": {
+          "state": "h1:pos2:act3",
+          "visits": 331,
+          "momentum": 1.5,
+          "reflexes": {
+            "fold": {
+              "score": 0.088,
+              "chosen": 35,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.471,
+              "chosen": 122,
+              "won": 54
+            },
+            "raise": {
+              "score": 0.496,
+              "chosen": 121,
+              "won": 58
+            },
+            "bluff": {
+              "score": 0.342,
+              "chosen": 53,
+              "won": 21
+            }
+          }
+        },
+        "h2:pos2:act2": {
+          "state": "h2:pos2:act2",
+          "visits": 24,
+          "momentum": 1.05,
+          "reflexes": {
+            "fold": {
+              "score": 0.092,
+              "chosen": 3,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.554,
+              "chosen": 9,
+              "won": 5
+            },
+            "raise": {
+              "score": 0.72,
+              "chosen": 8,
+              "won": 6
+            },
+            "bluff": {
+              "score": 0.691,
+              "chosen": 4,
+              "won": 4
+            }
+          }
+        },
+        "h2:pos2:act3": {
+          "state": "h2:pos2:act3",
+          "visits": 74,
+          "momentum": 2.0,
+          "reflexes": {
+            "fold": {
+              "score": 0.088,
+              "chosen": 9,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.673,
+              "chosen": 24,
+              "won": 20
+            },
+            "raise": {
+              "score": 0.556,
+              "chosen": 28,
+              "won": 18
+            },
+            "bluff": {
+              "score": 0.5,
+              "chosen": 13,
+              "won": 9
+            }
+          }
+        },
+        "h3:pos2:act2": {
+          "state": "h3:pos2:act2",
+          "visits": 11,
+          "momentum": 0.35,
+          "reflexes": {
+            "fold": {
+              "score": 0.17,
+              "chosen": 1,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.446,
+              "chosen": 4,
+              "won": 2
+            },
+            "raise": {
+              "score": 0.741,
+              "chosen": 4,
+              "won": 3
+            },
+            "bluff": {
+              "score": 0.204,
+              "chosen": 2,
+              "won": 1
+            }
+          }
+        },
+        "h3:pos2:act3": {
+          "state": "h3:pos2:act3",
+          "visits": 38,
+          "momentum": 2.0,
+          "reflexes": {
+            "fold": {
+              "score": 0.092,
+              "chosen": 5,
+              "won": 0
+            },
+            "check_call": {
+              "score": 0.678,
+              "chosen": 18,
+              "won": 15
+            },
+            "raise": {
+              "score": 0.683,
+              "chosen": 9,
+              "won": 7
+            },
+            "bluff": {
+              "score": 0.691,
+              "chosen": 6,
+              "won": 6
+            }
+          }
+        }
+      }
+    }
+  }
+}
