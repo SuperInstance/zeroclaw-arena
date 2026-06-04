@@ -111,8 +111,9 @@ class ContinuousStateTile:
             if a not in self.reflexes:
                 self.reflexes[a] = {"score": 0.5, "chosen": 0, "total_reward": 0.0}
 
-        # Epsilon-greedy
-        epsilon = 0.15
+        # Epsilon-greedy with decay
+        total_chosen = sum(d["chosen"] for d in self.reflexes.values())
+        epsilon = max(0.1, 0.5 - total_chosen * 0.005)
         if random.random() < epsilon:
             return random.choice(legal_actions)
 
@@ -267,7 +268,7 @@ def run_experiment(n_bins: int, num_episodes: int = 500, seed: int = 42) -> dict
     # Performance stats
     reached_count = sum(1 for r in episode_results if r["reached_target"])
     last_100_reached = sum(1 for r in episode_results[-100:] if r["reached_target"])
-    avg_final_dist = np.mean(final_distances[-100:])
+    last_100_avg_dist = float(np.mean(final_distances[-100:]))
 
     return {
         "n_bins": n_bins,
@@ -281,7 +282,7 @@ def run_experiment(n_bins: int, num_episodes: int = 500, seed: int = 42) -> dict
             "last_100_reached": last_100_reached,
             "reached_rate": reached_count / num_episodes,
             "last_100_reached_rate": last_100_reached / 100,
-            "avg_final_distance_last_100": float(avg_final_dist),
+            "avg_final_distance_last_100": last_100_avg_dist,
         },
         "conservation": {
             "score_distribution": score_stats,
@@ -301,13 +302,15 @@ def main():
 
     bin_counts = [4, 8, 16, 32, 64]
     n_runs = 5
-    num_episodes = 500
+    base_episodes = 500
 
     all_results = {}
 
     for n_bins in bin_counts:
+        # Scale episodes with action space — more bins need more exploration
+        num_episodes = base_episodes + (n_bins * n_bins * 10)
         print(f"\n{'─' * 60}")
-        print(f"BIN COUNT: {n_bins} ({n_bins*n_bins} discrete actions)")
+        print(f"BIN COUNT: {n_bins} ({n_bins*n_bins} discrete actions, {num_episodes} episodes)")
         print(f"{'─' * 60}")
 
         run_results = []
@@ -370,8 +373,12 @@ def main():
         all_results[str(n_bins)] = summary
 
         print(f"\n  SUMMARY ({n_bins} bins = {n_bins*n_bins} actions):")
-        print(f"    Convergence: {summary['convergence']['mean_episode']:.0f} ± {summary['convergence']['std_episode']:.0f} episodes "
-              f"({summary['convergence']['converged_runs']}/{n_runs} converged)")
+        conv = summary['convergence']
+        if conv['mean_episode'] is not None:
+            print(f"    Convergence: {conv['mean_episode']:.0f} ± {conv['std_episode']:.0f} episodes "
+                  f"({conv['converged_runs']}/{n_runs} converged)")
+        else:
+            print(f"    Convergence: NONE (0/{n_runs} converged)")
         print(f"    Reached rate (last 100): {summary['performance']['mean_reached_rate']:.1%} ± {summary['performance']['std_reached_rate']:.1%}")
         print(f"    Negative fraction: {summary['conservation']['negative_fraction']['mean']:.3f} ± {summary['conservation']['negative_fraction']['std']:.3f}")
         print(f"    Score CV: {summary['conservation']['score_cv_across_runs']['mean']:.4f}")

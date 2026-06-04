@@ -23,7 +23,20 @@ from collections import defaultdict, Counter
 from copy import deepcopy
 
 sys.path.insert(0, os.path.dirname(__file__))
+
+# Disable GPU/torch backends to avoid CUDA device mismatches
+import importlib
+_orig_import = __builtins__.__import__ if hasattr(__builtins__, '__import__') else __import__
+
+def _safe_import(name, *args, **kwargs):
+    if name in ('vector_store', 'gpu_vector_engine'):
+        raise ImportError(f"blocked {name}")
+    return _orig_import(name, *args, **kwargs)
+
+__builtins__.__import__ = _safe_import
 from zeroclaw import TicTacToe, Connect4, ZeroClaw, StateTile
+__builtins__.__import__ = _orig_import
+
 from holdem_tile import PokerTileField, HoldemHand
 
 
