@@ -1,0 +1,577 @@
+{
+  "experiment": "nash_distance",
+  "description": "Measure how close tile field strategies get to Nash equilibrium on negative space",
+  "training": {
+    "wins": 410,
+    "losses": 64,
+    "draws": 26,
+    "total": 500
+  },
+  "metrics": {
+    "states_evaluated": 2201,
+    "states_with_tiles": 747,
+    "negative_agreement_rate": 0.7242302543507363,
+    "positive_agreement_rate": 0.7710843373493976,
+    "spearman_correlation_mean": 0.5292141226169476,
+    "spearman_correlation_std": 0.5274896405802737,
+    "kendall_correlation_mean": 0.5209183895979542,
+    "mean_value_error": 0.1512431362869217,
+    "negative_hypothesis_confirmed": false
+  },
+  "sample_mismatches": [
+    {
+      "board": [
+        "X",
+        "O",
+        "X",
+        "O",
+        " ",
+        " ",
+        "O",
+        " ",
+        "X"
+      ],
+      "nash_values": {
+        "4": 1.0,
+        "5": 1.0,
+        "7": 0.0
+      },
+      "tile_scores": {
+        "4": 0.821,
+        "5": 0.5,
+        "7": 0.5
+      },
+      "nash_best": [
+        "4",
+        "5"
+      ],
+      "nash_worst": [
+        "7"
+      ],
+      "tile_best": "4",
+      "tile_worst": "5",
+      "negative_match": false,
+      "positive_match": true
+    },
+    {
+      "board": [
+        "X",
+        "O",
+        "X",
+        " ",
+        "O",
+        "O",
+        "X",
+        " ",
+        " "
+      ],
+      "nash_values": {
+        "3": 1.0,
+        "7": -1.0,
+        "8": -1.0
+      },
+      "tile_scores": {
+        "3": 0.5,
+        "7": 0.5,
+        "8": 0.5
+      },
+      "nash_best": [
+        "3"
+      ],
+      "nash_worst": [
+        "7",
+        "8"
+      ],
+      "tile_best": "3",
+      "tile_worst": "3",
+      "negative_match": false,
+      "positive_match": true
+    },
+    {
+      "board": [
+        "X",
+        "O",
+        "X",
+        " ",
+        "O",
+        "O",
+        " ",
+        " ",
+        "X"
+      ],
+      "nash_values": {
+        "3": 0.0,
+        "6": -1.0,
+        "7": -1.0
+      },
+      "tile_scores": {
+        "3": 0.5,
+        "6": 0.5,
+        "7": 0.5
+      },
+      "nash_best": [
+        "3"
+      ],
+      "nash_worst": [
+        "6",
+        "7"
+      ],
+      "tile_best": "3",
+      "tile_worst": "3",
+      "negative_match": false,
+      "positive_match": true
+    },
+    {
+      "board": [
+        "X",
+        "O",
+        "X",
+        "X",
+        " ",
+        "O",
+        " ",
+        "O",
+        " "
+      ],
+      "nash_values": {
+        "4": 1.0,
+        "6": 0.0,
+        "8": 0.0
+      },
+      "tile_scores": {
+        "4": 0.5,
+        "6": 0.5,
+        "8": 0.5
+      },
+      "nash_best": [
+        "4"
+      ],
+      "nash_worst": [
+        "6",
+        "8"
+      ],
+      "tile_best": "4",
+      "tile_worst": "4",
+      "negative_match": false,
+      "positive_match": true
+    },
+    {
+      "board": [
+        "X",
+        "O",
+        "O",
+        "X",
+        "X",
+        " ",
+        " ",
+        " ",
+        "O"
+      ],
+      "nash_values": {
+        "5": 1.0,
+        "6": 1.0,
+        "7": -1.0
+      },
+      "tile_scores": {
+        "5": 0.5,
+        "6": 0.5,
+        "7": 0.5
+      },
+      "nash_best": [
+        "5",
+        "6"
+      ],
+      "nash_worst": [
+        "7"
+      ],
+      "tile_best": "5",
+      "tile_worst": "5",
+      "negative_match": false,
+      "positive_match": true
+    },
+    {
+      "board": [
+        "X",
+        "O",
+        "O",
+        "X",
+        " ",
+        "X",
+        " ",
+        " ",
+        "O"
+      ],
+      "nash_values": {
+        "4": 1.0,
+        "6": 0.0,
+        "7": 1.0
+      },
+      "tile_scores": {
+        "4": 0.5,
+        "6": 0.701,
+        "7": 0.5
+      },
+      "nash_best": [
+        "4",
+        "7"
+      ],
+      "nash_worst": [
+        "6"
+      ],
+      "tile_best": "6",
+      "tile_worst": "4",
+      "negative_match": false,
+      "positive_match": false
+    },
+    {
+      "board": [
+        "X",
+        "O",
+        "O",
+        " ",
+        "X",
+        "X",
+        "O",
+        " ",
+        " "
+      ],
+      "nash_values": {
+        "3": 1.0,
+        "7": 1.0,
+        "8": 0.0
+      },
+      "tile_scores": {
+        "3": 0.5,
+        "7": 0.5,
+        "8": 0.651
+      },
+      "nash_best": [
+        "3",
+        "7"
+      ],
+      "nash_worst": [
+        "8"
+      ],
+      "tile_best": "8",
+      "tile_worst": "3",
+      "negative_match": false,
+      "positive_match": false
+    },
+    {
+      "board": [
+        "X",
+        "O",
+        "O",
+        " ",
+        "X",
+        "X",
+        " ",
+        "O",
+        " "
+      ],
+      "nash_values": {
+        "3": 1.0,
+        "6": 0.0,
+        "8": 0.0
+      },
+      "tile_scores": {
+        "3": 0.5,
+        "6": 0.5,
+        "8": 0.811
+      },
+      "nash_best": [
+        "3"
+      ],
+      "nash_worst": [
+        "6",
+        "8"
+      ],
+      "tile_best": "8",
+      "tile_worst": "3",
+      "negative_match": false,
+      "positive_match": false
+    },
+    {
+      "board": [
+        "X",
+        "O",
+        "O",
+        " ",
+        "X",
+        "O",
+        " ",
+        "X",
+        " "
+      ],
+      "nash_values": {
+        "3": 1.0,
+        "6": 0.0,
+        "8": 0.0
+      },
+      "tile_scores": {
+        "3": 0.5,
+        "6": 0.5,
+        "8": 0.5
+      },
+      "nash_best": [
+        "3"
+      ],
+      "nash_worst": [
+        "6",
+        "8"
+      ],
+      "tile_best": "3",
+      "tile_worst": "3",
+      "negative_match": false,
+      "positive_match": true
+    },
+    {
+      "board": [
+        "X",
+        "O",
+        " ",
+        "O",
+        "X",
+        " ",
+        "X",
+        "O",
+        " "
+      ],
+      "nash_values": {
+        "2": 1.0,
+        "5": 0.0,
+        "8": 0.0
+      },
+      "tile_scores": {
+        "2": 0.5,
+        "5": 0.5,
+        "8": 0.5
+      },
+      "nash_best": [
+        "2"
+      ],
+      "nash_worst": [
+        "5",
+        "8"
+      ],
+      "tile_best": "2",
+      "tile_worst": "2",
+      "negative_match": false,
+      "positive_match": true
+    }
+  ],
+  "sample_matches": [
+    {
+      "board": [
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      "nash_values": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0
+      },
+      "tile_scores": {
+        "0": 0.5,
+        "1": 0.5,
+        "2": 0.5,
+        "3": 0.5,
+        "4": 0.5,
+        "5": 0.5,
+        "6": 0.5,
+        "7": 0.5,
+        "8": 0.5
+      },
+      "nash_best": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "nash_worst": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "tile_best": "0",
+      "tile_worst": "0",
+      "negative_match": true,
+      "positive_match": true
+    },
+    {
+      "board": [
+        "X",
+        "O",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      "nash_values": {
+        "2": 0.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 1.0,
+        "7": 1.0,
+        "8": 1.0
+      },
+      "tile_scores": {
+        "2": 0.5,
+        "3": 0.5,
+        "4": 0.5,
+        "5": 0.5,
+        "6": 0.5,
+        "7": 0.5,
+        "8": 0.5
+      },
+      "nash_best": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "nash_worst": [
+        "2"
+      ],
+      "tile_best": "2",
+      "tile_worst": "2",
+      "negative_match": true,
+      "positive_match": false
+    },
+    {
+      "board": [
+        "X",
+        "O",
+        "X",
+        "O",
+        "X",
+        " ",
+        " ",
+        "O",
+        " "
+      ],
+      "nash_values": {
+        "5": 1.0,
+        "6": 1.0,
+        "8": 1.0
+      },
+      "tile_scores": {
+        "5": 0.5,
+        "6": 0.5,
+        "8": 0.701
+      },
+      "nash_best": [
+        "5",
+        "6",
+        "8"
+      ],
+      "nash_worst": [
+        "5",
+        "6",
+        "8"
+      ],
+      "tile_best": "8",
+      "tile_worst": "5",
+      "negative_match": true,
+      "positive_match": true
+    },
+    {
+      "board": [
+        "X",
+        "O",
+        "X",
+        "O",
+        "X",
+        " ",
+        " ",
+        " ",
+        "O"
+      ],
+      "nash_values": {
+        "5": 0.0,
+        "6": 1.0,
+        "7": 0.0
+      },
+      "tile_scores": {
+        "5": 0.5,
+        "6": 0.5,
+        "7": 0.5
+      },
+      "nash_best": [
+        "6"
+      ],
+      "nash_worst": [
+        "5",
+        "7"
+      ],
+      "tile_best": "5",
+      "tile_worst": "5",
+      "negative_match": true,
+      "positive_match": false
+    },
+    {
+      "board": [
+        "X",
+        "O",
+        "X",
+        "O",
+        " ",
+        " ",
+        "X",
+        " ",
+        "O"
+      ],
+      "nash_values": {
+        "4": 1.0,
+        "5": 0.0,
+        "7": 0.0
+      },
+      "tile_scores": {
+        "4": 0.811,
+        "5": 0.5,
+        "7": 0.5
+      },
+      "nash_best": [
+        "4"
+      ],
+      "nash_worst": [
+        "5",
+        "7"
+      ],
+      "tile_best": "4",
+      "tile_worst": "5",
+      "negative_match": true,
+      "positive_match": true
+    }
+  ]
+}
