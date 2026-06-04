@@ -1,0 +1,617 @@
+{
+  "room": {
+    "lidar_front": {
+      "id": "lidar_front",
+      "type": "sensor",
+      "state": {
+        "distance": 2.5,
+        "object": "wall"
+      },
+      "reflexes": [
+        {
+          "name": "approach_wall",
+          "action": "slow_down",
+          "score": 0.8,
+          "cost": 0.1,
+          "conditions": {
+            "distance_lt": 3.0
+          }
+        },
+        {
+          "name": "wall_clear",
+          "action": "maintain_speed",
+          "score": 0.6,
+          "cost": 0.05,
+          "conditions": {}
+        }
+      ],
+      "neighbors": [
+        "path_planner"
+      ],
+      "momentum": 0.7999999999999999,
+      "entropy": 0.25
+    },
+    "lidar_left": {
+      "id": "lidar_left",
+      "type": "sensor",
+      "state": {
+        "distance": 5.0,
+        "object": "clear"
+      },
+      "reflexes": [
+        {
+          "name": "left_clear",
+          "action": "turn_left",
+          "score": 0.7,
+          "cost": 0.1,
+          "conditions": {}
+        },
+        {
+          "name": "maintain",
+          "action": "go_straight",
+          "score": 0.5,
+          "cost": 0.05,
+          "conditions": {}
+        }
+      ],
+      "neighbors": [
+        "path_planner"
+      ],
+      "momentum": 0.0,
+      "entropy": 0.1
+    },
+    "camera": {
+      "id": "camera",
+      "type": "sensor",
+      "state": {
+        "objects": [
+          "person",
+          "chair"
+        ],
+        "person_distance": 4.0
+      },
+      "reflexes": [
+        {
+          "name": "person_ahead",
+          "action": "stop_and_wait",
+          "score": 0.9,
+          "cost": 0.2,
+          "conditions": {
+            "person_distance_lt": 5.0
+          }
+        },
+        {
+          "name": "person_far",
+          "action": "proceed_cautiously",
+          "score": 0.6,
+          "cost": 0.1,
+          "conditions": {}
+        }
+      ],
+      "neighbors": [
+        "path_planner",
+        "voice"
+      ],
+      "momentum": 2.0,
+      "entropy": 0.4
+    },
+    "path_planner": {
+      "id": "path_planner",
+      "type": "decider",
+      "state": {
+        "destination": "kitchen",
+        "obstacles": 2
+      },
+      "reflexes": [
+        {
+          "name": "reroute",
+          "action": "calculate_new_path",
+          "score": 0.8,
+          "cost": 0.3,
+          "conditions": {
+            "obstacles_gt": 1
+          }
+        },
+        {
+          "name": "continue",
+          "action": "follow_path",
+          "score": 0.5,
+          "cost": 0.1,
+          "conditions": {}
+        },
+        {
+          "name": "explore",
+          "action": "scan_alternatives",
+          "score": 0.3,
+          "cost": 0.2,
+          "conditions": {}
+        }
+      ],
+      "neighbors": [
+        "lidar_front",
+        "lidar_left",
+        "camera",
+        "safety_checker",
+        "spatial_memory"
+      ],
+      "momentum": 2.0,
+      "entropy": 0.15000000000000008
+    },
+    "safety_checker": {
+      "id": "safety_checker",
+      "type": "decider",
+      "state": {
+        "risk_level": "medium",
+        "last_incident": 30
+      },
+      "reflexes": [
+        {
+          "name": "high_risk",
+          "action": "full_stop",
+          "score": 0.95,
+          "cost": 0.05,
+          "conditions": {
+            "risk_eq": "high"
+          }
+        },
+        {
+          "name": "medium_risk",
+          "action": "reduce_speed",
+          "score": 0.7,
+          "cost": 0.1,
+          "conditions": {
+            "risk_eq": "medium"
+          }
+        },
+        {
+          "name": "low_risk",
+          "action": "proceed",
+          "score": 0.4,
+          "cost": 0.05,
+          "conditions": {
+            "risk_eq": "low"
+          }
+        }
+      ],
+      "neighbors": [
+        "path_planner",
+        "motor_control"
+      ],
+      "momentum": 2.0,
+      "entropy": 0.10000000000000002
+    },
+    "motor_control": {
+      "id": "motor_control",
+      "type": "actor",
+      "state": {
+        "speed": 0.5,
+        "direction": "forward"
+      },
+      "reflexes": [
+        {
+          "name": "accelerate",
+          "action": "speed_up",
+          "score": 0.3,
+          "cost": 0.1,
+          "conditions": {}
+        },
+        {
+          "name": "decelerate",
+          "action": "slow_down",
+          "score": 0.6,
+          "cost": 0.1,
+          "conditions": {}
+        },
+        {
+          "name": "stop",
+          "action": "full_stop",
+          "score": 0.9,
+          "cost": 0.05,
+          "conditions": {}
+        },
+        {
+          "name": "turn_left",
+          "action": "rotate_left",
+          "score": 0.5,
+          "cost": 0.15,
+          "conditions": {}
+        },
+        {
+          "name": "turn_right",
+          "action": "rotate_right",
+          "score": 0.5,
+          "cost": 0.15,
+          "conditions": {}
+        }
+      ],
+      "neighbors": [
+        "safety_checker",
+        "path_planner"
+      ],
+      "momentum": 0.4,
+      "entropy": 0.0
+    },
+    "voice": {
+      "id": "voice",
+      "type": "actor",
+      "state": {
+        "last_utterance": "excuse_me",
+        "volume": "normal"
+      },
+      "reflexes": [
+        {
+          "name": "announce",
+          "action": "say_excuse_me",
+          "score": 0.7,
+          "cost": 0.2,
+          "conditions": {
+            "person_nearby": true
+          }
+        },
+        {
+          "name": "quiet",
+          "action": "silent_mode",
+          "score": 0.3,
+          "cost": 0.0,
+          "conditions": {}
+        }
+      ],
+      "neighbors": [
+        "camera"
+      ],
+      "momentum": 0.30000000000000004,
+      "entropy": 0.2
+    },
+    "spatial_memory": {
+      "id": "spatial_memory",
+      "type": "memory",
+      "state": {
+        "known_paths": 3,
+        "dead_ends": 1,
+        "last_location": "hallway"
+      },
+      "reflexes": [
+        {
+          "name": "recall_path",
+          "action": "use_known_route",
+          "score": 0.8,
+          "cost": 0.1,
+          "conditions": {
+            "known_paths_gt": 0
+          }
+        },
+        {
+          "name": "explore_new",
+          "action": "try_unexplored",
+          "score": 0.4,
+          "cost": 0.3,
+          "conditions": {}
+        }
+      ],
+      "neighbors": [
+        "path_planner",
+        "safety_checker"
+      ],
+      "momentum": 0.5,
+      "entropy": 0.6
+    }
+  },
+  "decisions": [
+    {
+      "tile": "path_planner",
+      "action": "calculate_new_path",
+      "path": [
+        "path_planner",
+        "spatial_memory",
+        "safety_checker",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "lidar_front",
+        "path_planner",
+        "lidar_front"
+      ],
+      "confidence": 0.9999999999840128,
+      "urgency": 0.0,
+      "simulations": 200,
+      "avg_score": 5.1149249999999995,
+      "remaining_time": 2.0
+    },
+    {
+      "tile": "path_planner",
+      "action": "calculate_new_path",
+      "path": [
+        "path_planner",
+        "lidar_front",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "camera",
+        "path_planner"
+      ],
+      "confidence": 0.9999999999870087,
+      "urgency": 0.0,
+      "simulations": 200,
+      "avg_score": 6.382937500000001,
+      "remaining_time": 0.5
+    },
+    {
+      "tile": "path_planner",
+      "action": "calculate_new_path",
+      "path": [
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "lidar_front",
+        "path_planner",
+        "safety_checker",
+        "motor_control",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "safety_checker"
+      ],
+      "confidence": 0.9999999999859155,
+      "urgency": 0.0,
+      "simulations": 200,
+      "avg_score": 4.432550000000001,
+      "remaining_time": 0.1
+    },
+    {
+      "tile": "path_planner",
+      "action": "calculate_new_path",
+      "path": [
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "safety_checker"
+      ],
+      "confidence": 0.9999999999575597,
+      "urgency": 0.0,
+      "simulations": 200,
+      "avg_score": 0.9859500000000001,
+      "remaining_time": 0.02
+    },
+    {
+      "tile": "voice",
+      "action": "say_excuse_me",
+      "path": [
+        "voice",
+        "camera",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "camera",
+        "path_planner"
+      ],
+      "confidence": 0.9999999999841332,
+      "urgency": 0.0,
+      "simulations": 200,
+      "avg_score": 5.191537499999999,
+      "remaining_time": 0.5
+    },
+    {
+      "tile": "voice",
+      "action": "say_excuse_me",
+      "path": [
+        "voice",
+        "camera",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "safety_checker",
+        "path_planner"
+      ],
+      "confidence": 0.9999999999852235,
+      "urgency": 0.0,
+      "simulations": 200,
+      "avg_score": 5.519962499999999,
+      "remaining_time": 0.5
+    },
+    {
+      "tile": "camera",
+      "action": "stop_and_wait",
+      "path": [
+        "camera",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "spatial_memory",
+        "safety_checker",
+        "path_planner"
+      ],
+      "confidence": 0.9999999999881517,
+      "urgency": 0.0,
+      "simulations": 200,
+      "avg_score": 6.9872749999999995,
+      "remaining_time": 0.5
+    },
+    {
+      "tile": "path_planner",
+      "action": "calculate_new_path",
+      "path": [
+        "path_planner",
+        "camera",
+        "path_planner",
+        "camera",
+        "voice",
+        "camera",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "safety_checker",
+        "path_planner"
+      ],
+      "confidence": 0.9999999999885877,
+      "urgency": 0.0,
+      "simulations": 200,
+      "avg_score": 7.154224999999999,
+      "remaining_time": 0.5
+    },
+    {
+      "tile": "lidar_front",
+      "action": "slow_down",
+      "path": [
+        "lidar_front",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "spatial_memory"
+      ],
+      "confidence": 0.9999999999868594,
+      "urgency": 0.0,
+      "simulations": 200,
+      "avg_score": 6.4024,
+      "remaining_time": 0.5
+    },
+    {
+      "tile": "motor_control",
+      "action": "full_stop",
+      "path": [
+        "motor_control",
+        "safety_checker",
+        "path_planner",
+        "lidar_front",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "safety_checker",
+        "motor_control",
+        "safety_checker",
+        "path_planner"
+      ],
+      "confidence": 0.9999999999854493,
+      "urgency": 0.0,
+      "simulations": 200,
+      "avg_score": 5.5464875,
+      "remaining_time": 0.5
+    },
+    {
+      "tile": "camera",
+      "action": "stop_and_wait",
+      "path": [
+        "camera",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "lidar_front",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "safety_checker"
+      ],
+      "confidence": 0.9999999999884991,
+      "urgency": 0.0,
+      "simulations": 200,
+      "avg_score": 7.15415,
+      "remaining_time": 0.5
+    },
+    {
+      "tile": "safety_checker",
+      "action": "full_stop",
+      "path": [
+        "safety_checker",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "spatial_memory"
+      ],
+      "confidence": 0.9999999999887037,
+      "urgency": 0.0,
+      "simulations": 200,
+      "avg_score": 7.061399999999999,
+      "remaining_time": 0.5
+    },
+    {
+      "tile": "safety_checker",
+      "action": "full_stop",
+      "path": [
+        "safety_checker",
+        "path_planner",
+        "lidar_front",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "safety_checker"
+      ],
+      "confidence": 0.9999999999883246,
+      "urgency": 0.0,
+      "simulations": 200,
+      "avg_score": 7.0451749999999995,
+      "remaining_time": 0.5
+    },
+    {
+      "tile": "motor_control",
+      "action": "full_stop",
+      "path": [
+        "motor_control",
+        "path_planner",
+        "camera",
+        "path_planner",
+        "safety_checker",
+        "path_planner",
+        "spatial_memory",
+        "safety_checker",
+        "path_planner",
+        "safety_checker",
+        "path_planner"
+      ],
+      "confidence": 0.9999999999870383,
+      "urgency": 0.0,
+      "simulations": 200,
+      "avg_score": 6.13205,
+      "remaining_time": 0.5
+    }
+  ],
+  "room_state": {
+    "n_tiles": 8,
+    "active_tiles": 7,
+    "total_momentum": 8.0,
+    "avg_entropy": 0.225,
+    "state_hash": "7c54d348c75a46a3",
+    "type_distribution": {
+      "sensor": 3,
+      "decider": 2,
+      "actor": 2,
+      "memory": 1
+    }
+  },
+  "total_entropy": 1.8000000000000003,
+  "total_momentum": 8.0
+}
