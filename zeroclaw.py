@@ -28,6 +28,13 @@ from typing import Optional, Any
 from pathlib import Path
 from collections import defaultdict
 
+# GPU Vector Engine — optional, uses CUDA if available
+try:
+    from gpu_vector_engine import GPUVectorEngine
+    GPU_AVAILABLE = True
+except ImportError:
+    GPU_AVAILABLE = False
+
 
 # ─── Vector DB (lightweight, no dependencies) ─────────────
 
@@ -572,7 +579,14 @@ class ZeroClaw:
             "best_win_rate": 0.0,
         }
         
+        # GPU Vector Engine for batch embedding & pattern mining
+        if GPU_AVAILABLE:
+            self.gpu_engine = GPUVectorEngine(dim=64)
+        else:
+            self.gpu_engine = None
+        
         self._load_state()
+        self._load_gpu_state()
     
     # ── Phase 1: EXPLORE ──────────────────────────────────
     
@@ -642,6 +656,16 @@ class ZeroClaw:
             if (i + 1) % 25 == 0:
                 win_rate = self.stats["wins"] / max(self.stats["games_played"], 1)
                 print(f"    {i+1}/{num_games} games | win_rate={win_rate:.1%} | transitions={len(self.transitions)}")
+        
+        # GPU batch embedding: if we collected enough transitions, batch-embed them
+        if self.gpu_engine and len(self.transitions) > 100:
+            new_states = [f"{t.state_str}|{t.action}" for t in self.transitions]
+            new_metadata = [{"state": t.state_str, "action": t.action, "reward": t.reward,
+                             "turn": t.state_str.count("|") - 1 if "|" in t.state_str else 0,
+                             "game_over": t.game_over} for t in self.transitions]
+            batch_vecs = self.gpu_engine.hash_embed_batch(new_states)
+            self.gpu_engine.add_batch(batch_vecs, new_metadata)
+            print(f"    GPU batch-embedded {len(new_states)} states ({len(self.gpu_engine)} total in GPU index)")
     
     # ── Phase 2: OBSERVE ──────────────────────────────────
     
@@ -952,6 +976,7 @@ def choose_action(state_str, legal_actions):
         }
         with open(self.sandbox_dir / "state.json", "w") as f:
             json.dump(state, f, indent=2, default=str)
+        self._save_gpu_state()
     
     def _load_state(self):
         state_file = self.sandbox_dir / "state.json"
@@ -961,6 +986,19 @@ def choose_action(state_str, legal_actions):
             self.generation = state.get("generation", 0)
             self.stats.update(state.get("stats", {}))
             self.scripts = state.get("scripts", [])
+    
+    def _save_gpu_state(self):
+        """Persist GPU engine vectors alongside the SQLite DB."""
+        if self.gpu_engine and len(self.gpu_engine) > 0:
+            path = str(self.sandbox_dir / "gpu_engine.pt")
+            self.gpu_engine.save(path)
+    
+    def _load_gpu_state(self):
+        """Load GPU engine vectors if a saved state exists."""
+        if self.gpu_engine:
+            path = self.sandbox_dir / "gpu_engine.pt"
+            if path.exists():
+                self.gpu_engine.load(str(path))
 
 
 # ─── Main: Run the ZeroClaw Arena ────────────────────────
