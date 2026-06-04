@@ -1,0 +1,31 @@
+{
+  "n_teachers": 20,
+  "teacher_win_rates": [
+    0.62,
+    0.635,
+    0.655,
+    0.6,
+    0.575,
+    0.575,
+    0.55,
+    0.535,
+    0.585,
+    0.595,
+    0.61,
+    0.57,
+    0.605,
+    0.57,
+    0.645,
+    0.64,
+    0.58,
+    0.625,
+    0.61,
+    0.62
+  ],
+  "best_teacher": 0.655,
+  "mean_teacher": 0.6,
+  "distilled_wr": 0.588,
+  "distilled_tiles": 2291,
+  "improvement_over_best": -6.700000000000006,
+  "improvement_over_mean": -1.200000000000001
+}
