@@ -24,7 +24,8 @@
     "tile-conservation-connect4-results",
     "tile-conservation-results",
     "tile-vs-random-results",
-    "evolutionary-arms-race-results"
+    "evolutionary-arms-race-results",
+    "continuous-tile-results"
   ],
   "summary": {
     "games_tested": [
@@ -43,7 +44,8 @@
       "Cooperation: sharing helps (+7.6pp on C4)",
       "Nash distance: 77% negative space agreement",
       "Holographic bound: 5 tiles = 99.8% of full field",
-      "Bluffing emerges organically (no instruction needed)"
+      "Bluffing emerges organically (no instruction needed)",
+      "Continuous actions: conservation HOLDS more strongly as bins increase (CV: 0.071\u21920.017), but trivially \u2014 tile field starves above 64 actions"
     ],
     "total_agents_this_session": 20,
     "total_experiments": 22
