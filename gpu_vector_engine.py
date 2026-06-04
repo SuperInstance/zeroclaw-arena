@@ -82,7 +82,7 @@ class GPUVectorEngine:
         
         return results
     
-    def search_batch(self, query_texts: List[str], top_k: int = 5) -> List[List[Tuple[int, float, dict]]]]:
+    def search_batch(self, query_texts: List[str], top_k: int = 5) -> List[List[Tuple[int, float, dict]]]:
         """Batch search — much faster on GPU for multiple queries."""
         queries = self.hash_embed_batch(query_texts)  # [Q, dim]
         
