@@ -1,0 +1,72 @@
+{
+  "1": {
+    "resolution": 1,
+    "win_rate": 0.554,
+    "tiles": 248,
+    "entropy": 7.520027471257071,
+    "compression_ratio": 0.496
+  },
+  "2": {
+    "resolution": 2,
+    "win_rate": 0.556,
+    "tiles": 922,
+    "entropy": 8.173003293461022,
+    "compression_ratio": 1.844
+  },
+  "3": {
+    "resolution": 3,
+    "win_rate": 0.596,
+    "tiles": 915,
+    "entropy": 8.169500292677547,
+    "compression_ratio": 1.83
+  },
+  "4": {
+    "resolution": 4,
+    "win_rate": 0.59,
+    "tiles": 937,
+    "entropy": 8.19474721678527,
+    "compression_ratio": 1.874
+  },
+  "5": {
+    "resolution": 5,
+    "win_rate": 0.596,
+    "tiles": 884,
+    "entropy": 8.137804102528312,
+    "compression_ratio": 1.768
+  },
+  "6": {
+    "resolution": 6,
+    "win_rate": 0.6,
+    "tiles": 913,
+    "entropy": 8.161205468198979,
+    "compression_ratio": 1.826
+  },
+  "8": {
+    "resolution": 8,
+    "win_rate": 0.596,
+    "tiles": 897,
+    "entropy": 8.157693101264787,
+    "compression_ratio": 1.794
+  },
+  "10": {
+    "resolution": 10,
+    "win_rate": 0.584,
+    "tiles": 914,
+    "entropy": 8.173265300842338,
+    "compression_ratio": 1.828
+  },
+  "12": {
+    "resolution": 12,
+    "win_rate": 0.602,
+    "tiles": 934,
+    "entropy": 8.182763642411668,
+    "compression_ratio": 1.868
+  },
+  "16": {
+    "resolution": 16,
+    "win_rate": 0.638,
+    "tiles": 894,
+    "entropy": 8.149937785018112,
+    "compression_ratio": 1.788
+  }
+}

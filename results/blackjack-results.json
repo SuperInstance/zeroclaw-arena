@@ -1,0 +1,8 @@
+{
+  "strategy_avg": 0.3882,
+  "strategy_best": 0.432,
+  "random_avg": 0.289,
+  "advantage_pp": 9.920000000000002,
+  "n_scripts": 50,
+  "n_games_per_script": 500
+}

@@ -1,0 +1,90 @@
+{
+  "competition_matrix": [
+    [
+      1.0,
+      0.25,
+      0.25,
+      0.25,
+      0.5
+    ],
+    [
+      0.25,
+      1.0,
+      0.2,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    [
+      0.25,
+      0.2,
+      1.0,
+      0.14285714285714285,
+      0.2
+    ],
+    [
+      0.25,
+      0.3333333333333333,
+      0.14285714285714285,
+      1.0,
+      0.3333333333333333
+    ],
+    [
+      0.5,
+      0.3333333333333333,
+      0.2,
+      0.3333333333333333,
+      1.0
+    ]
+  ],
+  "species": [
+    "Explorer",
+    "Diplomat",
+    "Marksman",
+    "Climber",
+    "Prospector"
+  ],
+  "growth_rates": [
+    0.55,
+    0.5,
+    0.5,
+    0.35,
+    0.1
+  ],
+  "coexistence": true,
+  "survivors": [
+    "Explorer",
+    "Diplomat",
+    "Marksman",
+    "Climber",
+    "Prospector"
+  ],
+  "extinct": [],
+  "perturbation_survivors": [
+    "Diplomat",
+    "Marksman",
+    "Climber",
+    "Prospector"
+  ],
+  "stability": {
+    "Explorer": {
+      "cv": 0.001,
+      "mean_pop": 423.8
+    },
+    "Diplomat": {
+      "cv": 0.0,
+      "mean_pop": 478.5
+    },
+    "Marksman": {
+      "cv": 0.0,
+      "mean_pop": 658.6
+    },
+    "Climber": {
+      "cv": 0.0,
+      "mean_pop": 535.0
+    },
+    "Prospector": {
+      "cv": 0.003,
+      "mean_pop": 316.5
+    }
+  }
+}

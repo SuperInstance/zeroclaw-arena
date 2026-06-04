@@ -1,0 +1,413 @@
+{
+  "score_history": [
+    {
+      "opening": {
+        "center_control": 0.5,
+        "corner_play": 0.4,
+        "edge_play": 0.3,
+        "aggressive_open": 0.2
+      },
+      "mid_game_aggressive": {
+        "full_attack": 0.5,
+        "feint": 0.4,
+        "retreat": 0.3
+      },
+      "mid_game_defensive": {
+        "fortify": 0.6,
+        "counter_attack": 0.5,
+        "full_retreat": 0.2
+      },
+      "mid_game_balanced": {
+        "probe": 0.5,
+        "consolidate": 0.4,
+        "adapt": 0.6
+      },
+      "end_game_winning": {
+        "close_out": 0.7,
+        "play_safe": 0.5,
+        "style_points": 0.3
+      },
+      "end_game_losing": {
+        "desperate_attack": 0.4,
+        "extend_game": 0.3,
+        "resign": 0.2,
+        "miracle_play": 0.1
+      }
+    },
+    {
+      "opening": {
+        "center_control": 0.657,
+        "corner_play": 0.348,
+        "edge_play": 0.244,
+        "aggressive_open": 0.156
+      },
+      "mid_game_aggressive": {
+        "full_attack": 0.749,
+        "feint": 0.33,
+        "retreat": 0.222
+      },
+      "mid_game_defensive": {
+        "fortify": 0.969,
+        "counter_attack": 0.671,
+        "full_retreat": 0.162
+      },
+      "mid_game_balanced": {
+        "probe": 0.632,
+        "consolidate": 0.354,
+        "adapt": 0.833
+      },
+      "end_game_winning": {
+        "close_out": 1.0,
+        "play_safe": 0.608,
+        "style_points": 0.247
+      },
+      "end_game_losing": {
+        "desperate_attack": 0.289,
+        "extend_game": 0.204,
+        "resign": 0.132,
+        "miracle_play": 0.063
+      }
+    },
+    {
+      "opening": {
+        "center_control": 1.0,
+        "corner_play": 0.281,
+        "edge_play": 0.201,
+        "aggressive_open": 0.124
+      },
+      "mid_game_aggressive": {
+        "full_attack": 1.0,
+        "feint": 0.269,
+        "retreat": 0.18
+      },
+      "mid_game_defensive": {
+        "fortify": 1.0,
+        "counter_attack": 0.925,
+        "full_retreat": 0.133
+      },
+      "mid_game_balanced": {
+        "probe": 0.919,
+        "consolidate": 0.307,
+        "adapt": 1.0
+      },
+      "end_game_winning": {
+        "close_out": 1.0,
+        "play_safe": 0.825,
+        "style_points": 0.208
+      },
+      "end_game_losing": {
+        "desperate_attack": 0.151,
+        "extend_game": 0.104,
+        "resign": 0.069,
+        "miracle_play": 0.031
+      }
+    },
+    {
+      "opening": {
+        "center_control": 1.0,
+        "corner_play": 0.227,
+        "edge_play": 0.163,
+        "aggressive_open": 0.097
+      },
+      "mid_game_aggressive": {
+        "full_attack": 1.0,
+        "feint": 0.208,
+        "retreat": 0.149
+      },
+      "mid_game_defensive": {
+        "fortify": 1.0,
+        "counter_attack": 1.0,
+        "full_retreat": 0.113
+      },
+      "mid_game_balanced": {
+        "probe": 1.0,
+        "consolidate": 0.262,
+        "adapt": 1.0
+      },
+      "end_game_winning": {
+        "close_out": 1.0,
+        "play_safe": 1.0,
+        "style_points": 0.181
+      },
+      "end_game_losing": {
+        "desperate_attack": 0.013,
+        "extend_game": 0.012,
+        "resign": 0.01,
+        "miracle_play": 0.01
+      }
+    },
+    {
+      "opening": {
+        "center_control": 1.0,
+        "corner_play": 0.18,
+        "edge_play": 0.133,
+        "aggressive_open": 0.079
+      },
+      "mid_game_aggressive": {
+        "full_attack": 1.0,
+        "feint": 0.166,
+        "retreat": 0.116
+      },
+      "mid_game_defensive": {
+        "fortify": 1.0,
+        "counter_attack": 1.0,
+        "full_retreat": 0.094
+      },
+      "mid_game_balanced": {
+        "probe": 1.0,
+        "consolidate": 0.182,
+        "adapt": 1.0
+      },
+      "end_game_winning": {
+        "close_out": 1.0,
+        "play_safe": 1.0,
+        "style_points": 0.153
+      },
+      "end_game_losing": {
+        "desperate_attack": 0.01,
+        "extend_game": 0.01,
+        "resign": 0.01,
+        "miracle_play": 0.01
+      }
+    },
+    {
+      "opening": {
+        "center_control": 1.0,
+        "corner_play": 0.141,
+        "edge_play": 0.102,
+        "aggressive_open": 0.056
+      },
+      "mid_game_aggressive": {
+        "full_attack": 1.0,
+        "feint": 0.124,
+        "retreat": 0.093
+      },
+      "mid_game_defensive": {
+        "fortify": 1.0,
+        "counter_attack": 1.0,
+        "full_retreat": 0.079
+      },
+      "mid_game_balanced": {
+        "probe": 1.0,
+        "consolidate": 0.156,
+        "adapt": 1.0
+      },
+      "end_game_winning": {
+        "close_out": 1.0,
+        "play_safe": 0.969,
+        "style_points": 0.137
+      },
+      "end_game_losing": {
+        "desperate_attack": 0.01,
+        "extend_game": 0.01,
+        "resign": 0.01,
+        "miracle_play": 0.01
+      }
+    },
+    {
+      "opening": {
+        "center_control": 1.0,
+        "corner_play": 0.106,
+        "edge_play": 0.081,
+        "aggressive_open": 0.01
+      },
+      "mid_game_aggressive": {
+        "full_attack": 1.0,
+        "feint": 0.092,
+        "retreat": 0.071
+      },
+      "mid_game_defensive": {
+        "fortify": 1.0,
+        "counter_attack": 1.0,
+        "full_retreat": 0.066
+      },
+      "mid_game_balanced": {
+        "probe": 1.0,
+        "consolidate": 0.135,
+        "adapt": 1.0
+      },
+      "end_game_winning": {
+        "close_out": 1.0,
+        "play_safe": 1.0,
+        "style_points": 0.114
+      },
+      "end_game_losing": {
+        "desperate_attack": 0.01,
+        "extend_game": 0.01,
+        "resign": 0.01,
+        "miracle_play": 0.01
+      }
+    },
+    {
+      "opening": {
+        "center_control": 1.0,
+        "corner_play": 0.085,
+        "edge_play": 0.061,
+        "aggressive_open": 0.01
+      },
+      "mid_game_aggressive": {
+        "full_attack": 1.0,
+        "feint": 0.068,
+        "retreat": 0.053
+      },
+      "mid_game_defensive": {
+        "fortify": 1.0,
+        "counter_attack": 1.0,
+        "full_retreat": 0.056
+      },
+      "mid_game_balanced": {
+        "probe": 1.0,
+        "consolidate": 0.112,
+        "adapt": 1.0
+      },
+      "end_game_winning": {
+        "close_out": 1.0,
+        "play_safe": 1.0,
+        "style_points": 0.095
+      },
+      "end_game_losing": {
+        "desperate_attack": 0.01,
+        "extend_game": 0.01,
+        "resign": 0.01,
+        "miracle_play": 0.01
+      }
+    },
+    {
+      "opening": {
+        "center_control": 1.0,
+        "corner_play": 0.062,
+        "edge_play": 0.046,
+        "aggressive_open": 0.01
+      },
+      "mid_game_aggressive": {
+        "full_attack": 1.0,
+        "feint": 0.049,
+        "retreat": 0.04
+      },
+      "mid_game_defensive": {
+        "fortify": 1.0,
+        "counter_attack": 1.0,
+        "full_retreat": 0.048
+      },
+      "mid_game_balanced": {
+        "probe": 1.0,
+        "consolidate": 0.096,
+        "adapt": 1.0
+      },
+      "end_game_winning": {
+        "close_out": 1.0,
+        "play_safe": 1.0,
+        "style_points": 0.083
+      },
+      "end_game_losing": {
+        "desperate_attack": 0.01,
+        "extend_game": 0.01,
+        "resign": 0.01,
+        "miracle_play": 0.01
+      }
+    },
+    {
+      "opening": {
+        "center_control": 1.0,
+        "corner_play": 0.046,
+        "edge_play": 0.033,
+        "aggressive_open": 0.01
+      },
+      "mid_game_aggressive": {
+        "full_attack": 1.0,
+        "feint": 0.035,
+        "retreat": 0.032
+      },
+      "mid_game_defensive": {
+        "fortify": 1.0,
+        "counter_attack": 1.0,
+        "full_retreat": 0.043
+      },
+      "mid_game_balanced": {
+        "probe": 1.0,
+        "consolidate": 0.084,
+        "adapt": 1.0
+      },
+      "end_game_winning": {
+        "close_out": 1.0,
+        "play_safe": 1.0,
+        "style_points": 0.068
+      },
+      "end_game_losing": {
+        "desperate_attack": 0.01,
+        "extend_game": 0.01,
+        "resign": 0.01,
+        "miracle_play": 0.01
+      }
+    },
+    {
+      "opening": {
+        "center_control": 1.0,
+        "corner_play": 0.036,
+        "edge_play": 0.022,
+        "aggressive_open": 0.01
+      },
+      "mid_game_aggressive": {
+        "full_attack": 1.0,
+        "feint": 0.024,
+        "retreat": 0.023
+      },
+      "mid_game_defensive": {
+        "fortify": 1.0,
+        "counter_attack": 1.0,
+        "full_retreat": 0.037
+      },
+      "mid_game_balanced": {
+        "probe": 1.0,
+        "consolidate": 0.074,
+        "adapt": 1.0
+      },
+      "end_game_winning": {
+        "close_out": 1.0,
+        "play_safe": 1.0,
+        "style_points": 0.058
+      },
+      "end_game_losing": {
+        "desperate_attack": 0.01,
+        "extend_game": 0.01,
+        "resign": 0.01,
+        "miracle_play": 0.01
+      }
+    }
+  ],
+  "final_scores": {
+    "opening": {
+      "center_control": 1.0,
+      "corner_play": 0.036,
+      "edge_play": 0.022,
+      "aggressive_open": 0.01
+    },
+    "mid_game_aggressive": {
+      "full_attack": 1.0,
+      "feint": 0.024,
+      "retreat": 0.023
+    },
+    "mid_game_defensive": {
+      "fortify": 1.0,
+      "counter_attack": 1.0,
+      "full_retreat": 0.037
+    },
+    "mid_game_balanced": {
+      "probe": 1.0,
+      "consolidate": 0.074,
+      "adapt": 1.0
+    },
+    "end_game_winning": {
+      "close_out": 1.0,
+      "play_safe": 1.0,
+      "style_points": 0.058
+    },
+    "end_game_losing": {
+      "desperate_attack": 0.01,
+      "extend_game": 0.01,
+      "resign": 0.01,
+      "miracle_play": 0.01
+    }
+  },
+  "outcome_count": 5000
+}

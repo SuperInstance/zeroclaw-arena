@@ -1,0 +1,210 @@
+{
+  "history": [
+    {
+      "gen": 0,
+      "best": 0.6466666666666666,
+      "avg": 0.57375,
+      "params": {
+        "exploration_rate": 0.134,
+        "temperature": 1.487,
+        "reward_weight": 0.146,
+        "center_bonus": 0.632,
+        "blocking_weight": 0.688,
+        "random_noise": 0.01
+      }
+    },
+    {
+      "gen": 1,
+      "best": 0.72,
+      "avg": 0.6030833333333333,
+      "params": {
+        "exploration_rate": 0.134,
+        "temperature": 0.288,
+        "reward_weight": 0.146,
+        "center_bonus": 0.632,
+        "blocking_weight": 0.547,
+        "random_noise": 0.057
+      }
+    },
+    {
+      "gen": 2,
+      "best": 0.75,
+      "avg": 0.6381666666666667,
+      "params": {
+        "exploration_rate": 0.134,
+        "temperature": 0.274,
+        "reward_weight": 0.881,
+        "center_bonus": 0.809,
+        "blocking_weight": 0.425,
+        "random_noise": 0.01
+      }
+    },
+    {
+      "gen": 3,
+      "best": 0.7866666666666666,
+      "avg": 0.7150833333333334,
+      "params": {
+        "exploration_rate": 0.134,
+        "temperature": 0.288,
+        "reward_weight": 0.146,
+        "center_bonus": 0.632,
+        "blocking_weight": 0.584,
+        "random_noise": 0.057
+      }
+    },
+    {
+      "gen": 4,
+      "best": 0.8633333333333333,
+      "avg": 0.7454166666666666,
+      "params": {
+        "exploration_rate": 0.064,
+        "temperature": 0.105,
+        "reward_weight": 0.023,
+        "center_bonus": 0.632,
+        "blocking_weight": 0.584,
+        "random_noise": 0.078
+      }
+    },
+    {
+      "gen": 5,
+      "best": 0.9333333333333333,
+      "avg": 0.7673333333333334,
+      "params": {
+        "exploration_rate": 0,
+        "temperature": 0.008,
+        "reward_weight": 0.881,
+        "center_bonus": 0.809,
+        "blocking_weight": 0.425,
+        "random_noise": 0.01
+      }
+    },
+    {
+      "gen": 6,
+      "best": 0.93,
+      "avg": 0.8430833333333332,
+      "params": {
+        "exploration_rate": 0,
+        "temperature": 0.008,
+        "reward_weight": 0.881,
+        "center_bonus": 1.01,
+        "blocking_weight": 0.425,
+        "random_noise": 0.01
+      }
+    },
+    {
+      "gen": 7,
+      "best": 0.9433333333333334,
+      "avg": 0.8833333333333334,
+      "params": {
+        "exploration_rate": 0,
+        "temperature": 0,
+        "reward_weight": 1.016,
+        "center_bonus": 0.809,
+        "blocking_weight": 0.553,
+        "random_noise": 0.078
+      }
+    },
+    {
+      "gen": 8,
+      "best": 0.95,
+      "avg": 0.9139166666666668,
+      "params": {
+        "exploration_rate": 0.0,
+        "temperature": 0.008,
+        "reward_weight": 0.881,
+        "center_bonus": 0.809,
+        "blocking_weight": 0.337,
+        "random_noise": 0.01
+      }
+    },
+    {
+      "gen": 9,
+      "best": 0.9533333333333334,
+      "avg": 0.9247499999999998,
+      "params": {
+        "exploration_rate": 0,
+        "temperature": 0,
+        "reward_weight": 0.977,
+        "center_bonus": 0.809,
+        "blocking_weight": 0.338,
+        "random_noise": 0
+      }
+    },
+    {
+      "gen": 10,
+      "best": 0.95,
+      "avg": 0.9188333333333333,
+      "params": {
+        "exploration_rate": 0,
+        "temperature": 0,
+        "reward_weight": 0.881,
+        "center_bonus": 0.809,
+        "blocking_weight": 0.338,
+        "random_noise": 0.038
+      }
+    },
+    {
+      "gen": 11,
+      "best": 0.9433333333333334,
+      "avg": 0.9181666666666668,
+      "params": {
+        "exploration_rate": 0,
+        "temperature": 0.008,
+        "reward_weight": 0.881,
+        "center_bonus": 0.827,
+        "blocking_weight": 0.553,
+        "random_noise": 0.01
+      }
+    },
+    {
+      "gen": 12,
+      "best": 0.95,
+      "avg": 0.9203333333333333,
+      "params": {
+        "exploration_rate": 0,
+        "temperature": 0,
+        "reward_weight": 0.881,
+        "center_bonus": 0.827,
+        "blocking_weight": 0.338,
+        "random_noise": 0.01
+      }
+    },
+    {
+      "gen": 13,
+      "best": 0.9533333333333334,
+      "avg": 0.92225,
+      "params": {
+        "exploration_rate": 0,
+        "temperature": 0,
+        "reward_weight": 0.881,
+        "center_bonus": 0.827,
+        "blocking_weight": 0.553,
+        "random_noise": 0.01
+      }
+    },
+    {
+      "gen": 14,
+      "best": 0.9466666666666667,
+      "avg": 0.9173333333333332,
+      "params": {
+        "exploration_rate": 0,
+        "temperature": 0.008,
+        "reward_weight": 0.881,
+        "center_bonus": 0.747,
+        "blocking_weight": 0.337,
+        "random_noise": 0.01
+      }
+    }
+  ],
+  "final": 0.942,
+  "baseline": 0.5,
+  "improvement_pp": 44.199999999999996,
+  "best_params": {
+    "exploration_rate": 0,
+    "temperature": 0.008,
+    "reward_weight": 0.881,
+    "center_bonus": 0.747,
+    "blocking_weight": 0.337,
+    "random_noise": 0.01
+  }
+}

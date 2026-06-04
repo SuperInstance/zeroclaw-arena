@@ -1,0 +1,102 @@
+{
+  "experiment": "tile_conservation_law_connect4",
+  "hypothesis": "less_symmetric_game_more_unique_policy",
+  "baseline_ttt_agreement": 0.4128,
+  "seeds": [
+    42,
+    1337,
+    9999,
+    7,
+    2024
+  ],
+  "num_games": 300,
+  "verdict": {
+    "score_converges": true,
+    "reflex_converges": false,
+    "count_stable": true,
+    "mean_agreement": 0.3911504424778761,
+    "full_agreement_pct": 0.0,
+    "std_of_means": 0.0012603181132573942,
+    "mean_correlation": 0.02803745115680365,
+    "c4_vs_ttt_delta": -0.021649557522123886,
+    "hypothesis_confirmed": false,
+    "hypothesis_direction": false
+  },
+  "run_summaries": [
+    {
+      "seed": 42,
+      "num_tiles": 4898,
+      "score_distribution": {
+        "min": 0.2701800438313185,
+        "max": 0.7298199561686817,
+        "mean": 0.5126408912610241,
+        "std": 0.058092433841192385,
+        "median": 0.5,
+        "p25": 0.5,
+        "p75": 0.5,
+        "p90": 0.5713125000000001,
+        "p10": 0.5
+      }
+    },
+    {
+      "seed": 1337,
+      "num_tiles": 4549,
+      "score_distribution": {
+        "min": 0.2701800438313185,
+        "max": 0.7298199561686817,
+        "mean": 0.5117874817152601,
+        "std": 0.05825265528560129,
+        "median": 0.5,
+        "p25": 0.5,
+        "p75": 0.5,
+        "p90": 0.5713125000000001,
+        "p10": 0.5
+      }
+    },
+    {
+      "seed": 9999,
+      "num_tiles": 4564,
+      "score_distribution": {
+        "min": 0.2701800438313185,
+        "max": 0.7298199561686817,
+        "mean": 0.5141475244341317,
+        "std": 0.058411306810336294,
+        "median": 0.5,
+        "p25": 0.5,
+        "p75": 0.5,
+        "p90": 0.5927468750000001,
+        "p10": 0.5
+      }
+    },
+    {
+      "seed": 7,
+      "num_tiles": 4495,
+      "score_distribution": {
+        "min": 0.2701800438313185,
+        "max": 0.7298199561686817,
+        "mean": 0.5154582309874325,
+        "std": 0.05752733735640407,
+        "median": 0.5,
+        "p25": 0.5,
+        "p75": 0.5,
+        "p90": 0.5927468750000001,
+        "p10": 0.5
+      }
+    },
+    {
+      "seed": 2024,
+      "num_tiles": 4610,
+      "score_distribution": {
+        "min": 0.2701800438313185,
+        "max": 0.7298199561686817,
+        "mean": 0.5133603905876537,
+        "std": 0.05876441739374086,
+        "median": 0.5,
+        "p25": 0.5,
+        "p75": 0.5,
+        "p90": 0.5713125000000001,
+        "p10": 0.5
+      }
+    }
+  ]
+}

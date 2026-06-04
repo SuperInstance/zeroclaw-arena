@@ -1,0 +1,14 @@
+{
+  "tictactoe": {
+    "tile_win_rate": 0.794,
+    "random_win_rate": 0.592,
+    "advantage_pp": 20.200000000000006,
+    "tiles_learned": 758
+  },
+  "connect4": {
+    "tile_win_rate": 0.778,
+    "random_win_rate": 0.558,
+    "advantage_pp": 21.999999999999996,
+    "tiles_learned": 3820
+  }
+}

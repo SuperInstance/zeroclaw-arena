@@ -1,0 +1,7 @@
+{
+  "game_trained_game": 0.526,
+  "game_trained_nongame": 0.476,
+  "fresh_game": 0.453,
+  "transfer_ratio": -0.225,
+  "verdict": "NEUTRAL"
+}
